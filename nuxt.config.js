@@ -7,6 +7,10 @@ const baseUrl = (process.env.NODE_ENV === 'development' ? 'http://127.0.0.2' : '
 export default {
     target: 'static',
 
+    server: {
+        host: '192.168.0.2'
+    },
+
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         titleTemplate: '%s | Monster RX93.1',
@@ -70,8 +74,7 @@ export default {
     },
 
     generate: {
-        fallback: true,
-        subFolders: false
+        fallback: true
     },
 
     // Auto import components: https://go.nuxtjs.dev/config-components
