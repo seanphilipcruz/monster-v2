@@ -274,6 +274,30 @@ export default {
                     this.$store.dispatch("setLoadingState", { type: 'content', status: false });
                 });
             }
+        },
+
+        async fetchPodcastData() {
+            const { showID, show, page } = this.$route.query;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                if (showID && page) {
+                    await this.$store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?filter=${showID}&page=${page}`);
+                } else if (page) {
+                    await this.$store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?page=${page}`);
+                } else if (showID) {
+                    await this.$store.dispatch("podcasts/getShowData", show);
+
+                    await this.$store.dispatch("podcasts/filterPodcast", showID);
+                } else {
+                    await this.$store.dispatch("podcasts/setPodcastsData");
+                }
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
         }
     },
 
@@ -326,6 +350,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchPodcastData();
         }
     }
 }

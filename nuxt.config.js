@@ -40,10 +40,10 @@ export default {
             { 'property': 'fb:app_id', content: '250218719159269' }
         ],
         link: [
-            { rel: 'apple-touch-icon', sizes: '180x180', href: '/app-logo.png' },
-            { rel: 'icon', sizes: '32x32', href: '/app-logo.png' },
-            { rel: 'icon', sizes: '16x16', href: '/app-logo.png' },
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'apple-touch-icon', sizes: '180x180', href: `${baseUrl}/app-logo.png` },
+            { rel: 'icon', sizes: '32x32', href: `${baseUrl}/app-logo.png` },
+            { rel: 'icon', sizes: '16x16', href: `${baseUrl}/app-logo.png` },
+            { rel: 'icon', type: 'image/x-icon', href: `${baseUrl}/favicon.ico` },
             { rel: 'stylesheet', type: 'text/css', href: `${baseUrl}/css/app.css` }
         ],
         script: [
@@ -71,7 +71,7 @@ export default {
 
     generate: {
         fallback: true,
-        devtools: true
+        subFolders: false
     },
 
     // Auto import components: https://go.nuxtjs.dev/config-components

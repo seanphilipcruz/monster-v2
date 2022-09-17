@@ -208,6 +208,26 @@ export default {
             await this.$store.dispatch("articles/searchArticles", search);
 
             await this.$store.dispatch("setLoadingState", { type: 'content', status: false });
+        },
+
+        async fetchArticleData() {
+            const { page, keyword } = this.$route.query;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                if (page) {
+                    await this.$store.dispatch("articles/getPage", ApiService.baseUrl() + `/articles?page=${page}`);
+                } else if (keyword) {
+                    await this.$store.dispatch("articles/searchArticles", keyword);
+                } else {
+                    await this.$store.dispatch("articles/setArticlesData");
+                }
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                throw error;
+            }
         }
     },
 
@@ -253,6 +273,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchArticleData();
         }
     },
 

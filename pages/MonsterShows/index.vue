@@ -132,6 +132,24 @@ export default {
             }
 
             await this.$store.dispatch("setLoadingState", { type: 'content', status: false });
+        },
+
+        async fetchShowData() {
+            const { shows } = this.$route.query;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                if (shows) {
+                    await this.$store.dispatch('shows/filterShows', shows);
+                } else {
+                    await this.$store.dispatch('shows/getPageData');
+                }
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
         }
     },
 
@@ -160,6 +178,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchShowData();
         }
     }
 }

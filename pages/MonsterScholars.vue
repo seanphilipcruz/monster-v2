@@ -96,6 +96,24 @@ export default {
 
             await this.$store.dispatch("setLoadingState", { type: 'content', status: false });
         },
+
+        async fetchMonsterScholarData() {
+            const { batchNumber } = this.$route.query;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                if (batchNumber) {
+                    await this.$store.dispatch("scholars/getBatch", batchNumber);
+                } else {
+                    await this.$store.dispatch("scholars/getScholarsBatch");
+                }
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        }
     },
 
     computed: {
@@ -171,6 +189,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchMonsterScholarData();
         }
     }
 }

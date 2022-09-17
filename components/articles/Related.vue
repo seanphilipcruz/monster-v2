@@ -12,7 +12,7 @@
                         <div class="card-body">
                             <div class="row mx-1">
                                 <div class="col-12">
-                                    <img :src="related.article.image" alt="song" class="card-img-top rounded-start">
+                                    <img :src="related.article.image" :alt="related.article.title" class="card-img-top rounded-start">
                                     <div class="my-2"></div>
                                     <nuxt-link :to="{ name: 'Articles-uuid-articleSlug', params: { uuid: related.article.unique_id, articleSlug: slugString(related.article.title) } }"
                                                class="text-monster-blue stretched-link text-uppercase">
@@ -74,7 +74,7 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <img :src="related.article.image" alt="song" class="card-img-top rounded-start">
+                                        <img :src="related.article.image" :alt="related.article.title" class="card-img-top rounded-start">
                                         <div class="my-2"></div>
                                         <nuxt-link :to="{ name: 'Articles-uuid-articleSlug', params: { uuid: related.article.unique_id, articleSlug: slugString(related.article.title) } }"
                                                    class="text-monster-blue stretched-link text-uppercase">

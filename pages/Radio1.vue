@@ -145,6 +145,24 @@ export default {
 
             await this.$store.dispatch("setLoadingState", { type: 'content', status: false });
         },
+
+        async fetchRadio1Data() {
+            const { batchNumber } = this.$route.query;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                if (batchNumber) {
+                    await this.$store.dispatch("jocks/getR1Batch", batchNumber);
+                } else {
+                    await this.$store.dispatch("jocks/getR1Students");
+                }
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        }
     },
 
     computed: {
@@ -208,6 +226,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchRadio1Data();
         }
     }
 }

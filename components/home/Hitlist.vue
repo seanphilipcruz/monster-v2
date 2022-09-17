@@ -118,15 +118,13 @@
 
             <!-- LARGE TO EXTRA LARGE DEVICES -->
             <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-                <div class="row g-2">
-                    <div class="col-lg-8">
-                        <div v-for="(chart, index) in charts" :key="chart.id">
-                            <div class="card bg-light-gray" v-if="index === 0">
-                                <div class="row g-0">
-                                    <div class="col-5">
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <div class="row g-2">
+                            <div class="col-lg-6">
+                                <div v-for="(chart, index) in charts" :key="chart.id">
+                                    <div class="card bg-light-gray" v-if="index === 0">
                                         <img :src="chart.song.album.image" :alt="chart.song.album.name" class="img-fluid rounded-start bg-medium-gray">
-                                    </div>
-                                    <div class="col-6 align-self-center">
                                         <div class="card-body text-light text-wrap">
                                             <h5 class="my-0 font-responsive">{{ chart.song.name }}</h5>
                                             <p class="barlow-subtitle">{{ chart.song.album.artist.name }}</p>
@@ -134,50 +132,50 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div v-for="(chart, index) in charts" :key="chart.id">
-                                    <div v-if="index > 0">
-                                        <div class="card bg-medium-gray text-light" v-if="index % 2 === 0">
-                                            <div class="row g-0">
-                                                <div class="col-1 d-flex justify-content-center align-self-center">{{ chart.position }}</div>
-                                                <div class="col-2">
-                                                    <img :src="chart.song.album.image" :alt="chart.song.album.name" class="img-fluid rounded-start bg-light-gray">
-                                                </div>
-                                                <div class="col-9">
-                                                    <div class="card-body card-body-chart text-light text-wrap">
-                                                        <h6 class="my-0 font-responsive" :title="chart.song.name">{{ trimString(chart.song.name, 20) }}</h6>
-                                                        <p class="barlow-subtitle">{{ chart.song.album.artist.name }}</p>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div v-for="(chart, index) in charts" :key="chart.id">
+                                            <div v-if="index > 0">
+                                                <div class="card bg-medium-gray text-light" v-if="index % 2 === 0">
+                                                    <div class="row g-0">
+                                                        <div class="col-1 d-flex justify-content-center align-self-center">{{ chart.position }}</div>
+                                                        <div class="col-2">
+                                                            <img :src="chart.song.album.image" :alt="chart.song.album.name" class="img-fluid rounded-start bg-light-gray">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <div class="card-body card-body-chart text-light text-wrap">
+                                                                <h6 class="my-0 font-responsive" :title="chart.song.name">{{ trimString(chart.song.name, 20) }}</h6>
+                                                                <p class="barlow-subtitle">{{ chart.song.album.artist.name }}</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="card bg-light-gray text-light" v-else>
-                                            <div class="row g-0">
-                                                <div class="col-1 d-flex justify-content-center align-self-center">{{ chart.position }}</div>
-                                                <div class="col-2">
-                                                    <img :src="chart.song.album.image" :alt="chart.song.album.name" class="img-fluid rounded-start bg-medium-gray">
-                                                </div>
-                                                <div class="col-9">
-                                                    <div class="card-body card-body-chart text-light text-wrap">
-                                                        <h6 class="my-0 font-responsive" :title="chart.song.name">{{ trimString(chart.song.name, 20) }}</h6>
-                                                        <p class="barlow-subtitle">{{ chart.song.album.artist.name }}</p>
+                                                <div class="card bg-light-gray text-light" v-else>
+                                                    <div class="row g-0">
+                                                        <div class="col-1 d-flex justify-content-center align-self-center">{{ chart.position }}</div>
+                                                        <div class="col-2">
+                                                            <img :src="chart.song.album.image" :alt="chart.song.album.name" class="img-fluid rounded-start bg-medium-gray">
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <div class="card-body card-body-chart text-light text-wrap">
+                                                                <h6 class="my-0 font-responsive" :title="chart.song.name">{{ trimString(chart.song.name, 20) }}</h6>
+                                                                <p class="barlow-subtitle">{{ chart.song.album.artist.name }}</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="d-none d-xl-block d-xxl-block">
-                            <div class="my-2"></div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <nuxt-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP 20</nuxt-link>
+                                <div class="d-none d-xl-block d-xxl-block">
+                                    <div class="my-2"></div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <nuxt-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP 20</nuxt-link>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

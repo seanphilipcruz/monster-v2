@@ -233,6 +233,32 @@ export default {
             }
 
             await this.$store.dispatch("setLoadingState", { type: 'content', status: false });
+        },
+
+        async fetchWallpaperData() {
+            const { device, page } = this.$route.query;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                await this.$store.dispatch("getHomeData");
+
+                if (device && page) {
+                    await this.$store.dispatch("wallpapers/setWallpaperDeviceType", device);
+                    await this.$store.dispatch("wallpapers/getPage", ApiService.baseUrl() + `/wallpapers?type=${device}&page=${page}`);
+                } else if (page) {
+                    await this.$store.dispatch("wallpapers/getPage", ApiService.baseUrl() + `/wallpapers?page=${page}`);
+                } else if (device) {
+                    await this.$store.dispatch("wallpapers/setWallpaperDeviceType", device);
+                    await this.$store.dispatch("wallpapers/getWallpaperDeviceType", device);
+                } else {
+                    await this.$store.dispatch("wallpapers/getWallpapersData");
+                }
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
         }
     },
 
@@ -277,6 +303,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchWallpaperData();
         }
     }
 }
