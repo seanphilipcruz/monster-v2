@@ -28,68 +28,74 @@
         <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
             <p class="text-light">JOCKS ON BOARD</p>
         </div>
-        <div class="card bg-light-gray">
+        <div class="card bg-light-gray" v-if="jocksCount">
             <div class="row">
                 <div class="col-12">
                     <div class="card-body text-light text-center text-wrap">
                         <div class="row" v-if="jocksCount === 4">
                             <div class="col-6 col-sm-3 col-md col-lg col-xl col-xxl interactive-card" v-for="jock in currentJocks" :key="jock.id">
-                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
-                                    <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
-                                    <div class="card-text">
-                                        <small class="my-0 barlow">{{ jock.name }}</small>
-                                    </div>
-                                </nuxt-link>
-                            </div>
-                        </div>
-                        <div class="row" v-else-if="jocksCount === 3">
-                            <div class="col interactive-card" v-for="jock in currentJocks" :key="jock.id">
-                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
-                                    <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
-                                    <div class="card-text">
-                                        <small class="my-0 barlow">{{ jock.name }}</small>
-                                    </div>
-                                </nuxt-link>
-                            </div>
-                        </div>
-                        <div class="row" v-else-if="jocksCount === 2">
-                            <div class="col interactive-card" v-for="jock in currentJocks" :key="jock.id">
-                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
-                                    <div class="row">
-                                        <div class="col">
-                                            <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
-                                        </div>
-                                        <div class="col d-flex justify-content-center align-items-center">
-                                            <div class="card-text">
-                                                <small class="my-0 barlow">{{ jock.name }}</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </nuxt-link>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center" v-else-if="jocksCount === 1">
-                            <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-                                <div class="row">
-                                    <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: currentJocks[0].slug_string } }">
-                                        <div class="col" v-for="jock in currentJocks" :key="jock.id">
-                                            <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
-                                        </div>
-                                        <div class="col d-flex justify-content-center align-items-center">
-                                            <div class="card-text">
-                                                <small class="my-0 barlow">{{ currentJocks[0].name }}</small>
-                                            </div>
-                                        </div>
-                                    </nuxt-link>
+                                <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
+                                <div class="card-text">
+                                    <small class="my-0 barlow">
+                                        <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                            {{ jock.name }}
+                                        </nuxt-link>
+                                    </small>
                                 </div>
                             </div>
                         </div>
-                        <div v-else>
-                            <div class="m-5">
+                        <div class="row" v-if="jocksCount === 3">
+                            <div class="col interactive-card" v-for="jock in currentJocks" :key="jock.id">
+                                <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
+                                <div class="card-text">
+                                    <small class="my-0 barlow">
+                                        <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                            {{ jock.name }}
+                                        </nuxt-link>
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" v-if="jocksCount === 2">
+                            <div class="col interactive-card" v-for="jock in currentJocks" :key="jock.id">
                                 <div class="row">
-                                    <div class="col-12 text-light text-center">
-                                        Seems there are no jocks On-Air, still you can tune in and listen! Enjoy monster!
+                                    <div class="col">
+                                        <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
                                     </div>
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <div class="card-text">
+                                            <small class="my-0 barlow">
+                                                <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                                    {{ jock.name }}
+                                                </nuxt-link>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center" v-if="jocksCount === 1">
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
+                                <div class="row">
+                                    <div class="col" v-for="jock in currentJocks" :key="jock.id">
+                                        <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
+                                    </div>
+                                    <div class="col d-flex justify-content-center align-items-center">
+                                        <div class="card-text">
+                                            <small class="my-0 barlow">
+                                                <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: currentJocks[0].slug_string } }">
+                                                    {{ currentJocks[0].name }}
+                                                </nuxt-link>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-5" v-if="jocksCount === 0">
+                            <div class="row">
+                                <div class="col-12 text-light text-center">
+                                    Seems there are no jocks On-Air, still you can tune in and listen! Enjoy monster!
                                 </div>
                             </div>
                         </div>
@@ -100,11 +106,11 @@
         <div class="my-3"></div>
         <div class="row justify-content-center">
             <div class="col-6 d-grid">
-                <client-only>
-                    <button type="button" class="btn btn-monster-blue" @click="getStream({})">
-                        <font-awesome-icon :icon="['fas', 'fa-play-circle']" />  Stream
-                    </button>
-                </client-only>
+                <button type="button" class="btn btn-monster-blue" @click="getStream({})">
+                    <client-only>
+                        <font-awesome-icon :icon="['fas', 'fa-play-circle']"></font-awesome-icon>  Stream
+                    </client-only>
+                </button>
             </div>
         </div>
     </div>
