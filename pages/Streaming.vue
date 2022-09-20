@@ -1,47 +1,47 @@
 <template>
     <div>
-        <banner v-if="!show" />
-        <custom-banner v-else :image="show.header_image" />
+        <client-only>
+            <banner v-if="!show" />
+            <custom-banner v-else :image="show.header_image" />
 
-        <div v-if="isLoading">
-            <loader />
-        </div>
-        <transition name="fade">
-            <div class="bg-dark-gray-container" v-if="!isLoading">
-                <div class="container">
-                    <div class="my-5">
-                        <client-only>
-                            <PageTitle :station-name="stationName" />
+            <div v-if="isLoading">
+                <loader />
+            </div>
+            <transition name="fade">
+                <div class="bg-dark-gray-container" v-if="!isLoading">
+                    <div class="container">
+                        <div class="my-5">
+                                <PageTitle :station-name="stationName" />
 
-                            <div class="row">
-                                <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
-                                    <p class="text-light text-center"><span class="text-monster-blue">NOW PLAYING:</span> {{ !show ? 'Random Tunes' : show.title }}</p>
+                                <div class="row">
+                                    <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
+                                        <p class="text-light text-center"><span class="text-monster-blue">NOW PLAYING:</span> {{ !show ? 'Random Tunes' : show.title }}</p>
+                                    </div>
+                                    <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
+                                        <p class="text-light"><span class="text-monster-blue">NOW PLAYING:</span> {{ !show ? 'Random Tunes' : show.title }}</p>
+                                    </div>
+
+                                    <ShowInformation :jocks-count="jocksCount" :current-jocks="jocks" :current-show="show"></ShowInformation>
+
+                                    <Timeslot
+                                        v-show="timeslotsCount > 0"
+                                        :timeslot-count="timeslotsCount"
+                                        :timeslots="timeslots"
+                                        :jock-timeslots="jockTimeslots"
+                                        :show-timeslots="showTimeslots"
+                                        :day="today"
+                                        :date-today="date">
+                                    </Timeslot>
                                 </div>
-                                <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-                                    <p class="text-light"><span class="text-monster-blue">NOW PLAYING:</span> {{ !show ? 'Random Tunes' : show.title }}</p>
-                                </div>
 
-                                <ShowInformation :jocks-count="jocksCount" :current-jocks="jocks" :current-show="show"></ShowInformation>
+                                <div class="my-4"></div>
 
-                                <Timeslot
-                                    v-show="timeslotsCount > 0"
-                                    :timeslot-count="timeslotsCount"
-                                    :timeslots="timeslots"
-                                    :jock-timeslots="jockTimeslots"
-                                    :show-timeslots="showTimeslots"
-                                    :day="today"
-                                    :date-today="date">
-                                </Timeslot>
-                            </div>
-
-                            <div class="my-4"></div>
-
-                            <Podcasts v-show="podcastsCount > 0" :podcasts-count="podcastsCount" :podcasts="podcasts"></Podcasts>
-                        </client-only>
+                                <Podcasts v-show="podcastsCount > 0" :podcasts-count="podcastsCount" :podcasts="podcasts"></Podcasts>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </transition>
+            </transition>
+        </client-only>
     </div>
 </template>
 
