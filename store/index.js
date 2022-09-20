@@ -13,9 +13,9 @@ export const state = () => ({
     isPlayerLoading: false,
     isFormBusy: false,
     station: {
-        title: 'Monster Hot Top 40'
+        title: 'Countdown Top 7'
     },
-    stationName: 'Monster BT105.9',
+    stationName: 'Monster RX93.1',
     openCount: 0,
     message: {
         name: '',
@@ -24,7 +24,7 @@ export const state = () => ({
         topic: '',
         content: ''
     },
-    siteUrl: 'https://monstercebu.com'
+    siteUrl: 'https://rx931.com'
 });
 
 export const mutations = {
