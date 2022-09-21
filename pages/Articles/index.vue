@@ -138,8 +138,6 @@ export default {
         const { page, keyword } = route.query;
 
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             if (page) {
                 await store.dispatch("articles/getPage", ApiService.baseUrl() + `/articles?page=${page}`);
             } else if (keyword) {
@@ -147,8 +145,6 @@ export default {
             } else {
                 await store.dispatch("articles/setArticlesData");
             }
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             throw error;
         }

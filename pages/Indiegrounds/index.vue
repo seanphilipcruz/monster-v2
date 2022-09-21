@@ -127,13 +127,7 @@ export default {
 
     async asyncData({ store }) {
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
-            const indie = await store.dispatch("indiegrounds/getIndiegroundsData");
-
-            console.log(indie);
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
+            await store.dispatch("indiegrounds/getIndiegroundsData");
         } catch (error) {
             alert(error);
         }
@@ -160,6 +154,20 @@ export default {
         FeaturedArtists,
         IndiegroundPlaylist,
         Roster
+    },
+
+    methods: {
+        async fetchIndiegroundsData() {
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                await this.$store.dispatch("indiegrounds/getIndiegroundsData");
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        }
     },
 
     computed: {
@@ -195,6 +203,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchIndiegroundsData();
         }
     }
 }

@@ -155,13 +155,9 @@ export default {
 
     async asyncData({ store }) {
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("dailyCountdowns/getDailySurveyCharts");
             // Getting the widget.
             await store.dispatch("widgets/getChartsWidget");
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }
@@ -187,6 +183,22 @@ export default {
     components: {
         TDSHeader,
         Top5Chart
+    },
+
+    methods: {
+        async fetchDailySurveyData() {
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                await this.$store.dispatch("dailyCountdowns/getDailySurveyCharts");
+                // Getting the widget.
+                await this.$store.dispatch("widgets/getChartsWidget");
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        }
     },
 
     computed: {
@@ -234,6 +246,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchDailySurveyData();
         }
     }
 }

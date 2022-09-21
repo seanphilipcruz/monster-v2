@@ -91,13 +91,9 @@ export default {
         const { slugString } = params;
 
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("jocks/getJock", slugString);
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
-            return error;
+            alert(error);
         }
     },
 
@@ -121,6 +117,22 @@ export default {
     components: {
         SocialLinks,
         JockGallery
+    },
+
+    methods: {
+        async fetchJockData() {
+            const { slugString } = this.$route.params;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                await this.$store.dispatch("jocks/getJock", slugString);
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        }
     },
 
     computed: {
@@ -171,6 +183,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchJockData();
         }
     }
 }

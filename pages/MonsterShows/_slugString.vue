@@ -89,13 +89,9 @@ export default {
         const { slugString } = params;
 
         try {
-            await store.dispatch('setLoadingState', { type: 'page', status: true });
-
             await store.dispatch('shows/getShow', slugString);
             // Getting the widget.
             await store.dispatch("widgets/getChartsWidget");
-
-            await store.dispatch('setLoadingState', { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }
@@ -125,6 +121,24 @@ export default {
                 { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-shw.jpg" }
             ]
         }
+    },
+
+    methods: {
+        async fetchMonsterShowData() {
+            const { slugString } = this.$route.params;
+
+            try {
+                await this.$store.dispatch('setLoadingState', { type: 'page', status: true });
+
+                await this.$store.dispatch('shows/getShow', slugString);
+                // Getting the widget.
+                await this.$store.dispatch("widgets/getChartsWidget");
+
+                await this.$store.dispatch('setLoadingState', { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        },
     },
 
     computed: {
@@ -168,6 +182,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchMonsterShowData();
         }
     }
 }

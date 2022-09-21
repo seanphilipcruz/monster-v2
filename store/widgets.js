@@ -36,7 +36,7 @@ export const mutations = {
 export const actions = {
     async getChartsWidget({ commit }) {
         try {
-            const response = await ChartService.getCharts('top5');
+            const response = await ChartService.getChartWidget('top5');
 
             const result = response.data;
 

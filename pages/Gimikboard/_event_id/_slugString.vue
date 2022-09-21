@@ -52,11 +52,7 @@ export default {
         try {
             const { event_id, slugString } = params;
 
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("gimikboards/getGimikboard", event_id);
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }
@@ -83,6 +79,22 @@ export default {
         LatestNews
     },
 
+    methods: {
+        async fetchGimikboardData() {
+            try {
+                const { event_id, slugString } = this.$route.params;
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                await this.$store.dispatch("gimikboards/getGimikboard", event_id);
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        }
+    },
+
     computed: {
         isLoading() {
             return this.$store.state.isLoading;
@@ -100,6 +112,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchGimikboardData();
         }
     }
 }

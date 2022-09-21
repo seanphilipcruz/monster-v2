@@ -83,15 +83,11 @@ export default {
         const { shows } = route.query;
 
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             if (shows) {
                 await store.dispatch('shows/filterShows', shows);
             } else {
                 await store.dispatch('shows/getPageData');
             }
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }

@@ -160,8 +160,6 @@ export default {
         const { device, page } = route.query;
 
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("getHomeData");
 
             if (device && page) {
@@ -175,8 +173,6 @@ export default {
             } else {
                 await store.dispatch("wallpapers/getWallpapersData");
             }
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }

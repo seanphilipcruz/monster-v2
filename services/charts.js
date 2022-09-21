@@ -2,12 +2,8 @@ import axios from "axios";
 import ApiService from "@/services/api";
 
 const ChartService = {
-    async getCharts(type) {
-        return await axios.get(ApiService.baseUrl() + '/charts', {
-            params: {
-                type: type
-            }
-        });
+    async getCharts() {
+        return await axios.get(ApiService.baseUrl() + '/charts');
     },
 
     async voteChartSong(chart_id) {
@@ -32,7 +28,15 @@ const ChartService = {
                 date: date
             }
         });
-    }
+    },
+
+    async getChartWidget(type) {
+        return await axios.get(ApiService.baseUrl() + '/charts', {
+            params: {
+                type: type
+            }
+        });
+    },
 }
 
 export default ChartService;

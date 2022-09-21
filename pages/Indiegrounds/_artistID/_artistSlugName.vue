@@ -93,11 +93,7 @@ export default {
         try {
             const { artistID, artistSlugName } = params;
 
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("indiegrounds/getIndiegroundArtist", artistID);
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }
@@ -124,6 +120,22 @@ export default {
         IndiegroundPlaylist,
         About,
         Songs
+    },
+
+    methods: {
+        async fetchArtistData() {
+            try {
+                const { artistID, artistSlugName } = this.$route.params;
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                await this.$store.dispatch("indiegrounds/getIndiegroundArtist", artistID);
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        }
     },
 
     computed: {
@@ -159,6 +171,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchArtistData();
         }
     }
 }

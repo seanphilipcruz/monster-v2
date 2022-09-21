@@ -46,15 +46,11 @@ export default {
         const { batchNumber } = route.query;
 
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             if (batchNumber) {
                 await store.dispatch("scholars/getBatch", batchNumber);
             } else {
                 await store.dispatch("scholars/getScholarsBatch");
             }
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }

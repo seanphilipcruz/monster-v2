@@ -1,6 +1,6 @@
 <template>
     <div>
-        <banner></banner>
+        <banner />
 
         <div class="container">
             <div v-if="isLoading">
@@ -61,11 +61,7 @@ export default {
 
     async asyncData({ store }) {
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("countdowns/getChartData");
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }
@@ -95,6 +91,20 @@ export default {
     },
 
     methods: {
+        async fetchChartVotingData() {
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                // await this.$store.dispatch("countdowns/getChartData");
+
+                setTimeout(() => {
+                    this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+                }, 800);
+            } catch (error) {
+                alert(error);
+            }
+        },
+
         async voteSong(chartID) {
             const response = await this.$store.dispatch("voting/verifyRemainingVotes");
 
@@ -206,10 +216,14 @@ export default {
     },
 
     async created() {
-        await this.verifySession();
+        await this.fetchChartVotingData();
 
         if (process.client) {
             await this.incrementOpenCount();
+
+            setTimeout(() => {
+                this.verifySession();
+            }, 800);
         }
     },
 }

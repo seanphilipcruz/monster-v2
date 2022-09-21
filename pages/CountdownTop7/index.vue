@@ -1,6 +1,6 @@
 <template>
     <div>
-        <banner></banner>
+        <banner />
 
         <div id="chartTop" class="container">
             <div v-if="isLoading">
@@ -91,11 +91,7 @@ export default {
 
     async asyncData({ store }) {
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("countdowns/getChartData");
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }
@@ -124,6 +120,16 @@ export default {
     },
 
     methods: {
+        async fetchChartData() {
+            await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+            // await this.$store.dispatch("countdowns/getChartData");
+
+            setTimeout(() => {
+                this.$store.dispatch("setLoadingState", {type: 'page', status: false });
+            }, 800);
+        },
+
         async revealChart() {
             await this.$store.dispatch("setLoadingState", { type: 'content', status: true });
 
@@ -172,6 +178,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchChartData();
         }
     }
 }

@@ -56,11 +56,7 @@ export default {
 
     async asyncData({ store }) {
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             await store.dispatch("liveStream/getLiveStreamPageData");
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             return error;
         }

@@ -178,8 +178,6 @@ export default {
         const { showID, show, page } = route.query;
 
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             if (showID && page) {
                 await store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?filter=${showID}&page=${page}`);
             } else if (page) {
@@ -191,8 +189,6 @@ export default {
             } else {
                 await store.dispatch("podcasts/setPodcastsData");
             }
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }

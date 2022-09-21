@@ -29,15 +29,11 @@ export default {
         const { date } = route.query;
 
         try {
-            await store.dispatch("setLoadingState", { type: 'page', status: true });
-
             if (!date) {
                 await store.dispatch("monsterHit/getMonsterHitData");
             } else {
                 await store.dispatch("monsterHit/getMonsterHitByDate", date);
             }
-
-            await store.dispatch("setLoadingState", { type: 'page', status: false });
         } catch (error) {
             alert(error);
         }
@@ -66,6 +62,24 @@ export default {
     },
 
     methods: {
+        async fetchAllTimeHitsData() {
+            const { date } = this.$route.query;
+
+            try {
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+                if (!date) {
+                    await this.$store.dispatch("monsterHit/getMonsterHitData");
+                } else {
+                    await this.$store.dispatch("monsterHit/getMonsterHitByDate", date);
+                }
+
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            } catch (error) {
+                alert(error);
+            }
+        },
+
         async getMonsterHit(date) {
             await this.$store.dispatch("setLoadingState", { type: 'content', status: true });
 
@@ -110,6 +124,8 @@ export default {
     async created() {
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.fetchAllTimeHitsData();
         }
     }
 }

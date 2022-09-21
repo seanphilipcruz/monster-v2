@@ -8,7 +8,7 @@ export default {
     target: 'static',
 
     server: {
-        host: '192.168.0.2'
+        // host: '192.168.0.2'
     },
 
     // Global page headers: https://go.nuxtjs.dev/config-head

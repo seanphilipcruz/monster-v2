@@ -1,6 +1,6 @@
 <template>
     <div>
-        <banner></banner>
+        <banner />
 
         <div class="container">
             <div class="my-5">
