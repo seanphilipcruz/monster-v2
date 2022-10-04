@@ -13,8 +13,8 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        titleTemplate: '%s | Monster RX93.1',
-        title: 'Monster RX93.1',
+        titleTemplate: '%s | Monster BT105.9',
+        title: 'Monster BT105.9',
         htmlAttrs: {
             lang: 'en'
         },
@@ -25,12 +25,12 @@ export default {
             { name: 'subject', content: 'Radio' },
             { name: 'language', content: 'ES' },
             { name: 'author', content: 'Audiovisual Communicators Inc.' },
-            { name: 'url', content: 'https://rx931.com' },
-            { name: 'DC.title', content: 'monsterrx931' },
+            { name: 'url', content: 'https://monstercebu.com' },
+            { name: 'DC.title', content: 'monsterbt1059' },
             { name: 'geo.region', content: 'PH' },
-            { name: 'geo.placename', content: 'Pasig City' },
-            { name: 'geo.position', content: '10.3222333;123.9136394' },
-            { name: 'ICBM', content: '10.3222333, 123.9136394' },
+            { name: 'geo.placename', content: 'Cebu City' },
+            { name: 'geo.position', content: '10.3221877; 123.9117792' },
+            { name: 'ICBM', content: '10.3221877, 123.9117792' },
             { name: 'format-detection', content: 'telephone=no' },
             { 'http-equiv': 'Content-Security-Policy', content: "img-src * 'self' data:;\n" +
                     "          default-src * 'self' gap: wss: ws: ;\n" +
@@ -38,8 +38,8 @@ export default {
                     "          script-src * 'self' 'unsafe-inline' 'unsafe-eval';\n" +
                     "          frame-src * 'self' data: http: https: wss: ws: 'unsafe-inline' 'unsafe-eval';" },
             { 'property': 'og:type', content: "website" },
-            { 'property': 'twitter:site', content: "@RX931" },
-            { 'property': 'twitter:creator', content: "@RX931" },
+            { 'property': 'twitter:site', content: "@bt1059" },
+            { 'property': 'twitter:creator', content: "@bt1059" },
             { 'property': 'twitter:card', content: "summary_large_image" },
             { 'property': 'fb:app_id', content: '250218719159269' }
         ],
