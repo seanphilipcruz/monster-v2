@@ -95,11 +95,13 @@ export default {
             try {
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
 
-                // await this.$store.dispatch("countdowns/getChartData");
+                await setTimeout(() => {
+                    this.$store.dispatch("countdowns/getChartData");
+                }, 1000);
 
-                setTimeout(() => {
-                    this.$store.dispatch("setLoadingState", { type: 'page', status: false });
-                }, 800);
+                await setTimeout(() => {
+                    this.$store.dispatch("setLoadingState", {type: 'page', status: false });
+                }, 1400);
             } catch (error) {
                 alert(error);
             }
@@ -223,7 +225,7 @@ export default {
 
             setTimeout(() => {
                 this.verifySession();
-            }, 800);
+            }, 1400);
         }
     },
 }

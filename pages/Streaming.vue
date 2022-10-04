@@ -1,16 +1,15 @@
 <template>
     <div>
         <client-only>
-            <banner v-if="!show" />
-            <custom-banner v-else :image="show.header_image" />
+            <loader v-if="isLoading" />
 
-            <div v-if="isLoading">
-                <loader />
-            </div>
             <transition name="fade">
-                <div class="bg-dark-gray-container" v-if="!isLoading">
-                    <div class="container">
-                        <div class="my-5">
+                <div v-if="!isLoading">
+                    <streaming-banner />
+
+                    <div class="bg-dark-gray-container" v-if="!isLoading">
+                        <div class="container">
+                            <div class="my-5">
                                 <PageTitle :station-name="stationName" />
 
                                 <div class="row">
@@ -37,6 +36,7 @@
                                 <div class="my-4"></div>
 
                                 <Podcasts v-show="podcastsCount > 0" :podcasts-count="podcastsCount" :podcasts="podcasts"></Podcasts>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,26 +54,18 @@ import Podcasts from "@/components/live/Podcasts";
 export default {
     name: "LiveStream",
 
-    async asyncData({ store }) {
-        try {
-            await store.dispatch("liveStream/getLiveStreamPageData");
-        } catch (error) {
-            return error;
-        }
-    },
-
     head() {
         return {
             title: !this.show ? 'Live Stream' : `Live: ${this.show.title}`,
             meta: [
-                { hid: 'description', name: 'description', content: !this.show ? 'Live Stream | Monster RX93.1' : this.show.front_description },
+                { hid: 'description', name: 'description', content: !this.show ? 'Live Shows via Monster RX93.1 Streaming' : this.show.front_description },
                 { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
                 { 'property': 'og:title', content: !this.show ? 'Live Stream | Monster RX93.1' : `Live: ${this.show.title} | Monster RX93.1` },
-                { 'property': 'og:description', content: !this.show ? 'Live Stream | Monster RX93.1' : this.show.front_description },
+                { 'property': 'og:description', content: !this.show ? 'Live Shows via Monster RX93.1 Streaming' : this.show.front_description },
                 { 'property': 'og:image', content: !this.show ? "https://rx931.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
                 { 'property': 'og:image:alt', content: !this.show ? "https://rx931.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
                 { 'property': 'twitter:title', content: !this.show ? 'Live Stream | Monster RX93.1' : `Live: ${this.show.title} | Monster RX93.1` },
-                { 'property': 'twitter:description', content: !this.show ? 'Live Stream | Monster RX93.1' : this.show.front_description },
+                { 'property': 'twitter:description', content: !this.show ? 'Live Shows via Monster RX93.1 Streaming' : this.show.front_description },
                 { 'property': 'twitter:image', content: !this.show ? "https://rx931.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image }
             ]
         }
@@ -87,15 +79,6 @@ export default {
     },
 
     methods: {
-        async playLiveStream() {
-            const streamData = {
-                show: this.show,
-                stream: this.live
-            };
-
-            await this.$store.dispatch("player/getAudioData", streamData);
-        },
-
         async fetchLiveStreamData() {
             await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
 
@@ -105,7 +88,7 @@ export default {
         },
 
         async refreshLiveStreamPage() {
-            await this.$store.dispatch("liveStream/refreshLiveStream");
+            await this.$store.dispatch("liveStream/getLiveStreamPageData", true);
         },
 
         trimWhiteSpaces(text = "") {
@@ -230,10 +213,10 @@ export default {
     },
 
     async created() {
+        await this.fetchLiveStreamData();
+
         if (process.client) {
             await this.incrementOpenCount();
-
-            await this.fetchLiveStreamData();
 
             let timeout = this.getRemainingTimeToNextHour();
 

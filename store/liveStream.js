@@ -58,53 +58,44 @@ export const mutations = {
 };
 
 export const actions = {
-    async getLiveStreamPageData({ commit }) {
+    async getLiveStreamPageData({ commit }, _refresh = false) {
         try {
             const response = await LiveStreamService.getLiveStream();
 
             const { jocks, timeslots, show, podcasts, live, day, date } = response.data;
 
-            const liveStreamData = {
-                'today': day,
-                'date': date,
-                'live': live,
-                'timeslots': timeslots,
-                'podcasts': podcasts
-            };
+            if (_refresh === true) {
+                const liveStreamData = {
+                    'today': day,
+                    'date': date,
+                    'timeslots': timeslots,
+                    'podcasts': podcasts
+                };
 
-            const programData = {
-                show: show,
-                jocks: jocks
-            };
+                const programData = {
+                    show: show,
+                    jocks: jocks
+                };
 
-            commit("setLiveStreamPageData", liveStreamData);
-            commit("setProgram", programData);
-        } catch (error) {
-            return error;
-        }
-    },
+                commit("setLiveStreamPageData", liveStreamData);
+                commit("setProgram", programData);
+            } else {
+                const liveStreamData = {
+                    'today': day,
+                    'date': date,
+                    'live': live,
+                    'timeslots': timeslots,
+                    'podcasts': podcasts
+                };
 
-    // Refresh without getting the live stream
-    async refreshLiveStream({ commit }) {
-        try {
-            const response = await LiveStreamService.getLiveStream();
+                const programData = {
+                    show: show,
+                    jocks: jocks
+                };
 
-            const { jocks, timeslots, show, podcasts, live, day, date } = response.data;
-
-            const liveStreamData = {
-                'today': day,
-                'date': date,
-                'timeslots': timeslots,
-                'podcasts': podcasts
-            };
-
-            const programData = {
-                show: show,
-                jocks: jocks
-            };
-
-            commit("setLiveStreamPageData", liveStreamData);
-            commit("setProgram", programData);
+                commit("setLiveStreamPageData", liveStreamData);
+                commit("setProgram", programData);
+            }
         } catch (error) {
             return error;
         }

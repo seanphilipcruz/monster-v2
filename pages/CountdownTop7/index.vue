@@ -123,11 +123,13 @@ export default {
         async fetchChartData() {
             await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
 
-            // await this.$store.dispatch("countdowns/getChartData");
+            await setTimeout(() => {
+                this.$store.dispatch("countdowns/getChartData");
+            }, 1000);
 
-            setTimeout(() => {
+            await setTimeout(() => {
                 this.$store.dispatch("setLoadingState", {type: 'page', status: false });
-            }, 800);
+            }, 1400);
         },
 
         async revealChart() {
