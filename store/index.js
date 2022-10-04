@@ -16,6 +16,8 @@ export const state = () => ({
         title: 'Countdown Top 7'
     },
     stationName: 'Monster RX93.1',
+    chartCount: '20',
+    stationCode: 'mnl',
     openCount: 0,
     message: {
         name: '',
