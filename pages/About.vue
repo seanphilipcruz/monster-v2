@@ -75,38 +75,18 @@
                 <div class="container">
                     <div class="my-3"></div>
                     <div class="m-4">
-                        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
-                            <div class="card bg-medium-gray text-light">
-                                <div class="row g-0">
-                                    <div class="col-12 align-self-center">
-                                        <div class="card-img text-center">
-                                            <div class="m-4 text-monster-blue">COVERAGE</div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="card bg-medium-gray text-light">
+                            <div class="row g-0">
                                 <div class="col-12 align-self-center">
-                                    <div class="card-body bg-light-gray">
-                                        <div class="m-4">
-                                            <div class="font-thin-1 text-center">{{ stationName }}’s We have installed imported high powered antennas and transmitters. We’ve suited our studios to be at par with the best stations in the country. <br>We are located at East Aurora Tower Condominium, #3 Pres. Quezon Street, Villa Aurora, Mabolo, Cebu City. And of course, we are heard all over the world via live web streaming.</div>
-                                        </div>
+                                    <div class="card-img text-center">
+                                        <div class="m-4 text-monster-blue">COVERAGE</div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
-                            <div class="card bg-medium-gray text-light">
-                                <div class="row g-0">
-                                    <div class="col-md-8 align-self-center">
-                                        <div class="card-body bg-light-gray">
-                                            <div class="m-4">
-                                                <div class="font-thin-1 text-center">{{ stationName }}’s We have installed imported high powered antennas and transmitters. We’ve suited our studios to be at par with the best stations in the country. <br>We are located at East Aurora Tower Condominium, #3 Pres. Quezon Street, Villa Aurora, Mabolo, Cebu City. And of course, we are heard all over the world via live web streaming.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 align-self-center">
-                                        <div class="card-img text-center">
-                                            <div class="text-monster-blue"><img src="~/images/about/coverage.png" alt="audience-logo" width="50px"><span class="ms-3 mt-1">COVERAGE</span></div>
-                                        </div>
+                            <div class="col-12 align-self-center">
+                                <div class="card-body bg-light-gray">
+                                    <div class="m-4">
+                                        <div class="font-thin-1 text-center">{{ stationName }}’s We have installed imported high powered antennas and transmitters. We’ve suited our studios to be at par with the best stations in the country. <br>We are located at East Aurora Tower Condominium, #3 Pres. Quezon Street, Villa Aurora, Mabolo, Cebu City. And of course, we are heard all over the world via live web streaming.</div>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +111,7 @@
                                                         <div class="row">
                                                             <div class="col-6 text-center">
                                                                 <a href="https://rx931.com" target="_blank">
-                                                                    <img src="~/images/logo.png" alt="cebu-station" class="img-fluid rounded-start interactive-card" style="width: 120px">
+                                                                    <img src="~/images/about/logo.png" alt="cebu-station" class="img-fluid rounded-start interactive-card" style="width: 120px">
                                                                 </a>
                                                             </div>
                                                             <div class="col-6 text-center">
