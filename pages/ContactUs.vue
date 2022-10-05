@@ -42,7 +42,7 @@
                                                         <button type="button" class="btn btn-info btn-monster-blue btn-rounded">CONTACT NUMBERS</button>
                                                     </div>
                                                     <div class="col-12">
-                                                        <p class="my-3 barlow text-center">Phone Numbers: 8633.5414 (to 16)<br>Radio Number: 8631-9393<br>TeleFax: 633.5417</p>
+                                                        <p class="my-3 barlow text-center">Phone Numbers: (+63) 922 337 6177</p>
                                                     </div>
                                                 </div>
                                                 <div class="my-2"></div>
