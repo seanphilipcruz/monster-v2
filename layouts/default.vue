@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Navigation :articles="hasArticles" :podcasts="hasPodcasts" />
+        <Navigation :articles="articles" :podcasts="podcasts" />
         <Nuxt />
         <Component is="AudioPlayer"></Component>
         <Footer />
@@ -12,16 +12,12 @@ export default {
     name: "default",
 
     computed: {
-        hasArticles() {
-            let article = typeof this.$store.state.article;
-
-            return article === 'object';
+        articles() {
+            return this.$store.state.article;
         },
 
-        hasPodcasts() {
-            let podcast = typeof this.$store.state.podcast;
-
-            return podcast === 'object';
+        podcasts() {
+            return this.$store.state.podcast;
         }
     }
 }

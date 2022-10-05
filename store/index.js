@@ -16,7 +16,7 @@ export const state = () => ({
         title: 'Monster Hot Top 40'
     },
     stationName: 'Monster BT105.9',
-    chartCount: '40',
+    chartCount: 40,
     stationCode: 'cbu',
     openCount: 0,
     message: {

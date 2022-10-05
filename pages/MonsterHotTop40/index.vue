@@ -44,14 +44,14 @@
                             </div>
 
                             <page-loader v-if="isContentLoading"/>
-                            <ChartContainer v-else :charts="charts" :is-full-charts="isFullCharts" />
+                            <ChartContainer v-else :charts="charts" :is-full-charts="isFullCharts" :station-code="stationCode" />
 
                             <div class="my-4"></div>
 
                             <div class="row">
                                 <div class="col-12 d-grid">
-                                    <button type="button" @click="revealChart();" v-if="!isFullCharts" class="btn btn-info btn-monster-blue barlow btn-rounded">SEE MORE (TOP 20)</button>
-                                    <button type="button" @click="revealChart();" v-else class="btn btn-info btn-monster-blue barlow btn-rounded">SEE LESS (TOP 7)</button>
+                                    <button type="button" @click="revealChart();" v-if="!isFullCharts" class="btn btn-info btn-monster-blue barlow btn-rounded">SEE MORE (TOP {{ chartCount }})</button>
+                                    <button type="button" @click="revealChart();" v-else class="btn btn-info btn-monster-blue barlow btn-rounded">SEE LESS (TOP {{ chartCount >= 20 ? 10 : 7 }})</button>
                                 </div>
                             </div>
                         </div>
@@ -170,6 +170,14 @@ export default {
 
         chartTitle() {
             return this.$store.state.countdowns.chartTitle;
+        },
+
+        chartCount() {
+            return this.$store.state.chartCount;
+        },
+
+        stationCode() {
+            return this.$store.state.stationCode;
         },
 
         routePath() {

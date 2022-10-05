@@ -15,7 +15,7 @@
             <div class="my-3"></div>
             <div class="row">
                 <div class="col-12 d-grid">
-                    <router-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded">LISTEN: TOP 20</router-link>
+                    <router-link :to="{ name: 'MonsterHotTop40' }" class="btn btn-info btn-monster-blue btn-rounded">LISTEN: TOP 20</router-link>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <div class="my-3"></div>
                 <div class="row">
                     <div class="col-12 d-grid">
-                        <router-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded">LISTEN: TOP 20</router-link>
+                        <router-link :to="{ name: 'MonsterHotTop40' }" class="btn btn-info btn-monster-blue btn-rounded">LISTEN: TOP {{ chartCount }}</router-link>
                     </div>
                 </div>
             </div>
@@ -57,6 +57,12 @@ export default {
         chartDate: {
             required: true
         }
+    },
+
+    computed: {
+        chartCount() {
+            return this.$store.state.chartCount;
+        },
     }
 }
 </script>
