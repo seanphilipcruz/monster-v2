@@ -26,7 +26,7 @@
                                     <div class="col-lg-12 mb-3">
                                         <div class="card bg-medium-gray text-light">
                                             <div class="ratio ratio-16x9">
-                                                <iframe class="iframe-responsive" src="https://maps.google.com/maps?q=RX93.1&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                                <iframe class="iframe-responsive" src="https://maps.google.com/maps?q=Monster%20BT%20105.9%20Cebu&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                                             </div>
                                             <div class="card-body">
                                                 <div class="row justify-content-center">
@@ -34,7 +34,7 @@
                                                         <button type="button" class="btn btn-info btn-monster-blue btn-rounded">STATION ADDRESS</button>
                                                     </div>
                                                     <div class="col-lg-12">
-                                                        <p class="my-3 barlow text-center">17th floor, Strata 2000 Building F. Ortigas <br> Jr. Road (Emerald Avenue), Ortigas Center, <br> Pasig City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
+                                                        <p class="my-3 barlow text-center">#3 President Quezon Street <br>Kasambagan, Mabolo <br>Cebu City (Don't forget to bring a valid ID for building entrance)</p>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
@@ -52,33 +52,9 @@
                                                     </div>
                                                     <div class="my-3">
                                                         <div class="row">
-                                                            <div class="col-12 col-md-6">
-                                                                <div class="barlow-heading">events@rx931.com</div>
-                                                                <p class="text-light barlow">Throw awesome events with help from the Monster team. Send all your event-partnership queries here!</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">hosts@rx931.com</div>
-                                                                <p class="text-light barlow">Interested in hiring Monster Jocks to host your next party? Share some information about your event by sending us a message.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">internship@rx931.com</div>
-                                                                <p class="text-light barlow">Stand out from your peers by becoming a Monster Intern! Send your resumes here.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">jobs@rx931.com</div>
-                                                                <p class="text-light barlow">Get in touch with our HR for career opportunities with the Monster.</p>
-                                                                <div class="my-4"></div>
-                                                            </div>
-                                                            <div class="col-12 col-md-6">
-                                                                <div class="barlow-heading">sales@rx931.com</div>
-                                                                <p class="text-light barlow">Reach out to our sales team for all advertising inquiries including requesting for rate cards.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">schools@rx931.com</div>
-                                                                <p class="text-light barlow">Organizing a school event? Inquiring about how to become a student jock? Send all your questions here and we'll get right back to you!</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">scholar@rx931.com</div>
-                                                                <p class="text-light barlow">Send your messages/inquiries to make a donation or to submit scholarship applications. For scholarship applicants, feel free to share your info here.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">ios@rx931.com</div>
-                                                                <p class="text-light barlow">Send the concerns or bugs in the mobile app, either iOS or Android. express the issue well and when it is happening inside the app.</p>
-                                                                <div class="my-4"></div>
+                                                            <div class="col-12">
+                                                                For Inquiries, email at
+                                                                <p class="text-monster-yellow">bt1059.monsterradio@gmail.com</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -124,7 +100,7 @@
                                     <div class="col-lg-12">
                                         <div class="card bg-medium-gray text-light">
                                             <div class="ratio ratio-16x9">
-                                                <iframe class="iframe-responsive" src="https://maps.google.com/maps?q=RX93.1&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                                <iframe class="iframe-responsive" src="https://maps.google.com/maps?q=Monster%20BT%20105.9%20Cebu&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                                             </div>
                                             <div class="card-body">
                                                 <div class="row">
@@ -136,49 +112,25 @@
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="my-3 mx-2">
-                                                            <p class="barlow">17th floor, Strata 2000 Building F. Ortigas <br> Jr. Road (Emerald Avenue), Ortigas Center, <br> Pasig City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
+                                                            <p class="barlow">#3 President Quezon Street <br>Kasambagan, Mabolo <br>Cebu City (Don't forget to bring a valid ID for building entrance)</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="my-3 mx-2">
-                                                            <p class="barlow">Phone Numbers: 8633.5414 (to 16)<br>Radio Number: 8631-9393<br>TeleFax: 633.5417</p>
+                                                            <p class="barlow">Phone Numbers: (+63) 922 337 6177</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="my-4"></div>
                                                 <div class="row">
-                                                    <div class="col-lg-6 d-grid">
+                                                    <div class="col d-grid">
                                                         <button type="button" class="btn btn-info btn-monster-blue btn-rounded">EMAIL ADDRESS</button>
                                                     </div>
                                                     <div class="my-3">
                                                         <div class="row">
-                                                            <div class="col-lg-6">
-                                                                <div class="barlow-heading">events@rx931.com</div>
-                                                                <p class="text-light barlow">Throw awesome events with help from the Monster team. Send all your event-partnership queries here!</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">hosts@rx931.com</div>
-                                                                <p class="text-light barlow">Interested in hiring Monster Jocks to host your next party? Share some information about your event by sending us a message.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">internship@rx931.com</div>
-                                                                <p class="text-light barlow">Stand out from your peers by becoming a Monster Intern! Send your resumes here.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">jobs@rx931.com</div>
-                                                                <p class="text-light barlow">Get in touch with our HR for career opportunities with the Monster.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">sales@rx931.com</div>
-                                                                <p class="text-light barlow">Reach out to our sales team for all advertising inquiries including requesting for rate cards.</p>
-                                                                <div class="my-4"></div>
-                                                            </div>
-                                                            <div class="col-lg-6">
-                                                                <div class="barlow-heading">schools@rx931.com</div>
-                                                                <p class="text-light barlow">Organizing a school event? Inquiring about how to become a student jock? Send all your questions here and we'll get right back to you!</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">scholar@rx931.com</div>
-                                                                <p class="text-light barlow">Send your messages/inquiries to make a donation or to submit scholarship applications. For scholarship applicants, feel free to share your info here.</p>
-                                                                <div class="my-4"></div>
-                                                                <div class="barlow-heading">ios@rx931.com</div>
-                                                                <p class="text-light barlow">Send the concerns or bugs in the mobile app, either iOS or Android. express the issue well and when it is happening inside the app.</p>
-                                                                <div class="my-4"></div>
+                                                            <div class="col text-center barlow">
+                                                                For Inquiries, email at
+                                                                <p class="text-monster-yellow">bt1059.monsterradio@gmail.com</p>
                                                             </div>
                                                         </div>
                                                     </div>

@@ -205,7 +205,7 @@
                                     <div class="font-responsive mb-3">Contact Us</div>
                                     <p class="font-responsive font-thin-1">If you have any questions about this Privacy Policy, please contact us:</p>
                                     <ul class="font-responsive font-thin-1">
-                                        <li>By email: <a href="mailto:info@rx931.com" class="text-monster-blue">info@rx931.com</a></li>
+                                        <li>By email: <a href="mailto:bt1059.monsterradio@gmail.com" class="text-monster-blue">bt1059.monsterradio@gmail.com</a></li>
                                         <li>By visiting this page on our website: <router-link :to="{ name: 'ContactUs' }" class="text-monster-blue">{{ stationUrl }}/ContactUs</router-link></li>
                                     </ul>
                                 </div>
