@@ -16,7 +16,8 @@ export const state = () => ({
     chartTitle: null,
     article: null,
     tmr: null,
-    podcast: null
+    podcast: null,
+    outbreakCharts: []
 });
 
 export const mutations = {
@@ -30,6 +31,10 @@ export const mutations = {
         state.article = payload.articles;
         state.tmr = payload.tmr;
         state.podcast = payload.podcasts;
+    },
+
+    setOutbreaksWidget(state, payload) {
+        state.outbreakCharts = payload.outbreak_charts;
     }
 };
 
@@ -53,6 +58,18 @@ export const actions = {
             const result = response.data;
 
             commit("setLatestNewsWidget", result);
+        } catch (error) {
+            return error;
+        }
+    },
+
+    async outbreaksWidget({ commit }) {
+        try {
+            const response = await ChartService.getOutbreakSongs();
+
+            const result = response.data;
+
+            commit('setOutbreaksWidget', result);
         } catch (error) {
             return error;
         }

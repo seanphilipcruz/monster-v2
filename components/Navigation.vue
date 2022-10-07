@@ -82,7 +82,8 @@
 
                         <ul class="dropdown-menu text-center" aria-labelledby="charts-dropdown">
                             <li><nuxt-link :to="{ name: 'MonsterHotTop40' }" class="dropdown-item">{{ stationChart }}</nuxt-link></li>
-                            <li><nuxt-link :to="{ name: 'MonsterHotTop40-Voting' }" class="dropdown-item">Hit List Voting</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'SouthsideSounds' }" class="dropdown-item">Southside Sounds</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'MonsterHotTop40-Voting' }" class="dropdown-item">Monster Hit Voting</nuxt-link></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

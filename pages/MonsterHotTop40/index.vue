@@ -73,6 +73,8 @@
                                 </div>
                             </div>
                             <div class="my-3"></div>
+                            <OutbreakSongs />
+                            <div class="my-3"></div>
                             <LatestNews />
                         </div>
                     </div>
@@ -85,6 +87,7 @@
 <script>
 import ChartContainer from "@/components/charts/Charts";
 import LatestNews from "@/components/widgets/LatestNews";
+import OutbreakSongs from "@/components/widgets/OutbreakSongs";
 
 export default {
     name: "CountdownTop7",
@@ -115,6 +118,7 @@ export default {
     },
 
     components: {
+        OutbreakSongs,
         LatestNews,
         ChartContainer
     },

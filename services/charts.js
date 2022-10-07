@@ -37,6 +37,14 @@ const ChartService = {
             }
         });
     },
+
+    async getSouthsideSounds() {
+        return await axios.get(ApiService.baseUrl() + '/southside');
+    },
+
+    async getOutbreakSongs() {
+        return await axios.get(ApiService.baseUrl() + '/outbreaks');
+    }
 }
 
 export default ChartService;

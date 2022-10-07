@@ -94,7 +94,9 @@ export default {
     },
 
     async created() {
-        await this.fetchWidgetData();
+        setTimeout(async () => {
+            await this.fetchWidgetData();
+        }, 1500);
     }
 }
 </script>

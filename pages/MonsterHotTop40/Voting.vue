@@ -41,6 +41,8 @@
                         <div class="row">
                             <FullChart :charts="charts" :vote-count="voteCount" :vote-chart-song="voteSong" />
                             <div class="col-lg-3">
+                                <OutbreakSongs />
+                                <div class="my-3"></div>
                                 <LatestNews />
                             </div>
                         </div>
@@ -55,6 +57,7 @@
 import LatestNews from "@/components/widgets/LatestNews";
 import ShortChart from "@/components/voting/ShortChart";
 import FullChart from "@/components/voting/FullChart";
+import OutbreakSongs from "@/components/widgets/OutbreakSongs";
 
 export default {
     name: "StationCountdownVoting",
@@ -85,6 +88,7 @@ export default {
     },
 
     components: {
+        OutbreakSongs,
         FullChart,
         ShortChart,
         LatestNews
@@ -95,8 +99,8 @@ export default {
             try {
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
 
-                await setTimeout(() => {
-                    this.$store.dispatch("countdowns/getChartData");
+                await setTimeout(async () => {
+                    await this.$store.dispatch("countdowns/getChartData");
                 }, 1000);
 
                 await setTimeout(() => {
@@ -210,6 +214,10 @@ export default {
 
         stationChart() {
             return this.$store.state.station.title;
+        },
+
+        outbreakSongs() {
+            return this.$store.state.widgets.outbreakCharts;
         },
 
         routePath() {
