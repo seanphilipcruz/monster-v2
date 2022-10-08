@@ -35,9 +35,9 @@
                         <a id="charts-dropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">CHARTS</a>
 
                         <ul class="dropdown-menu text-center" aria-labelledby="charts-dropdown">
-                            <li><nuxt-link :to="{ name: 'MonsterHotTop40' }" class="dropdown-item">{{ stationChart }}</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'CountdownTop7' }" class="dropdown-item">{{ stationChart }}</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'TheDailySurveyTop5' }" class="dropdown-item">The Daily Survey Top 5</nuxt-link></li>
-                            <li><nuxt-link :to="{ name: 'MonsterHotTop40-Voting' }" class="dropdown-item">Countdown Voting</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'CountdownTop7-Voting' }" class="dropdown-item">Countdown Voting</nuxt-link></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -81,9 +81,9 @@
                         <a id="charts-dropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">CHARTS</a>
 
                         <ul class="dropdown-menu text-center" aria-labelledby="charts-dropdown">
-                            <li><nuxt-link :to="{ name: 'MonsterHotTop40' }" class="dropdown-item">{{ stationChart }}</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'CountdownTop7' }" class="dropdown-item">{{ stationChart }}</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'SouthsideSounds' }" class="dropdown-item">Southside Sounds</nuxt-link></li>
-                            <li><nuxt-link :to="{ name: 'MonsterHotTop40-Voting' }" class="dropdown-item">Monster Hit Voting</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'CountdownTop7-Voting' }" class="dropdown-item">Monster Hit Voting</nuxt-link></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

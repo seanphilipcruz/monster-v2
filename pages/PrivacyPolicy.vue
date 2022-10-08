@@ -233,14 +233,14 @@ export default {
             title: 'Privacy Policy',
             meta: [
                 { hid: 'description', name: 'description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: 'Privacy Policy | Monster BT105.9 Cebu' },
+                { 'property': 'og:url', content: this.stationUrl + this.routePath },
+                { 'property': 'og:title', content: `Privacy Policy | ${this.stationName}` },
                 { 'property': 'og:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: 'Privacy Policy | Monster BT105.9 Cebu' },
+                { 'property': 'og:image', content: `${this.stationUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image:alt', content: `${this.stationUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'twitter:title', content: `Privacy Policy | ${this.stationName}` },
                 { 'property': 'twitter:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { 'property': 'twitter:image', content: `${this.stationUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
     },
@@ -252,6 +252,10 @@ export default {
 
         stationUrl() {
             return this.$store.state.siteUrl;
+        },
+
+        stationName() {
+            return this.$store.state.stationName;
         },
 
         routePath() {

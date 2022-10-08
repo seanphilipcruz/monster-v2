@@ -44,14 +44,14 @@ export default {
             title: 'The Monster Hit List Finder',
             meta: [
                 { hid: 'description', name: 'description', content: 'Search for the Monster Hit on a day.' },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: 'The Monster Hit List Finder | Monster BT105.9' },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `The Monster Hit List Finder | ${this.stationName}` },
                 { 'property': 'og:description', content: 'Search for the Monster Hit on a day.' },
-                { 'property': 'og:image', content: !this.currentHit ? 'https://monstercebu.com/images/_assets/default.png' : this.currentHit.song.album.image },
-                { 'property': 'og:image:alt', content: !this.currentHit ? 'https://monstercebu.com/images/_assets/default.png' : this.currentHit.song.album.image },
-                { 'property': 'twitter:title', content: 'The Monster Hit List Finder | Monster BT105.9' },
+                { 'property': 'og:image', content: !this.currentHit ? `${this.siteUrl}/images/_assets/default.png` : this.currentHit.song.album.image },
+                { 'property': 'og:image:alt', content: !this.currentHit ? `${this.siteUrl}/images/_assets/default.png` : this.currentHit.song.album.image },
+                { 'property': 'twitter:title', content: `The Monster Hit List Finder | ${this.stationName}` },
                 { 'property': 'twitter:description', content: 'Search for the Monster Hit on a day.' },
-                { 'property': 'twitter:image', content: !this.currentHit ? 'https://monstercebu.com/images/_assets/default.png' : this.currentHit.song.album.image }
+                { 'property': 'twitter:image', content: !this.currentHit ? `${this.siteUrl}/images/_assets/default.png` : this.currentHit.song.album.image }
             ]
         }
     },
@@ -114,6 +114,14 @@ export default {
 
         dates() {
             return this.$store.state.monsterHit.dates;
+        },
+
+        stationName() {
+            return this.$store.state.stationName;
+        },
+
+        siteUrl() {
+            return this.$store.state.siteUrl;
         },
 
         routePath() {

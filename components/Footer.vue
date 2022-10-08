@@ -63,10 +63,10 @@ export default {
         },
 
         version() {
-            // Manila 2.1.2
+            // Manila 2.1.3
             // Cebu 2.0.0
             // Davao 2.0.0
-            return '2.0.0'
+            return '2.1.3'
         }
     }
 }

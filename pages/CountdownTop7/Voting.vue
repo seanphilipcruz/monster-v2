@@ -75,14 +75,14 @@ export default {
             title: `${this.stationChart} Voting`,
             meta: [
                 { hid: 'description', name: 'description', content: `${this.stationChart} voting page: Vote online for your favorite Monster hits.` },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.stationChart} Voting | Monster BT105.9 Cebu` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `${this.stationChart} Voting | ${this.siteUrl}` },
                 { 'property': 'og:description', content: `${this.stationChart} voting page: Vote online for your favorite Monster hits.` },
-                { 'property': 'og:image', content: 'https://monstercebu.com/images/_assets/thumbnails/thmbn-hit.jpg' },
-                { 'property': 'og:image:alt', content: 'https://monstercebu.com/images/_assets/thumbnails/thmbn-hit.jpg' },
-                { 'property': 'twitter:title', content: `${this.stationChart} Voting | Monster BT105.9 Cebu` },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-hit.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-hit.jpg` },
+                { 'property': 'twitter:title', content: `${this.stationChart} Voting | ${this.siteUrl}` },
                 { 'property': 'twitter:description', content: `${this.stationChart} page: Vote online for your favorite Monster hits.` },
-                { 'property': 'twitter:image', content: 'https://monstercebu.com/images/_assets/thumbnails/thmbn-hit.jpg' }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-hit.jpg` }
             ]
         }
     },
@@ -212,12 +212,20 @@ export default {
             return this.userSession.votes;
         },
 
+        outbreakSongs() {
+            return this.$store.state.widgets.outbreakCharts;
+        },
+
         stationChart() {
             return this.$store.state.station.title;
         },
 
-        outbreakSongs() {
-            return this.$store.state.widgets.outbreakCharts;
+        stationName() {
+            return this.$store.state.stationName;
+        },
+
+        siteUrl() {
+            return this.$store.state.siteUrl;
         },
 
         routePath() {

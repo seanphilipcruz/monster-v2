@@ -93,7 +93,7 @@
         </div>
         <div class="card bg-medium-gray text-light">
             <div class="card-body">
-                <nuxt-link :to="{ name: 'MonsterHotTop40' }" class="btn btn-info btn-monster-blue d-grid btn-rounded">LISTEN MORE</nuxt-link>
+                <nuxt-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue d-grid btn-rounded">LISTEN MORE</nuxt-link>
             </div>
         </div>
     </div>

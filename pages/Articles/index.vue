@@ -154,15 +154,15 @@ export default {
         return {
             title: !this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`,
             meta: [
-                { hid: 'description', name: 'description', content: "Read up on the latest in showbiz and exclusive interviews on the Monster BT105.9 blog." },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { hid: 'description', name: 'description', content: `Read up on the latest in showbiz and exclusive interviews on the ${this.stationName} blog.` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
                 { 'property': 'og:title', content: (!this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`) + ' | Monster BT105.9' },
-                { 'property': 'og:description', content: "Read up on the latest in showbiz and exclusive interviews on the Monster RX93.1 blog." },
-                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
+                { 'property': 'og:description', content: `Read up on the latest in showbiz and exclusive interviews on the ${this.stationName} blog.` },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'twitter:title', content: (!this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`) + ' | Monster BT105.9' },
-                { 'property': 'twitter:description', content: "Read up on the latest in showbiz and exclusive interviews on the Monster BT105.9 blog." },
-                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { 'property': 'twitter:description', content: `Read up on the latest in showbiz and exclusive interviews on the ${this.stationName} blog.` },
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
     },
@@ -264,6 +264,14 @@ export default {
         prevPageUrl() {
             return this.$store.state.articles.prevPageUrl;
         },
+
+        stationName() {
+            return this.$store.state.stationName;
+        },
+
+        siteUrl() {
+            return this.$store.state.siteUrl;
+        }
     },
 
     async created() {

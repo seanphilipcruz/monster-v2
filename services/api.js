@@ -8,7 +8,7 @@ const ApiService = {
     },
 
     baseUrl() {
-        return NODE_ENV === 'development' ? 'http://127.0.0.2/api/website' : 'https://monstercebu.com/universal/api/website';
+        return NODE_ENV === 'development' ? 'http://127.0.0.2/api/website' : 'https://rx931.com/universal/api/website';
     }
 }
 

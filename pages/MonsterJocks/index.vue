@@ -75,14 +75,14 @@ export default {
             title: 'Monster Jocks',
             meta: [
                 { hid: 'description', name: 'description', content: "Meet the Monster Jocks who fire up your day with good music and fun discussions!" },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: "Monster Jocks | Monster BT105.9 Cebu" },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `Monster Jocks | ${this.stationName}` },
                 { 'property': 'og:description', content: "Meet the Monster Jocks who fire up your day with good music and fun discussions!" },
-                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-jck.jpg" },
-                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-jck.jpg" },
-                { 'property': 'twitter:title', content: "Monster Jocks | Monster BT105.9 Cebu" },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-jck.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-jck.jpg` },
+                { 'property': 'twitter:title', content: `Monster Jocks | ${this.stationName}` },
                 { 'property': 'twitter:description', content: "Meet the Monster Jocks who fire up your day with good music and fun discussions!" },
-                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-jck.jpg" }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-jck.jpg` }
             ]
         }
     },
@@ -112,6 +112,10 @@ export default {
 
         stationName() {
             return this.$store.state.stationName;
+        },
+
+        siteUrl() {
+            return this.$store.state.siteUrl;
         },
 
         routePath() {
