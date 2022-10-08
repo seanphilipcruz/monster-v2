@@ -3,7 +3,10 @@ import ChartService from "@/services/charts";
 export const state = () => ({
     charts: [],
     chartDate: null,
-    show: null,
+    show: {
+        title: 'Southside Sounds',
+        front_description: 'Your one stop shop for everything'
+    },
 })
 
 export const getters = {
