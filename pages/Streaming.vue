@@ -59,14 +59,14 @@ export default {
             title: !this.show ? 'Live Stream' : `Live: ${this.show.title}`,
             meta: [
                 { hid: 'description', name: 'description', content: !this.show ? 'Live Shows via Monster RX93.1 Streaming' : this.show.front_description },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: !this.show ? 'Live Stream | Monster RX93.1' : `Live: ${this.show.title} | Monster RX93.1` },
-                { 'property': 'og:description', content: !this.show ? 'Live Shows via Monster RX93.1 Streaming' : this.show.front_description },
-                { 'property': 'og:image', content: !this.show ? "https://rx931.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
-                { 'property': 'og:image:alt', content: !this.show ? "https://rx931.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
-                { 'property': 'twitter:title', content: !this.show ? 'Live Stream | Monster RX93.1' : `Live: ${this.show.title} | Monster RX93.1` },
-                { 'property': 'twitter:description', content: !this.show ? 'Live Shows via Monster RX93.1 Streaming' : this.show.front_description },
-                { 'property': 'twitter:image', content: !this.show ? "https://rx931.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image }
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { 'property': 'og:title', content: !this.show ? 'Live Stream | Monster BT105.9 Cebu' : `Live: ${this.show.title} | Monster RX93.1` },
+                { 'property': 'og:description', content: !this.show ? 'Live Shows via Monster BT105.9 Cebu Streaming' : this.show.front_description },
+                { 'property': 'og:image', content: !this.show ? "https://monstercebu.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
+                { 'property': 'og:image:alt', content: !this.show ? "https://monstercebu.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
+                { 'property': 'twitter:title', content: !this.show ? 'Live Stream | Monster BT105.9 Cebu' : `Live: ${this.show.title} | Monster RX93.1` },
+                { 'property': 'twitter:description', content: !this.show ? 'Live Shows via Monster BT105.9 Cebu Streaming' : this.show.front_description },
+                { 'property': 'twitter:image', content: !this.show ? "https://monstercebu.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image }
             ]
         }
     },

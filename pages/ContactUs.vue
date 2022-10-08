@@ -188,15 +188,15 @@ export default {
         return {
             title: 'Contact Us',
             meta: [
-                { hid: 'description', name: 'description', content: 'Get in touch with Monster RX93.1 via email, phone, or message.' },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: 'Contact Us | Monster RX93.1' },
-                { 'property': 'og:description', content: 'Get in touch with Monster RX93.1 via email, phone, or message.' },
-                { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: 'Contact Us | Monster RX93.1' },
-                { 'property': 'twitter:description', content: 'Get in touch with Monster RX93.1 via email, phone, or message.' },
-                { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { hid: 'description', name: 'description', content: 'Get in touch with Monster BT105.9 Cebu via email, phone, or message.' },
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { 'property': 'og:title', content: 'Contact Us | Monster BT105.9 Cebu' },
+                { 'property': 'og:description', content: 'Get in touch with Monster BT105.9 Cebu via email, phone, or message.' },
+                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
+                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
+                { 'property': 'twitter:title', content: 'Contact Us | Monster BT105.9 Cebu' },
+                { 'property': 'twitter:description', content: 'Get in touch with Monster BT105.9 Cebu via email, phone, or message.' },
+                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
             ]
         }
     },

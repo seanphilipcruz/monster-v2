@@ -233,14 +233,14 @@ export default {
             title: 'Privacy Policy',
             meta: [
                 { hid: 'description', name: 'description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: 'Privacy Policy | Monster RX93.1' },
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { 'property': 'og:title', content: 'Privacy Policy | Monster BT105.9 Cebu' },
                 { 'property': 'og:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: 'Privacy Policy | Monster RX93.1' },
+                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
+                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
+                { 'property': 'twitter:title', content: 'Privacy Policy | Monster BT105.9 Cebu' },
                 { 'property': 'twitter:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
             ]
         }
     },

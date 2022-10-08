@@ -188,14 +188,14 @@ export default {
             title: 'Wallpapers',
             meta: [
                 { hid: 'description', name: 'description', content: 'Download exclusive Monster RX93.1 wallpapers for your phones, computers, and gadgets.' },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: 'Wallpapers | Monster RX93.1' },
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { 'property': 'og:title', content: 'Wallpapers | Monster BT105.9' },
                 { 'property': 'og:description', content: 'Download exclusive Monster RX93.1 wallpapers for your phones, computers, and gadgets.' },
-                { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: 'Wallpapers | Monster RX93.1' },
+                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
+                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
+                { 'property': 'twitter:title', content: 'Wallpapers | Monster BT105.9' },
                 { 'property': 'twitter:description', content: 'Download exclusive Monster RX93.1 wallpapers for your phones, computers, and gadgets.' },
-                { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
             ]
         }
     },

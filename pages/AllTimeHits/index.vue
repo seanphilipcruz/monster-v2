@@ -44,14 +44,14 @@ export default {
             title: 'The Monster Hit List Finder',
             meta: [
                 { hid: 'description', name: 'description', content: 'Search for the Monster Hit on a day.' },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: 'The Monster Hit List Finder | Monster RX93.1' },
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { 'property': 'og:title', content: 'The Monster Hit List Finder | Monster BT105.9' },
                 { 'property': 'og:description', content: 'Search for the Monster Hit on a day.' },
-                { 'property': 'og:image', content: !this.currentHit ? 'https://rx931.com/images/_assets/default.png' : this.currentHit.song.album.image },
-                { 'property': 'og:image:alt', content: !this.currentHit ? 'https://rx931.com/images/_assets/default.png' : this.currentHit.song.album.image },
-                { 'property': 'twitter:title', content: 'The Monster Hit List Finder | Monster RX93.1' },
+                { 'property': 'og:image', content: !this.currentHit ? 'https://monstercebu.com/images/_assets/default.png' : this.currentHit.song.album.image },
+                { 'property': 'og:image:alt', content: !this.currentHit ? 'https://monstercebu.com/images/_assets/default.png' : this.currentHit.song.album.image },
+                { 'property': 'twitter:title', content: 'The Monster Hit List Finder | Monster BT105.9' },
                 { 'property': 'twitter:description', content: 'Search for the Monster Hit on a day.' },
-                { 'property': 'twitter:image', content: !this.currentHit ? 'https://rx931.com/images/_assets/default.png' : this.currentHit.song.album.image }
+                { 'property': 'twitter:image', content: !this.currentHit ? 'https://monstercebu.com/images/_assets/default.png' : this.currentHit.song.album.image }
             ]
         }
     },

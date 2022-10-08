@@ -111,14 +111,14 @@ export default {
             title: this.show.title,
             meta: [
                 { hid: 'description', name: 'description', content: this.show.front_description },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.show.title} | Monster RX93.1` },
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { 'property': 'og:title', content: `${this.show.title} | Monster BT105.9 Cebu` },
                 { 'property': 'og:description', content: this.show.front_description },
-                { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-shw.jpg" },
-                { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-shw.jpg" },
-                { 'property': 'twitter:title', content: `${this.show.title} | Monster RX93.1` },
+                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-shw.jpg" },
+                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-shw.jpg" },
+                { 'property': 'twitter:title', content: `${this.show.title} | Monster BT105.9 Cebu` },
                 { 'property': 'twitter:description', content: this.show.front_description },
-                { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-shw.jpg" }
+                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-shw.jpg" }
             ]
         }
     },

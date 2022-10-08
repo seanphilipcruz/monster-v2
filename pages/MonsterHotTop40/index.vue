@@ -102,17 +102,17 @@ export default {
 
     head() {
         return {
-            title: !this.show ? 'Countdown Top 7' : this.show.title,
+            title: !this.show ? 'Monster Hot Top 40' : this.show.title,
             meta: [
                 { hid: 'description', name: 'description', content: !this.show ? 'Loading ...' : this.show.front_description },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: !this.show ? 'Countdown Top 7' : `${this.show.title} | Monster RX93.1` },
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
+                { 'property': 'og:title', content: !this.show ? 'Monster Hot Top 40' : `${this.show.title} | Monster BT105.9 Cebu` },
                 { 'property': 'og:description', content: !this.show ? 'Loading ...' : this.show.front_description },
-                { 'property': 'og:image', content: !this.show ? 'https://rx931.com/images/_assets/default.png' : this.show.header_image },
-                { 'property': 'og:image:alt', content: !this.show ? 'https://rx931.com/images/_assets/default.png' : this.show.header_image },
-                { 'property': 'twitter:title', content: !this.show ? 'Countdown Top 7' : `${this.show.title} | Monster RX93.1` },
+                { 'property': 'og:image', content: !this.show ? 'https://monstercebu.com/images/_assets/default.png' : this.show.header_image },
+                { 'property': 'og:image:alt', content: !this.show ? 'https://monstercebu.com/images/_assets/default.png' : this.show.header_image },
+                { 'property': 'twitter:title', content: !this.show ? 'Monster Hot Top 40' : `${this.show.title} | Monster BT105.9 Cebu` },
                 { 'property': 'twitter:description', content: !this.show ? 'Loading ...' : this.show.front_description },
-                { 'property': 'twitter:image', content: !this.show ? 'https://rx931.com/images/_assets/default.png' : this.show.header_image }
+                { 'property': 'twitter:image', content: !this.show ? 'https://monstercebu.com/images/_assets/default.png' : this.show.header_image }
             ]
         }
     },

@@ -103,11 +103,11 @@ export default {
             meta: [
                 { hid: 'description', name: 'description', content: this.jock.description },
                 { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.jock.name} | Monster RX93.1` },
+                { 'property': 'og:title', content: `${this.jock.name} | Monster BT105.9` },
                 { 'property': 'og:description', content: this.jock.description },
                 { 'property': 'og:image', content: this.jock.background_image },
                 { 'property': 'og:image:alt', content: this.jock.background_image },
-                { 'property': 'twitter:title', content: `${this.jock.name} | Monster RX93.1` },
+                { 'property': 'twitter:title', content: `${this.jock.name} | Monster BT105.9` },
                 { 'property': 'twitter:description', content: this.jock.description },
                 { 'property': 'twitter:image', content: this.jock.background_image }
             ]
