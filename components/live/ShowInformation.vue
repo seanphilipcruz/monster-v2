@@ -28,7 +28,7 @@
         <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
             <p class="text-light">JOCKS ON BOARD</p>
         </div>
-        <div class="card bg-light-gray" v-if="jocksCount">
+        <div class="card bg-light-gray">
             <div class="row">
                 <div class="col-12">
                     <div class="card-body text-light text-center text-wrap">
@@ -107,9 +107,7 @@
         <div class="row justify-content-center">
             <div class="col-6 d-grid">
                 <button type="button" class="btn btn-monster-blue" @click="getStream({})">
-                    <client-only>
-                        <font-awesome-icon :icon="['fas', 'fa-play-circle']"></font-awesome-icon>  Stream
-                    </client-only>
+                    <font-awesome-icon :icon="['fas', 'fa-play-circle']"></font-awesome-icon>  Stream
                 </button>
             </div>
         </div>

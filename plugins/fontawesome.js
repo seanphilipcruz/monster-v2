@@ -11,7 +11,9 @@ import {
     faPlay,
     faPlayCircle,
     faRotateRight,
-    faStar
+    faStar,
+    faToggleOn,
+    faToggleOff
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faFacebookF,
@@ -24,6 +26,25 @@ import {
     faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faPlay, faCaretUp, faCaretDown, faBroadcastTower, faAngleUp, faFacebookF, faTwitter, faInstagram, faYoutube, faTiktok, faTumblr, faLinkedin, faGlobe, faSpotify, faPlayCircle, faChevronCircleLeft, faStar, faRotateRight);
+library.add(faPlay,
+    faCaretUp,
+    faCaretDown,
+    faBroadcastTower,
+    faAngleUp,
+    faFacebookF,
+    faTwitter,
+    faInstagram,
+    faYoutube,
+    faTiktok,
+    faTumblr,
+    faLinkedin,
+    faGlobe,
+    faSpotify,
+    faPlayCircle,
+    faChevronCircleLeft,
+    faStar,
+    faRotateRight,
+    faToggleOn,
+    faToggleOff);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
