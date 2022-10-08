@@ -89,11 +89,15 @@ export default {
 
     methods: {
         async getPageData() {
-            await this.$store.dispatch("setLoadingState", { type: 'page', status: true })
+            await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
 
-            await this.$store.dispatch("jocks/setJocksData");
+            setTimeout(() => {
+                this.$store.dispatch("jocks/setJocksData");
+            }, 1400);
 
-            await this.$store.dispatch("setLoadingState", { type: 'page', status: false })
+            setTimeout(() => {
+                this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            }, 1800);
         },
     },
 
@@ -124,10 +128,10 @@ export default {
     },
 
     async created() {
-        await this.getPageData();
-
         if (process.client) {
             await this.incrementOpenCount();
+
+            await this.getPageData();
         }
     }
 }

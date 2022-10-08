@@ -1,56 +1,41 @@
 <template>
     <div>
-        <custom-banner :image="jock.background_image" type="jock"></custom-banner>
+        <client-only>
+            <jock-banner :header_image="picture.header" />
 
-        <div class="bg-medium-gray">
-            <div class="card bg-medium-gray border-transparent">
-                <div v-if="isLoading">
-                    <loader></loader>
-                </div>
-                <transition name="fade">
-                    <div v-if="!isLoading">
-                        <div class="bg-medium-gray">
-                            <div class="container">
-                                <div class="card bg-medium-gray border-transparent">
-                                    <div class="my-4">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <back-button route="Jocks" />
-                                            </div>
-                                            <div class="my-2"></div>
-                                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                                <img :src="jock.main_image" :alt="jock.main_image" class="card-img">
-                                            </div>
-                                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                                                <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
-                                                    <div class="fs-4 text-monster-yellow text-uppercase my-3">{{ jock.name }}</div>
-                                                    <div class="barlow text-monster-blue">
-                                                        SHOWS:
-                                                        <div
-                                                            v-for="show in jock.show">
-                                                            <nuxt-link
-                                                                :to="{ name: 'MonsterShows-slugString', params: { slugString: show.slug_string } }"
-                                                                class="text-monster-blue"
-                                                                :key="show.id">
-                                                                {{ show.title }}
-                                                            </nuxt-link>
-                                                        </div>
-                                                    </div>
-                                                    <div class="my-4"></div>
-                                                    <div class="text-light font-thin-1 barlow">
-                                                        <span v-html="jock.description"></span>
-                                                    </div>
-                                                    <div class="my-4"></div>
-                                                    <p class="text-monster-blue">Follow {{ jock.name }}</p>
-
-                                                    <SocialLinks :links-count="linksCount" :links="jock.link" />
+            <div class="bg-medium-gray">
+                <div class="card bg-medium-gray border-transparent">
+                    <div v-if="isLoading">
+                        <loader></loader>
+                    </div>
+                    <transition name="fade">
+                        <div v-if="!isLoading">
+                            <div class="bg-medium-gray">
+                                <div class="container">
+                                    <div class="card bg-medium-gray border-transparent">
+                                        <div class="my-4">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <back-button route="Jocks" />
                                                 </div>
-                                                <div class="d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
-                                                    <div class="text-center">
-                                                        <div class="my-4"></div>
-                                                        <div class="fs-4 text-monster-yellow uppercase">{{ jock.name }}</div>
-                                                        <div class="barlow text-monster-blue">SHOWS:
-                                                            <div v-for="show in jock.show" :key="show.id">{{ show.title }}</div>
+                                                <div class="my-2"></div>
+                                                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                                    <img :src="jock.main_image" :alt="jock.main_image" class="card-img">
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                                                    <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                                                        <div class="fs-4 text-monster-yellow text-uppercase my-3">{{ jock.name }}</div>
+                                                        <div class="barlow text-monster-blue">
+                                                            SHOWS:
+                                                            <div
+                                                                v-for="show in jock.show">
+                                                                <nuxt-link
+                                                                    :to="{ name: 'MonsterShows-slugString', params: { slugString: show.slug_string } }"
+                                                                    class="text-monster-blue"
+                                                                    :key="show.id">
+                                                                    {{ show.title }}
+                                                                </nuxt-link>
+                                                            </div>
                                                         </div>
                                                         <div class="my-4"></div>
                                                         <div class="text-light font-thin-1 barlow">
@@ -61,6 +46,23 @@
 
                                                         <SocialLinks :links-count="linksCount" :links="jock.link" />
                                                     </div>
+                                                    <div class="d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
+                                                        <div class="text-center">
+                                                            <div class="my-4"></div>
+                                                            <div class="fs-4 text-monster-yellow uppercase">{{ jock.name }}</div>
+                                                            <div class="barlow text-monster-blue">SHOWS:
+                                                                <div v-for="show in jock.show" :key="show.id">{{ show.title }}</div>
+                                                            </div>
+                                                            <div class="my-4"></div>
+                                                            <div class="text-light font-thin-1 barlow">
+                                                                <span v-html="jock.description"></span>
+                                                            </div>
+                                                            <div class="my-4"></div>
+                                                            <p class="text-monster-blue">Follow {{ jock.name }}</p>
+
+                                                            <SocialLinks :links-count="linksCount" :links="jock.link" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,21 +70,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </transition>
+                    </transition>
+                </div>
             </div>
-        </div>
 
 
-        <div class="my-5"></div>
+            <div class="my-5"></div>
 
-        <JockGallery :images-length="imagesLength" :images="jock.image" />
+            <JockGallery :images-length="imagesLength" :images="jock.image" />
+        </client-only>
     </div>
 </template>
 
 <script>
 import SocialLinks from "@/components/jocks/Socials";
 import JockGallery from "@/components/jocks/Photos";
+import JockBanner from "@/components/jocks/JockBanner";
 
 export default {
     name: "ViewJock",
@@ -115,6 +118,7 @@ export default {
     },
 
     components: {
+        JockBanner,
         SocialLinks,
         JockGallery
     },

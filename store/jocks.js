@@ -3,6 +3,7 @@ import JockService from "@/services/jocks";
 export const state = () => ({
     jocks: [],
     jock: {
+        background_image: null,
         show: [],
         fact: [],
         link: [],
