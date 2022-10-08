@@ -49,35 +49,31 @@
                             </div>
 
                             <div v-for="(timeslot, index) in jockTimeslots" :key="timeslot.id" v-show="showJocks">
-                                <div class="card bg-medium-gray text-light barlow" :class="timeslot.jock.length > 0 ? 'interactive-card' : ''" v-if="index % 2 === 0">
+                                <div class="card bg-medium-gray text-light barlow" v-if="index % 2 === 0">
                                     <div class="row m-4">
                                         <div class="col-6" v-show="timeslot.jock.length === 0">
                                             No Jocks
                                         </div>
                                         <div class="col-6" v-show="timeslot.jock.length > 0">
                                             <ul v-for="jock in timeslot.jock">
-                                                <li>
-                                                    <nuxt-link :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }" class="stretched-link text-white">
-                                                        {{ jock.name }}
-                                                    </nuxt-link>
-                                                </li>
+                                                <nuxt-link :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }" class="text-monster-blue">
+                                                    {{ jock.name }}
+                                                </nuxt-link>
                                             </ul>
                                         </div>
                                         <div class="col-6">{{ timeslot.start }} - {{ timeslot.end }}</div>
                                     </div>
                                 </div>
-                                <div class="card bg-light-gray text-light barlow" :class="timeslot.jock.length > 0 ? 'interactive-card' : ''" v-else>
+                                <div class="card bg-light-gray text-light barlow" v-else>
                                     <div class="row m-4">
                                         <div class="col-6" v-show="timeslot.jock.length === 0">
                                             No Jocks
                                         </div>
                                         <div class="col-6" v-show="timeslot.jock.length > 0">
                                             <ul v-for="jock in timeslot.jock">
-                                                <li>
-                                                    <nuxt-link :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }" class="stretched-link text-white">
-                                                        {{ jock.name }}
-                                                    </nuxt-link>
-                                                </li>
+                                                <nuxt-link :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }" class="text-monster-blue">
+                                                    {{ jock.name }}
+                                                </nuxt-link>
                                             </ul>
                                         </div>
                                         <div class="col-6">{{ timeslot.start }} - {{ timeslot.end }}</div>

@@ -73,8 +73,6 @@
                                 </div>
                             </div>
                             <div class="my-3"></div>
-                            <OutbreakSongs />
-                            <div class="my-3"></div>
                             <LatestNews />
                         </div>
                     </div>

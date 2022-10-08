@@ -42,7 +42,7 @@
                             </div>
                             <div class="m-2"></div>
                             <div class="text-light text-center">
-                                <p class="barlow">#3 President Quezon Street <br>Kasambagan, Mabolo <br>Cebu City (Don't forget to bring a valid ID for building entrance)</p>
+                                <p class="barlow">17th floor, Strata 2000 Building F. Ortigas Jr. Road (Emerald Avenue), Ortigas Center, Pasig City (Don't forget to bring valid ID's for building entrance)</p>
                             </div>
                             <div class="m-4"></div>
                             <div class="row justify-content-center">
@@ -52,7 +52,7 @@
                             </div>
                             <div class="m-2"></div>
                             <div class="text-light text-center">
-                                <p class="barlow">Phone Numbers:  (+63) 922 337 6177</p>
+                                <p class="barlow">Phone Numbers: 8633.5414 (to 16)<br>Radio Number: 8631-9393<br>TeleFax: 633.5417</p>
                             </div>
                         </div>
                         <!-- LARGER DEVICES -->
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="m-4"></div>
                                 <div class="text-light">
-                                    <p class="barlow">#3 President Quezon Street <br>Kasambagan, Mabolo <br>Cebu City (Don't forget to bring a valid ID for building entrance)</p>
+                                    <p class="barlow">17th floor, Strata 2000 Building F. Ortigas <br> Jr. Road (Emerald Avenue), Ortigas Center, <br> Pasig City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
                                 </div>
                                 <div class="m-4"></div>
                                 <div class="row">
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="m-4"></div>
                                 <div class="text-light">
-                                    <p class="barlow">Phone Numbers: (+63) 922 337 6177</p>
+                                    <p class="barlow">Phone Numbers: 8633.5414 (to 16)<br>Radio Number: 8631-9393<br>TeleFax: 633.5417</p>
                                 </div>
                             </div>
                         </div>
@@ -101,9 +101,35 @@
                         </div>
                         <div class="my-4"></div>
                         <div class="row">
-                            <div class="col text-center barlow text-light">
-                                For Inquiries, email at
-                                <p class="text-monster-yellow">bt1059.monsterradio@gmail.com</p>
+                            <div class="col">
+                                <div class="barlow-heading">events@rx931.com</div>
+                                <p class="text-light barlow">Throw awesome events with help from the Monster team. Send all your event-partnership queries here!</p>
+                                <div class="my-4"></div>
+                                <div class="barlow-heading">hosts@rx931.com</div>
+                                <p class="text-light barlow">Interested in hiring Monster Jocks to host your next party? Share some information about your event by sending us a message.</p>
+                                <div class="my-4"></div>
+                                <div class="barlow-heading">internship@rx931.com</div>
+                                <p class="text-light barlow">Stand out from your peers by becoming a Monster Intern! Send your resumes here.</p>
+                                <div class="my-4"></div>
+                            </div>
+                            <div class="col">
+                                <div class="barlow-heading">jobs@rx931.com</div>
+                                <p class="text-light barlow">Get in touch with our HR for career opportunities with the Monster.</p>
+                                <div class="my-4"></div>
+                                <div class="barlow-heading">sales@rx931.com</div>
+                                <p class="text-light barlow">Reach out to our sales team for all advertising inquiries including requesting for rate cards.</p>
+                                <div class="my-4"></div>
+                                <div class="barlow-heading">schools@rx931.com</div>
+                                <p class="text-light barlow">Organizing a school event? Inquiring about how to become a student jock? Send all your questions here and we'll get right back to you!</p>
+                                <div class="my-4"></div>
+                            </div>
+                            <div class="col">
+                                <div class="barlow-heading">scholar@rx931.com</div>
+                                <p class="text-light barlow">Send your messages/inquiries to make a donation or to submit scholarship applications. For scholarship applicants, feel free to share your info here.</p>
+                                <div class="my-4"></div>
+                                <div class="barlow-heading">ios@rx931.com</div>
+                                <p class="text-light barlow">Send the concerns or bugs in the mobile app, either iOS or Android. express the issue well and when it is happening inside the app.</p>
+                                <div class="my-4"></div>
                             </div>
                         </div>
                     </div>

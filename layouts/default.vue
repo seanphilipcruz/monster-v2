@@ -11,6 +11,24 @@
 export default {
     name: "default",
 
+    methods: {
+        async initiateNavigation() {
+            let environment = process.env.NODE_ENV;
+
+            await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+
+            await this.$store.dispatch("getHomeData");
+
+            if (environment === 'development') {
+                console.log('Nav init: complete');
+            }
+
+            this.$nextTick(() => {
+                this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+            });
+        },
+    },
+
     computed: {
         articles() {
             return this.$store.state.article;
@@ -19,6 +37,12 @@ export default {
         podcasts() {
             return this.$store.state.podcast;
         }
+    },
+
+    async created() {
+        setTimeout(async() => {
+            await this.initiateNavigation();
+        }, 1400);
     }
 }
 </script>
