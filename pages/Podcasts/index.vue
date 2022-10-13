@@ -199,14 +199,14 @@ export default {
             title: !this.show ? 'Official Monster Podcast Channel' : `${this.show.title} Official Podcast Channel`,
             meta: [
                 { hid: 'description', name: 'description', content: "Listen to podcast episodes and exclusive interviews from your favorite RX93.1 MonsterShows." },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: !this.show ? "Official Monster Podcast Channel | Monster RX93.1" : `${this.show.title}  Official Podcast Channel | Monster RX93.1` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: !this.show ? `Official Monster Podcast Channel | ${this.stationName}` : `${this.show.title}  Official Podcast Channel | ${this.stationName}` },
                 { 'property': 'og:description', content: "Listen to podcast episodes and exclusive interviews from your favorite RX93.1 MonsterShows." },
-                { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: !this.show ? "Official Monster Podcast Channel | Monster RX93.1" : `${this.show.title}  Official Podcast Channel | Monster RX93.1` },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'twitter:title', content: !this.show ? `Official Monster Podcast Channel | ${this.stationName}` : `${this.show.title}  Official Podcast Channel | ${this.stationName}` },
                 { 'property': 'twitter:description', content: "Listen to podcast episodes and exclusive interviews from your favorite RX93.1 MonsterShows." },
-                { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
     },
@@ -331,7 +331,11 @@ export default {
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         show() {

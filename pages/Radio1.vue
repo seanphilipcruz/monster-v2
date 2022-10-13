@@ -110,14 +110,14 @@ export default {
             title: !this.radio1Jocks ? 'Radio1' : `Radio1 Batch ${this.radio1Jocks.batch_number}`,
             meta: [
                 { hid: 'description', name: 'description', content: 'Meet the Radio1 Student Jocks representing your school on air and online!' },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: (!this.radio1Jocks ? 'Radio1' : `Radio1 Batch ${this.radio1Jocks.batch_number}`) + ' | Monster RX93.1' },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: (!this.radio1Jocks ? 'Radio1' : `Radio1 Batch ${this.radio1Jocks.batch_number}`) + ` | ${this.stationName}` },
                 { 'property': 'og:description', content: 'Meet the Radio1 Student Jocks representing your school on air and online!' },
-                { 'property': 'og:image', content: "https://rx931.com/images/studentJocks/radio1-header-500.png" },
-                { 'property': 'og:image:alt', content: "https://rx931.com/images/studentJocks/radio1-header-500.png" },
-                { 'property': 'twitter:title', content: (!this.radio1Jocks ? 'Radio1' : `Radio1 Batch ${this.radio1Jocks.batch_number}`) + ' | Monster RX93.1' },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/studentJocks/radio1-header-500.png` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/studentJocks/radio1-header-500.png` },
+                { 'property': 'twitter:title', content: (!this.radio1Jocks ? 'Radio1' : `Radio1 Batch ${this.radio1Jocks.batch_number}`) + ` | ${this.stationName}` },
                 { 'property': 'twitter:description', content: 'Meet the Radio1 Student Jocks representing your school on air and online!' },
-                { 'property': 'twitter:image', content: "https://rx931.com/images/studentJocks/radio1-header-500.png" }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/studentJocks/radio1-header-500.png` }
             ]
         }
     },
@@ -212,6 +212,14 @@ export default {
 
         babiesCount() {
             return this.$store.getters["jocks/babiesCount"];
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

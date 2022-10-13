@@ -22,9 +22,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <p class="font-responsive font-thin-1">Audiovisual Communicators Inc. ("us", "we", or "our") operates the {{ stationUrl }} website (the "Service").</p>
+                                    <p class="font-responsive font-thin-1">Audiovisual Communicators Inc. ("us", "we", or "our") operates the {{ siteUrl }} website (the "Service").</p>
                                     <p class="font-responsive font-thin-1">This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. This Privacy Policy for Audiovisual Communicators Inc. is powered by FreePrivacyPolicy.com.</p>
-                                    <p class="font-responsive font-thin-1">We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from <router-link :to="{ name: 'PrivacyPolicy' }" class="text-monster-blue">{{ stationUrl }}/PrivacyPolicy</router-link></p>
+                                    <p class="font-responsive font-thin-1">We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from <router-link :to="{ name: 'PrivacyPolicy' }" class="text-monster-blue">{{ siteUrl }}/PrivacyPolicy</router-link></p>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                                             <div class="text-primary font-responsive"><strong>Google Analytics</strong></div>
                                             <p class="font-responsive font-thin-1">Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.</p>
                                             <p class="font-responsive font-thin-1">You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.</p>
-                                            <p class="font-responsive font-thin-1">For more information on the privacy practices of Google, please visit the <a href="https://policies.google.com/privacy" class="text-monster-yellow" target="_blank">Google Privacy & Terms</a> web page.</p>
+                                            <p class="font-responsive font-thin-1">For more information on the privacy practices of Google, please visit the <a href="https://policies.google.com/privacy" class="text-monster-blue" target="_blank">Google Privacy & Terms</a> web page.</p>
                                         </li>
                                     </ul>
                                     <ul>
@@ -164,14 +164,14 @@
                                             <p class="font-responsive font-thin-1">YouTube allows users to upload, view, rate, share, add to playlists, report, comment on videos, and subscribe to other users. It offers a wide variety of user-generated and corporate media videos. Available content includes video clips, TV show clips, music videos, short and documentary films, audio recordings, movie trailers, live streams, and other content such as video blogging, short original videos, and educational videos. Most content on YouTube is uploaded by individuals, but media corporations including CBS, the BBC, Vevo, and Hulu offer some of their material via YouTube as part of the YouTube partnership program. Unregistered users can only watch (but not upload) videos on the site, while registered users are also permitted to upload an unlimited number of videos and add comments to videos. Videos deemed potentially inappropriate are available only to registered users affirming themselves to be at least 18 years old.</p>
                                             <p class="font-responsive font-thin-1">The following YouTube API Services Terms of Service is a legal document you must follow when accessing or using the YouTube API Services. Please read it often, and make sure you understand it. You can subscribe to the RSS feed for the revision history to be notified of any such changes to the YouTube API Services Terms of Service. When reviewing the following YouTube API Services Terms of Service below, and accessing and using YouTube API Services, please keep the following in mind:</p>
                                             <p class="font-responsive font-thin-1">Respecting and fostering the growth of the YouTube community of creators, viewers, content rights holders and advertisers is very important to us. We provide the YouTube API Services to enable developers to create experiences that bring additional value to the YouTube ecosystem and its users. If your implementation is in breach of the YouTube API Services Terms of Service or has a negative impact on the YouTube community, we may impose limitations and prohibitions on your access to, and use of, the YouTube API Services.</p>
-                                            <p class="font-responsive font-thin-1">For more information on the privacy practices of YouTube API, please visit the <a href="https://developers.google.com/youtube/terms/developer-policies" class="text-monster-yellow" target="_blank">YouTube API Terms of Service</a> web page and <a href="https://www.youtube.com/static?template=terms" class="text-monster-yellow" target="_blank">YouTube Terms of Service</a></p>
+                                            <p class="font-responsive font-thin-1">For more information on the privacy practices of YouTube API, please visit the <a href="https://developers.google.com/youtube/terms/developer-policies" class="text-monster-blue" target="_blank">YouTube API Terms of Service</a> web page and <a href="https://www.youtube.com/static?template=terms" class="text-monster-blue" target="_blank">YouTube Terms of Service</a></p>
                                         </li>
                                     </ul>
                                     <ul>
                                         <li class="text-wrap">
                                             <div class="text-success font-responsive"><strong>Spotify</strong></div>
                                             <p class="font-responsive font-thin-1">Spotify offers digital copyright restricted recorded music and podcasts, including more than 70 million songs, from record labels and media companies. As a freemium service, basic features are free with advertisements and limited control, while additional features, such as offline listening and commercial-free listening, are offered via paid subscriptions. Users can search for music based on artist, album, or genre, and can create, edit, and share playlists.</p>
-                                            <p class="font-responsive font-thin-1">For more information on the Terms of Use of Spotify's Widgets, please visit the Spotify for Developers' <a href="https://developer.spotify.com/documentation/widgets/terms/" class="text-monster-yellow" target="_blank">Widgets Terms of Use</a></p>
+                                            <p class="font-responsive font-thin-1">For more information on the Terms of Use of Spotify's Widgets, please visit the Spotify for Developers' <a href="https://developer.spotify.com/documentation/widgets/terms/" class="text-monster-blue" target="_blank">Widgets Terms of Use</a></p>
                                         </li>
                                     </ul>
                                 </div>
@@ -206,7 +206,7 @@
                                     <p class="font-responsive font-thin-1">If you have any questions about this Privacy Policy, please contact us:</p>
                                     <ul class="font-responsive font-thin-1">
                                         <li>By email: <a href="mailto:info@rx931.com" class="text-monster-blue">info@rx931.com</a></li>
-                                        <li>By visiting this page on our website: <router-link :to="{ name: 'ContactUs' }" class="text-monster-blue">{{ stationUrl }}/ContactUs</router-link></li>
+                                        <li>By visiting this page on our website: <router-link :to="{ name: 'ContactUs' }" class="text-monster-blue">{{ siteUrl }}/ContactUs</router-link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -233,14 +233,14 @@ export default {
             title: 'Privacy Policy',
             meta: [
                 { hid: 'description', name: 'description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:url', content: this.stationUrl + this.routePath },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
                 { 'property': 'og:title', content: `Privacy Policy | ${this.stationName}` },
                 { 'property': 'og:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:image', content: `${this.stationUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
-                { 'property': 'og:image:alt', content: `${this.stationUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'twitter:title', content: `Privacy Policy | ${this.stationName}` },
                 { 'property': 'twitter:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'twitter:image', content: `${this.stationUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
     },
@@ -250,12 +250,12 @@ export default {
             return this.$store.state.isLoading;
         },
 
-        stationUrl() {
-            return this.$store.state.siteUrl;
+        stationName() {
+            return this.$store.getters.StationName;
         },
 
-        stationName() {
-            return this.$store.state.stationName;
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

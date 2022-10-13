@@ -11,8 +11,8 @@
                             </div>
                             <div class="col-10">
                                 <div class="mx-2">
-                                    <p class="fs-4 header mb-0 text-uppercase">{{ !stationChart ? 'Loading ...' : stationChart.title }}</p>
-                                    <p class="barlow text-light">Catch the countdown every Friday, 12 to 4PM with Anj</p>
+                                    <p class="fs-4 header mb-0 text-uppercase">{{ stationChart }}</p>
+                                    <p class="barlow text-light">Catch the countdown every Friday, 6 to 7PM with Hazel Hottie</p>
                                 </div>
                             </div>
                         </div>
@@ -23,8 +23,8 @@
                                 <img src="~/images/home/hitlist.png" alt="hitlist" class="img-fluid img-icon">
                             </div>
                             <div class="col-11">
-                                <p class="fs-4 header mb-0 text-uppercase">{{ !stationChart ? 'Loading ...' : stationChart.title }}</p>
-                                <p class="barlow text-light">Catch the countdown every Friday, 12 to 4PM with Anj</p>
+                                <p class="fs-4 header mb-0 text-uppercase">{{ stationChart }}</p>
+                                <p class="barlow text-light">Catch the countdown every Friday, 6 to 7PM with Hazel Hottie</p>
                             </div>
                         </div>
                     </div>
@@ -211,15 +211,15 @@ export default {
 
     computed: {
         stationChart() {
-            return this.$store.state.station;
+            return this.$store.getters.StationChart;
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         },
 
         chartCount() {
-            return this.$store.state.chartCount;
+            return this.$store.getters.StationChartCount;
         }
     },
 }

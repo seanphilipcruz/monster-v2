@@ -1,12 +1,17 @@
 <template>
     <div>
-        <div class="card bg-light-gray text-light">
+        <div class="card bg-medium-gray text-light">
             <div class="card-body text-center text-uppercase">
                 OUTBREAK SONGS
             </div>
         </div>
-        <div v-for="(outbreak, index) in outbreakSongs" :key="outbreak.id">
-            <div class="card bg-medium-gray text-light" v-if="index % 2 === 0">
+        <div v-show="outbreakCount === 0" class="card bg-light-gray text-light">
+            <div class="card-body text-center text-uppercase">
+                No outbreaks for today!
+            </div>
+        </div>
+        <div v-show="outbreakCount > 0" v-for="(outbreak, index) in outbreakSongs" :key="outbreak.id">
+            <div class="card bg-light-gray text-light" v-if="index % 2 === 0">
                 <div class="card-body" v-if="outbreak.song.type === 'spotify'">
                     <div class="row">
                         <div class="col-12">
@@ -48,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card bg-light-gray text-light" v-else>
+            <div class="card bg-medium-gray text-light" v-else>
                 <div class="card-body" v-if="outbreak.song.type === 'spotify'">
                     <div class="row">
                         <div class="col-12">
@@ -116,6 +121,10 @@ export default {
     computed: {
         outbreakSongs() {
             return this.$store.state.widgets.outbreakCharts;
+        },
+
+        outbreakCount() {
+            return this.$store.getters["widgets/outbreakChartCount"];
         }
     },
 

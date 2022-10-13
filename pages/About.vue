@@ -354,15 +354,16 @@ export default {
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
+        },
+
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {
             return this.$route.fullPath;
-        },
-
-        siteUrl() {
-            return this.$store.state.siteUrl;
         }
     },
 

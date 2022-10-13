@@ -105,12 +105,12 @@ export default {
             title: this.jock.name,
             meta: [
                 { hid: 'description', name: 'description', content: this.jock.description },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.jock.name} | Monster BT105.9` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `${this.jock.name} | ${this.stationName}` },
                 { 'property': 'og:description', content: this.jock.description },
                 { 'property': 'og:image', content: this.jock.background_image },
                 { 'property': 'og:image:alt', content: this.jock.background_image },
-                { 'property': 'twitter:title', content: `${this.jock.name} | Monster BT105.9` },
+                { 'property': 'twitter:title', content: `${this.jock.name} | ${this.stationName}` },
                 { 'property': 'twitter:description', content: this.jock.description },
                 { 'property': 'twitter:image', content: this.jock.background_image }
             ]
@@ -177,6 +177,10 @@ export default {
 
         awardsCount() {
             return this.$store.getters["jocks/getAwardsCount"];
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

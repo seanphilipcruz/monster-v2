@@ -40,9 +40,12 @@
                     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
                         <div class="row">
                             <FullChart :charts="charts" :vote-count="voteCount" :vote-chart-song="voteSong" />
-                            <div class="col-lg-3">
+                            <div class="col-lg-3" v-show="stationCode !== 'mnl'">
                                 <OutbreakSongs />
                                 <div class="my-3"></div>
+                                <LatestNews />
+                            </div>
+                            <div class="col-lg-3" v-show="stationCode === 'mnl'">
                                 <LatestNews />
                             </div>
                         </div>
@@ -216,16 +219,20 @@ export default {
             return this.$store.state.widgets.outbreakCharts;
         },
 
+        stationCode() {
+            return this.$store.state.stationCode;
+        },
+
         stationChart() {
-            return this.$store.state.station.title;
+            return this.$store.getters.StationChart;
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         },
 
         siteUrl() {
-            return this.$store.state.siteUrl;
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

@@ -119,12 +119,12 @@ export default {
             title: this.podcast.episode,
             meta: [
                 { hid: 'description', name: 'description', content: this.podcast.episode },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.podcast.episode} | Monster RX93.1` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `${this.podcast.episode} | ${this.stationName}` },
                 { 'property': 'og:description', content: this.podcast.episode },
                 { 'property': 'og:image', content: this.podcast.image },
                 { 'property': 'og:image:alt', content: this.podcast.image },
-                { 'property': 'twitter:title', content: `${this.podcast.episode} | Monster RX93.1` },
+                { 'property': 'twitter:title', content: `${this.podcast.episode} | ${this.stationName}` },
                 { 'property': 'twitter:description', content: this.podcast.episode },
                 { 'property': 'twitter:image', content: this.podcast.image }
             ]
@@ -152,6 +152,14 @@ export default {
 
         related() {
             return this.$store.state.podcasts.related;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

@@ -175,7 +175,7 @@ export default {
         },
 
         chartCount() {
-            return this.$store.state.chartCount;
+            return this.$store.getters.StationChartCount;
         },
 
         stationCode() {
@@ -183,15 +183,15 @@ export default {
         },
 
         stationChart() {
-            return this.$store.state.station.title;
+            return this.$store.getters.StationChart;
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         },
 
         siteUrl() {
-            return this.$store.state.siteUrl;
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

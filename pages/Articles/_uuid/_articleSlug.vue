@@ -70,12 +70,12 @@ export default {
             title: this.article.title,
             meta: [
                 { hid: 'description', name: 'description', content: this.article.heading },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.article.title} | Monster RX93.1` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `${this.article.title} | ${this.stationName}` },
                 { 'property': 'og:description', content: this.article.heading },
                 { 'property': 'og:image', content: this.article.image },
                 { 'property': 'og:image:alt', content: this.article.image },
-                { 'property': 'twitter:title', content: `${this.article.title} | Monster RX93.1` },
+                { 'property': 'twitter:title', content: `${this.article.title} | ${this.stationName}` },
                 { 'property': 'twitter:description', content: this.article.heading },
                 { 'property': 'twitter:image', content: this.article.image },
             ]
@@ -115,6 +115,14 @@ export default {
 
         authorName() {
             return this.article.employee.first_name + ' ' + this.article.employee.last_name;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

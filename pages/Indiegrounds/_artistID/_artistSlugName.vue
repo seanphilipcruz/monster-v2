@@ -163,6 +163,14 @@ export default {
             return this.indieground.artist.country;
         },
 
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
+        },
+
         routePath() {
             return this.$route.fullPath;
         }

@@ -61,14 +61,14 @@ export default {
             title: !this.scholarBatch ? 'Monster Scholarship Program' : `Monster Scholarship Program Batch ${this.scholarBatch.number}`,
             meta: [
                 { hid: 'description', name: 'description', content: "The Monster Scholarship Program: We believe in the power of education." },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: (!this.scholarBatch ? 'Monster Scholarship Program' : `Monster Scholarship Program Batch ${this.scholarBatch.number}`) + ' | Monster RX93.1' },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: (!this.scholarBatch ? 'Monster Scholarship Program' : `Monster Scholarship Program Batch ${this.scholarBatch.number}`) + ` | ${this.stationName}` },
                 { 'property': 'og:description', content: "The Monster Scholarship Program: We believe in the power of education." },
-                { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-msp.jpg" },
-                { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-msp.jpg" },
-                { 'property': 'twitter:title', content: (!this.scholarBatch ? 'Monster Scholarship Program' : `Monster Scholarship Program Batch ${this.scholarBatch.number}`) + ' | Monster RX93.1' },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-msp.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-msp.jpg` },
+                { 'property': 'twitter:title', content: (!this.scholarBatch ? 'Monster Scholarship Program' : `Monster Scholarship Program Batch ${this.scholarBatch.number}`) + ` | ${this.stationName}` },
                 { 'property': 'twitter:description', content: "The Monster Scholarship Program: We believe in the power of education." },
-                { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-msp.jpg" }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-msp.jpg` }
             ]
         }
     },
@@ -175,6 +175,14 @@ export default {
 
         sponsors() {
             return this.$store.state.scholars.sponsors;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

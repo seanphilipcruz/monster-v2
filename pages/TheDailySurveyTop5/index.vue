@@ -211,7 +211,7 @@ export default {
         },
 
         stationChart() {
-            return this.$store.state.station.title;
+            return this.$store.getters.StationChart;
         },
 
         show() {
@@ -236,6 +236,14 @@ export default {
 
         resultDate() {
             return this.$store.state.dailyCountdowns.resultDate;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

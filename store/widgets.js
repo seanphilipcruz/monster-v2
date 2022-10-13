@@ -20,6 +20,14 @@ export const state = () => ({
     outbreakCharts: []
 });
 
+export const getters = {
+    outbreakChartCount(state) {
+        if (process.client) {
+            return state.outbreakCharts.length;
+        }
+    }
+}
+
 export const mutations = {
     setChartsWidget(state, payload) {
         state.widgetCharts = payload.charts;

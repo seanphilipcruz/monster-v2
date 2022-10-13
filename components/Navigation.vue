@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-xxl navbar-dark bg-dark-gray">
         <div class="container-fluid">
             <nuxt-link :to="{ name: 'index' }" class="navbar-brand">
-                <img src="~/images/logo.png" alt="Monster RX93.1">
+                <img src="~/images/logo.png" :alt="stationName">
             </nuxt-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".collapse">
                 <span class="navbar-toggler-icon"></span>
@@ -119,7 +119,11 @@ export default {
 
     computed: {
         stationChart() {
-            return this.$store.state.station.title;
+            return this.$store.getters.StationChart;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
         },
 
         stationCode() {

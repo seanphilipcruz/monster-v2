@@ -104,6 +104,14 @@ export default {
             return this.$store.state.gimikboards.gimikboard;
         },
 
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
+        },
+
         routePath() {
             return this.$route.fullPath;
         }

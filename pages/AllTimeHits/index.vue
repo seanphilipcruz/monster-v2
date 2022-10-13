@@ -117,11 +117,11 @@ export default {
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         },
 
         siteUrl() {
-            return this.$store.state.siteUrl;
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {
