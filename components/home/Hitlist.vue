@@ -12,7 +12,7 @@
                             <div class="col-10">
                                 <div class="mx-2">
                                     <p class="fs-4 header mb-0 text-uppercase">{{ stationChart }}</p>
-                                    <p class="barlow text-light">Catch the countdown every Friday, 6 to 7PM with Hazel Hottie</p>
+                                    <p class="barlow text-light">Catch the countdown every Saturday, 9AM to 12PM</p>
                                 </div>
                             </div>
                         </div>
@@ -24,7 +24,7 @@
                             </div>
                             <div class="col-11">
                                 <p class="fs-4 header mb-0 text-uppercase">{{ stationChart }}</p>
-                                <p class="barlow text-light">Catch the countdown every Friday, 6 to 7PM with Hazel Hottie</p>
+                                <p class="barlow text-light">Catch the countdown every Saturday, 9AM to 12PM</p>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                             <div class="my-3"></div>
                             <div class="row">
                                 <div class="col">
-                                    <router-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</router-link>
+                                    <router-link :to="{ name: 'MonsterTop30' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</router-link>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
                             <div class="row">
                                 <div class="col">
-                                    <nuxt-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</nuxt-link>
+                                    <nuxt-link :to="{ name: 'MonsterTop30' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</nuxt-link>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                 <div class="d-none d-md-block d-lg-none d-xl-none d-xxl-none">
                     <div class="row justify-content-center">
                         <div class="col-8">
-                            <nuxt-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</nuxt-link>
+                            <nuxt-link :to="{ name: 'MonsterTop30' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</nuxt-link>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                                     <div class="my-2"></div>
                                     <div class="row">
                                         <div class="col-12">
-                                            <nuxt-link :to="{ name: 'CountdownTop7' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</nuxt-link>
+                                            <nuxt-link :to="{ name: 'MonsterTop30' }" class="btn btn-info btn-monster-blue btn-rounded d-grid">LISTEN: TOP {{ chartCount }}</nuxt-link>
                                         </div>
                                     </div>
                                 </div>

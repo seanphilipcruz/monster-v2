@@ -2,7 +2,7 @@ import { resolve } from "path";
 
 export const recaptchaSiteKey = '6Ld2bAscAAAAAETgf1NV6XXg1DR6ztZRcmCzQyeP';
 
-const baseUrl = (process.env.NODE_ENV === 'development' ? 'http://127.0.0.2' : 'https://rx931.com');
+const baseUrl = (process.env.NODE_ENV === 'development' ? 'http://127.0.0.2' : 'https://monsterdavao.com');
 
 export default {
     target: 'static',
@@ -13,8 +13,8 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        titleTemplate: '%s | Monster RX93.1',
-        title: 'Monster RX93.1',
+        titleTemplate: '%s | Monster BT99.5 Davao',
+        title: 'Monster BT99.5 Davao',
         htmlAttrs: {
             lang: 'en'
         },
@@ -25,12 +25,12 @@ export default {
             { name: 'subject', content: 'Radio' },
             { name: 'language', content: 'ES' },
             { name: 'author', content: 'Audiovisual Communicators Inc.' },
-            { name: 'url', content: 'https://rx931.com' },
-            { name: 'DC.title', content: 'monsterrx931' },
+            { name: 'url', content: 'https://monsterdavao.com' },
+            { name: 'DC.title', content: 'monsterbt995' },
             { name: 'geo.region', content: 'PH' },
-            { name: 'geo.placename', content: 'Pasig City' },
-            { name: 'geo.position', content: '14.5870716; 121.0610674' },
-            { name: 'ICBM', content: '14.5870716, 121.0610674' },
+            { name: 'geo.placename', content: 'Davao City' },
+            { name: 'geo.position', content: '7.0778149; 125.6120103' },
+            { name: 'ICBM', content: '7.0778149, 125.6120103' },
             { name: 'format-detection', content: 'telephone=no' },
             { 'http-equiv': 'Content-Security-Policy', content: "img-src * 'self' data:;\n" +
                     "          default-src * 'self' gap: wss: ws: ;\n" +
@@ -38,8 +38,8 @@ export default {
                     "          script-src * 'self' 'unsafe-inline' 'unsafe-eval';\n" +
                     "          frame-src * 'self' data: http: https: wss: ws: 'unsafe-inline' 'unsafe-eval';" },
             { 'property': 'og:type', content: "website" },
-            { 'property': 'twitter:site', content: "@RX931" },
-            { 'property': 'twitter:creator', content: "@RX931" },
+            { 'property': 'twitter:site', content: "@monsterbt995" },
+            { 'property': 'twitter:creator', content: "@monsterbt995" },
             { 'property': 'twitter:card', content: "summary_large_image" },
             { 'property': 'fb:app_id', content: '250218719159269' }
         ],

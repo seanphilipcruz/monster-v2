@@ -25,10 +25,10 @@ export default {
 
     data() {
         return {
-            banner: !this.$props.image ? '/images/banner.jpg' :
+            banner: this.$props.type === 'about' ? '/images/about/main-banner.jpg' :
                 (this.$props.type === 'radio1' ? '/images/MonsterJocks/radio1-header-500.jpg' :
                     (this.$props.type === 'indiegrounds' ? '/images/indiegrounds/banner.jpg' :
-                        (this.$props.type === 'about' ? '/images/about/main-banner.jpg' : this.$props.image )))
+                        (!this.$props.image ? '/images/banner.jpg' : this.$props.image )))
         }
     },
 

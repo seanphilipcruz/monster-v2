@@ -12,7 +12,7 @@
                                 </div>
                                 <div class="col-10">
                                     <p class="fs-4 header mb-0">WHAT'S HOT</p>
-                                    <p class="barlow text-light">Articles, Podcasts, and YouTube Videos</p>
+                                    <p class="barlow text-light">Articles, and YouTube Videos</p>
                                 </div>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="col-11">
                                     <p class="fs-4 header mb-0">WHAT'S HOT</p>
-                                    <p class="barlow text-light">Articles, Podcasts, and YouTube Videos</p>
+                                    <p class="barlow text-light">Articles, and YouTube Videos</p>
                                 </div>
                             </div>
                         </div>
@@ -42,26 +42,6 @@
                             </div>
                             <div class="my-2"></div>
                             <nuxt-link :to="{ name: 'Articles-uuid-articleSlug', params: { uuid: article.unique_id, articleSlug: slugString(article.title) } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">VIEW ARTICLE</nuxt-link>
-                        </div>
-                        <div class="col mb-4" v-if="tmr">
-                            <div class="card bg-light-gray text-light">
-                                <img :src="tmr.image" alt="tmr" class="card-img-top rounded-start">
-                                <div class="card-body">
-                                    <p class="mb-0 text-center card-title">The Morning Rush</p>
-                                </div>
-                            </div>
-                            <div class="my-2"></div>
-                            <nuxt-link :to="{ name: 'Podcasts', query: { showID: tmr.show_id, show: tmr.show.slug_string } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">LISTEN MORE</nuxt-link>
-                        </div>
-                        <div class="col mb-4" v-if="podcast">
-                            <div class="card bg-light-gray text-light">
-                                <img :src="podcast.image" alt="latest-podcast" class="card-img-top rounded-start">
-                                <div class="card-body">
-                                    <p class="mb-0 text-center card-title">{{ stationName }} Podcast</p>
-                                </div>
-                            </div>
-                            <div class="my-2"></div>
-                            <nuxt-link :to="{ name: 'Podcasts', query: { showID: podcast.show_id, show: podcast.show.slug_string } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">LISTEN MORE</nuxt-link>
                         </div>
                         <div class="col mb-4">
                             <div class="card bg-light-gray text-light">
@@ -95,36 +75,6 @@
                                     </div>
                                     <div class="my-2"></div>
                                     <nuxt-link :to="{ name: 'Articles-uuid-articleSlug', params: { uuid: article.unique_id, articleSlug: slugString(article.title) } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">VIEW ARTICLE</nuxt-link>
-                                </div>
-                                <div class="col col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4" v-if="tmr">
-                                    <div class="card bg-light-gray text-light">
-                                        <div class="image-container">
-                                            <img :src="tmr.image" alt="tmr" class="card-img-top rounded-start">
-                                            <div class="overlay">
-                                                <img src="~/images/home/tmr.png" alt="tmr" class="icon">
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="mb-0 text-center card-title">The Morning Rush</p>
-                                        </div>
-                                    </div>
-                                    <div class="my-2"></div>
-                                    <nuxt-link :to="{ name: 'Podcasts', query: { showID: tmr.show_id, show: tmr.show.slug_string } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">LISTEN MORE</nuxt-link>
-                                </div>
-                                <div class="col col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4" v-if="podcast">
-                                    <div class="card bg-light-gray text-light">
-                                        <div class="image-container">
-                                            <img :src="podcast.image" alt="latest-podcast" class="card-img-top rounded-start">
-                                            <div class="overlay">
-                                                <img src="~/images/home/podcast.png" alt="latest-podcast" class="icon">
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="mb-0 text-center card-title">{{ stationName }} Podcast</p>
-                                        </div>
-                                    </div>
-                                    <div class="my-2"></div>
-                                    <nuxt-link :to="{ name: 'Podcasts', query: { showID: podcast.show_id, show: podcast.show.slug_string } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">LISTEN MORE</nuxt-link>
                                 </div>
                                 <div class="col col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4">
                                     <div class="card bg-light-gray text-light">
@@ -180,7 +130,7 @@ export default {
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         },
     },
 }

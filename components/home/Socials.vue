@@ -81,7 +81,7 @@ export default {
 
     computed: {
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         },
     }
 }

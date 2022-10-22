@@ -20,7 +20,7 @@ export const state = () => ({
         topic: '',
         content: ''
     },
-    stationCode: 'mnl'
+    stationCode: 'dav'
 });
 
 export const getters = {
