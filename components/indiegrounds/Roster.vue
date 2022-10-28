@@ -10,7 +10,7 @@
                     <div class="card bg-light-gray border-transparent interactive-card">
                         <img :src="indie.image" :alt="indie.image" class="card-img rounded-start">
                         <div class="card-body bg-medium-gray text-center text-light fw-light text-uppercase">
-                            <nuxt-link :to="{ name: 'Indiegrounds-artistID-artistSlugName', params: { artistID: indie.id, artistSlugName: indie.slug_artist_name } }"
+                            <nuxt-link :to="{ name: 'Indieground-artistID-artistSlugName', params: { artistID: indie.id, artistSlugName: indie.slug_artist_name } }"
                                          class="text-light stretched-link"
                                          :title="indie.artist.name">{{ trimString(indie.artist.name, 16) }}</nuxt-link>
                         </div>

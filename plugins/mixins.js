@@ -52,8 +52,8 @@ Vue.mixin({
                 case 'Jocks':
                     this.$router.replace({ name: 'MonsterJocks' });
                     break;
-                case 'Indiegrounds':
-                    this.$router.replace({ name: 'Indiegrounds' });
+                case 'Indieground':
+                    this.$router.replace({ name: 'Indieground' });
                     break;
                 case 'Gimikboards':
                     this.$router.replace({ name: 'Gimikboard' });

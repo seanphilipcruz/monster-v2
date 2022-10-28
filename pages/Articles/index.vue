@@ -156,11 +156,11 @@ export default {
             meta: [
                 { hid: 'description', name: 'description', content: `Read up on the latest in showbiz and exclusive interviews on the ${this.stationName} blog.` },
                 { 'property': 'og:url', content: this.siteUrl + this.routePath },
-                { 'property': 'og:title', content: (!this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`) + ' | Monster BT105.9' },
+                { 'property': 'og:title', content: (!this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`) + ` | ${this.stationName}` },
                 { 'property': 'og:description', content: `Read up on the latest in showbiz and exclusive interviews on the ${this.stationName} blog.` },
                 { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
-                { 'property': 'twitter:title', content: (!this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`) + ' | Monster BT105.9' },
+                { 'property': 'twitter:title', content: (!this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`) + ` | ${this.stationName}` },
                 { 'property': 'twitter:description', content: `Read up on the latest in showbiz and exclusive interviews on the ${this.stationName} blog.` },
                 { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]

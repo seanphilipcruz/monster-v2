@@ -41,7 +41,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <nuxt-link :to="{ name: 'Indiegrounds' }" class="nav-link text-uppercase">Indieground</nuxt-link>
+                        <nuxt-link :to="{ name: 'Indieground' }" class="nav-link text-uppercase">Indieground</nuxt-link>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="misc-dropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">OTHERS</a>

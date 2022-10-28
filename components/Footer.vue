@@ -38,7 +38,7 @@
                         <div class="text-center text-light barlow-footer">v{{ version }}</div>
                     </div>
                     <div class="col-12 text-center">
-                        Audiovisual Communicators Inc. &copy; 2021
+                        Audiovisual Communicators Inc. &copy; 2022
                         <div class="row justify-content-center">
                             <div class="col-10">
                                 <div class="small">
