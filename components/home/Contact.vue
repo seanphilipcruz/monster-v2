@@ -102,7 +102,7 @@
                         <div class="my-4"></div>
                         <div class="row">
                             <div class="col text-center barlow text-light">
-                                For Inquiries, email at
+                                For Inquiries, email us at
                                 <p class="text-monster-yellow">bt1059.monsterradio@gmail.com</p>
                             </div>
                         </div>

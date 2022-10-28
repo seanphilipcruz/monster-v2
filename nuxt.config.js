@@ -2,7 +2,7 @@ import { resolve } from "path";
 
 export const recaptchaSiteKey = '6Ld2bAscAAAAAETgf1NV6XXg1DR6ztZRcmCzQyeP';
 
-const baseUrl = (process.env.NODE_ENV === 'development' ? 'http://127.0.0.2' : 'https://rx931.com');
+const baseUrl = (process.env.NODE_ENV === 'development' ? 'http://127.0.0.2' : 'https://monstercebu.com');
 
 export default {
     target: 'static',
@@ -13,8 +13,8 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        titleTemplate: '%s | Monster BT105.9',
-        title: 'Monster BT105.9',
+        titleTemplate: '%s | Monster BT105.9 Cebu',
+        title: 'Monster BT105.9 Cebu',
         htmlAttrs: {
             lang: 'en'
         },

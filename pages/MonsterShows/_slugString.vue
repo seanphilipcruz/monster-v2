@@ -111,14 +111,14 @@ export default {
             title: this.show.title,
             meta: [
                 { hid: 'description', name: 'description', content: this.show.front_description },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.show.title} | Monster BT105.9 Cebu` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `${this.show.title} | ${this.stationName}` },
                 { 'property': 'og:description', content: this.show.front_description },
-                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-shw.jpg" },
-                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-shw.jpg" },
-                { 'property': 'twitter:title', content: `${this.show.title} | Monster BT105.9 Cebu` },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-shw.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-shw.jpg` },
+                { 'property': 'twitter:title', content: `${this.show.title} | ${this.stationName}` },
                 { 'property': 'twitter:description', content: this.show.front_description },
-                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-shw.jpg" }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-shw.jpg` }
             ]
         }
     },
@@ -172,6 +172,14 @@ export default {
 
         charts() {
             return this.$store.state.shows.chart;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

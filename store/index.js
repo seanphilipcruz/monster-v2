@@ -12,12 +12,6 @@ export const state = () => ({
     isContentLoading: false,
     isPlayerLoading: false,
     isFormBusy: false,
-    station: {
-        title: 'Monster Hot Top 40'
-    },
-    stationName: 'Monster BT105.9',
-    chartCount: 40,
-    stationCode: 'cbu',
     openCount: 0,
     message: {
         name: '',
@@ -26,8 +20,60 @@ export const state = () => ({
         topic: '',
         content: ''
     },
-    siteUrl: 'https://monstercebu.com'
+    stationCode: 'cbu'
 });
+
+export const getters = {
+    StationChart(state) {
+        if (state.stationCode === 'cbu') {
+            return 'Monster Hot Top 40';
+        } else if (state.stationCode === 'dav') {
+            return 'The Monster\'s Top 30';
+        } else {
+            return 'Countdown Top 7';
+        }
+    },
+
+    StationName(state) {
+        if (state.stationCode === 'cbu') {
+            return 'Monster BT105.9 Cebu';
+        } else if (state.stationCode === 'dav') {
+            return 'Monster BT99.5 Davao';
+        } else {
+            return 'Monster RX93.1';
+        }
+    },
+
+    StationUrl(state) {
+        if (state.stationCode === 'cbu') {
+            return 'https://monstercebu.com';
+        } else if (state.stationCode === 'dav') {
+            return 'https://monsterdavao.com';
+        } else {
+            return 'https://rx931.com';
+        }
+    },
+
+    StationVersion(state) {
+        if (state.stationCode === 'cbu') {
+            return '2.0.1';
+        } else if (state.stationCode === 'dav') {
+            return '2.0.0';
+        } else {
+            return '2.1.5';
+        }
+    },
+
+    StationChartCount(state) {
+        if (state.stationCode === 'cbu') {
+            return 40;
+        } else if (state.stationCode === 'dav') {
+            return 30;
+        } else {
+            return 20;
+        }
+    }
+}
 
 export const mutations = {
     setGiveaways(state, payload) {

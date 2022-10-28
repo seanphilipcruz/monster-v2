@@ -37,14 +37,14 @@ export default {
             title: 'Home',
             meta: [
                 { hid: 'description', name: 'description', content: "Cebu's Hottest Radio Station" },
-                { 'property': 'og:url', content: "https://monstercebu.com" },
-                { 'property': 'og:title', content: "Home | Monster BT105.9 Cebu" },
+                { 'property': 'og:url', content: this.siteUrl },
+                { 'property': 'og:title', content: `Home | ${this.stationName}` },
                 { 'property': 'og:description', content: "Cebu's Hottest Radio Station" },
-                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: `Home | Monster BT105.9 Cebu` },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'twitter:title', content: `Home | ${this.stationName}` },
                 { 'property': 'twitter:description', content: "Cebu's Hottest Radio Station" },
-                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
     },
@@ -105,6 +105,14 @@ export default {
 
         tmr() {
             return this.$store.state.tmr;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
     },
 

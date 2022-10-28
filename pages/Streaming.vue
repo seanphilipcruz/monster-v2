@@ -58,15 +58,15 @@ export default {
         return {
             title: !this.show ? 'Live Stream' : `Live: ${this.show.title}`,
             meta: [
-                { hid: 'description', name: 'description', content: !this.show ? 'Live Shows via Monster RX93.1 Streaming' : this.show.front_description },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: !this.show ? 'Live Stream | Monster BT105.9 Cebu' : `Live: ${this.show.title} | Monster RX93.1` },
-                { 'property': 'og:description', content: !this.show ? 'Live Shows via Monster BT105.9 Cebu Streaming' : this.show.front_description },
-                { 'property': 'og:image', content: !this.show ? "https://monstercebu.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
-                { 'property': 'og:image:alt', content: !this.show ? "https://monstercebu.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image },
-                { 'property': 'twitter:title', content: !this.show ? 'Live Stream | Monster BT105.9 Cebu' : `Live: ${this.show.title} | Monster RX93.1` },
-                { 'property': 'twitter:description', content: !this.show ? 'Live Shows via Monster BT105.9 Cebu Streaming' : this.show.front_description },
-                { 'property': 'twitter:image', content: !this.show ? "https://monstercebu.com/images/_assets/thumbnails/thmbn-lve.jpg" : this.show.header_image }
+                { hid: 'description', name: 'description', content: !this.show ? `Live Shows via ${this.stationName} Streaming` : this.show.front_description },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: !this.show ? `Live Stream | ${this.stationName}` : `Live: ${this.show.title} | ${this.stationName}` },
+                { 'property': 'og:description', content: !this.show ? `Live Shows via ${this.stationName} Streaming` : this.show.front_description },
+                { 'property': 'og:image', content: !this.show ? `${this.siteUrl}/images/_assets/thumbnails/thmbn-lve.jpg` : this.show.header_image },
+                { 'property': 'og:image:alt', content: !this.show ? `${this.siteUrl}/images/_assets/thumbnails/thmbn-lve.jpg` : this.show.header_image },
+                { 'property': 'twitter:title', content: !this.show ? `Live Stream | ${this.stationName}` : `Live: ${this.show.title} | ${this.stationName}` },
+                { 'property': 'twitter:description', content: !this.show ? `Live Shows via ${this.stationName} Streaming` : this.show.front_description },
+                { 'property': 'twitter:image', content: !this.show ? `${this.siteUrl}/images/_assets/thumbnails/thmbn-lve.jpg` : this.show.header_image }
             ]
         }
     },
@@ -204,7 +204,11 @@ export default {
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

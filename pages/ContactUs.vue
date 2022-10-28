@@ -151,16 +151,16 @@
                                                 <div class="card-body bg-medium-gray barlow">
                                                     <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
                                                         <div class="my-1 mx-0">
-                                                            Whether you are an on-air or online winner, you can claim your prize at the station during office hours (including Saturday morning).
+                                                            You can claim your prize at the station during office hours (including Saturday morning) unless instructed otherwise. Don't forget to bring a valid ID.
                                                             <br><br>
-                                                            If you choose to send a representative to claim for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
+                                                            If you choose to send a representative to claim your prize for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
                                                         </div>
                                                     </div>
                                                     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
                                                         <div class="my-4 mx-3">
-                                                            Whether you are an on-air or online, you can claim your prize at the station during office hours (including Saturday Morning). Don't forget to bring a valid ID.
+                                                            You can claim your prize at the station during office hours (including Saturday morning) unless instructed otherwise. Don't forget to bring a valid ID.
                                                             <br><br>
-                                                            If you choose to send a representative to claim for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
+                                                            If you choose to send a representative to claim your prize for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
                                                         </div>
                                                     </div>
                                                 </div>
@@ -188,15 +188,15 @@ export default {
         return {
             title: 'Contact Us',
             meta: [
-                { hid: 'description', name: 'description', content: 'Get in touch with Monster BT105.9 Cebu via email, phone, or message.' },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: 'Contact Us | Monster BT105.9 Cebu' },
-                { 'property': 'og:description', content: 'Get in touch with Monster BT105.9 Cebu via email, phone, or message.' },
-                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: 'Contact Us | Monster BT105.9 Cebu' },
-                { 'property': 'twitter:description', content: 'Get in touch with Monster BT105.9 Cebu via email, phone, or message.' },
-                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { hid: 'description', name: 'description', content: `Get in touch with ${this.stationName} via email, phone, or message.` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `Contact Us | ${this.stationName}` },
+                { 'property': 'og:description', content: `Get in touch with ${this.stationName} via email, phone, or message.` },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'twitter:title', content: `Contact Us | ${this.stationName}` },
+                { 'property': 'twitter:description', content: `Get in touch with ${this.stationName} via email, phone, or message.` },
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
     },
@@ -208,6 +208,14 @@ export default {
 
         recaptchaKey() {
             return this.$store.state.captchaSiteKey;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

@@ -206,7 +206,7 @@
                                     <p class="font-responsive font-thin-1">If you have any questions about this Privacy Policy, please contact us:</p>
                                     <ul class="font-responsive font-thin-1">
                                         <li>By email: <a href="mailto:bt1059.monsterradio@gmail.com" class="text-monster-blue">bt1059.monsterradio@gmail.com</a></li>
-                                        <li>By visiting this page on our website: <router-link :to="{ name: 'ContactUs' }" class="text-monster-blue">{{ stationUrl }}/ContactUs</router-link></li>
+                                        <li>By visiting this page on our website: <router-link :to="{ name: 'ContactUs' }" class="text-monster-blue">{{ siteUrl }}/ContactUs</router-link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -233,14 +233,14 @@ export default {
             title: 'Privacy Policy',
             meta: [
                 { hid: 'description', name: 'description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: 'Privacy Policy | Monster BT105.9 Cebu' },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: `Privacy Policy | ${this.stationName}` },
                 { 'property': 'og:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'og:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'og:image:alt', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: 'Privacy Policy | Monster BT105.9 Cebu' },
+                { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
+                { 'property': 'twitter:title', content: `Privacy Policy | ${this.stationName}` },
                 { 'property': 'twitter:description', content: 'Read our privacy policy for terms and conditions of our services.' },
-                { 'property': 'twitter:image', content: "https://monstercebu.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
+                { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
     },
@@ -250,8 +250,12 @@ export default {
             return this.$store.state.isLoading;
         },
 
-        stationUrl() {
-            return this.$store.state.siteUrl;
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

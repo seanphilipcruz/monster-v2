@@ -102,17 +102,17 @@ export default {
 
     head() {
         return {
-            title: !this.show ? 'Monster Hot Top 40' : this.show.title,
+            title: !this.show ? this.stationChart : this.show.title,
             meta: [
                 { hid: 'description', name: 'description', content: !this.show ? 'Loading ...' : this.show.front_description },
-                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
-                { 'property': 'og:title', content: !this.show ? 'Monster Hot Top 40' : `${this.show.title} | Monster BT105.9 Cebu` },
+                { 'property': 'og:url', content: this.siteUrl + this.routePath },
+                { 'property': 'og:title', content: !this.show ? this.stationChart : `${this.show.title} | ${this.stationName}` },
                 { 'property': 'og:description', content: !this.show ? 'Loading ...' : this.show.front_description },
-                { 'property': 'og:image', content: !this.show ? 'https://monstercebu.com/images/_assets/default.png' : this.show.header_image },
-                { 'property': 'og:image:alt', content: !this.show ? 'https://monstercebu.com/images/_assets/default.png' : this.show.header_image },
-                { 'property': 'twitter:title', content: !this.show ? 'Monster Hot Top 40' : `${this.show.title} | Monster BT105.9 Cebu` },
+                { 'property': 'og:image', content: !this.show ? `${this.siteUrl}/images/_assets/default.png` : this.show.header_image },
+                { 'property': 'og:image:alt', content: !this.show ? `${this.siteUrl}/images/_assets/default.png` : this.show.header_image },
+                { 'property': 'twitter:title', content: !this.show ? this.stationChart : `${this.show.title} | ${this.stationName}` },
                 { 'property': 'twitter:description', content: !this.show ? 'Loading ...' : this.show.front_description },
-                { 'property': 'twitter:image', content: !this.show ? 'https://monstercebu.com/images/_assets/default.png' : this.show.header_image }
+                { 'property': 'twitter:image', content: !this.show ? `${this.siteUrl}/images/_assets/default.png` : this.show.header_image }
             ]
         }
     },
@@ -182,6 +182,18 @@ export default {
 
         stationCode() {
             return this.$store.state.stationCode;
+        },
+
+        stationChart() {
+            return this.$store.getters.StationChart;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        siteUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

@@ -196,11 +196,11 @@ Vue.mixin({
         },
 
         stationChart() {
-            return this.$store.state.station.title;
+            return this.$store.getters.StationChart;
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         }
     },
 });
