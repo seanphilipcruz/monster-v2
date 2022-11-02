@@ -153,7 +153,7 @@
                                 <div class="row">
                                     <div class="my-3"></div>
                                     <div class="text-light">
-                                        <div class="barlow">See the weekly charts at <nuxt-link :to="{ name: 'MonsterHotTop40' }" class="text-monster-blue">{{ stationChart }}</nuxt-link></div>
+                                        <div class="barlow">See the weekly charts at <nuxt-link :to="{ name: 'MonsterHot40' }" class="text-monster-blue">{{ stationChart }}</nuxt-link></div>
                                         <div v-if="show.slug_string" class="barlow">Want to know more about the show? <nuxt-link :to="{ name: 'MonsterShows-slugString', params: { slugString: trimWhiteSpaces(stationChart) } }" class="text-monster-blue">Click here</nuxt-link> for more info</div>
                                     </div>
                                 </div>

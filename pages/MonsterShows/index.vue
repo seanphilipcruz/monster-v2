@@ -102,14 +102,14 @@ export default {
         return {
             title: 'Monster Shows',
             meta: [
-                { hid: 'description', name: 'description', content: "Cebu's hottest award winning programs!" },
+                { hid: 'description', name: 'description', content: "Cebu's hottest radio programs!" },
                 { 'property': 'og:url', content: this.siteUrl + this.routePath },
                 { 'property': 'og:title', content: `Monster Shows | ${this.stationName}` },
-                { 'property': 'og:description', content: "Cebu's hottest award winning programs!" },
+                { 'property': 'og:description', content: "Cebu's hottest radio programs!" },
                 { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-shw.jpg` },
                 { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-shw.jpg` },
                 { 'property': 'twitter:title', content: `Monster Shows | ${this.stationName}` },
-                { 'property': 'twitter:description', content: "Cebu's hottest award winning programs!" },
+                { 'property': 'twitter:description', content: "Cebu's hottest radio programs!" },
                 { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-shw.jpg` }
             ]
         }

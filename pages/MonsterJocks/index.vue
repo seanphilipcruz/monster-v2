@@ -74,14 +74,14 @@ export default {
         return {
             title: 'Monster Jocks',
             meta: [
-                { hid: 'description', name: 'description', content: "Meet the Monster Jocks who fire up your day with good music and fun discussions!" },
+                { hid: 'description', name: 'description', content: "Meet the Monster Cebu Jocks who fire up your day with good music and fun discussions!" },
                 { 'property': 'og:url', content: this.siteUrl + this.routePath },
                 { 'property': 'og:title', content: `Monster Jocks | ${this.stationName}` },
-                { 'property': 'og:description', content: "Meet the Monster Jocks who fire up your day with good music and fun discussions!" },
+                { 'property': 'og:description', content: "Meet the Monster Cebu Jocks who fire up your day with good music and fun discussions!" },
                 { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-jck.jpg` },
                 { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-jck.jpg` },
                 { 'property': 'twitter:title', content: `Monster Jocks | ${this.stationName}` },
-                { 'property': 'twitter:description', content: "Meet the Monster Jocks who fire up your day with good music and fun discussions!" },
+                { 'property': 'twitter:description', content: "Meet the Monster Cebu Jocks who fire up your day with good music and fun discussions!" },
                 { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-jck.jpg` }
             ]
         }

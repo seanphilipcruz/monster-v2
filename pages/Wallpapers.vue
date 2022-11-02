@@ -187,14 +187,14 @@ export default {
         return {
             title: 'Wallpapers',
             meta: [
-                { hid: 'description', name: 'description', content: 'Download exclusive Monster RX93.1 wallpapers for your phones, computers, and gadgets.' },
+                { hid: 'description', name: 'description', content: `Download exclusive ${this.stationName} wallpapers for your phones, computers, and gadgets.` },
                 { 'property': 'og:url', content: this.siteUrl + this.routePath },
                 { 'property': 'og:title', content: `Wallpapers | ${this.stationName}` },
-                { 'property': 'og:description', content: 'Download exclusive Monster RX93.1 wallpapers for your phones, computers, and gadgets.' },
+                { 'property': 'og:description', content: `Download exclusive ${this.stationName} wallpapers for your phones, computers, and gadgets.` },
                 { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'twitter:title', content: `Wallpapers | ${this.stationName}` },
-                { 'property': 'twitter:description', content: 'Download exclusive Monster RX93.1 wallpapers for your phones, computers, and gadgets.' },
+                { 'property': 'twitter:description', content: `Download exclusive ${this.stationName} wallpapers for your phones, computers, and gadgets.` },
                 { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }
