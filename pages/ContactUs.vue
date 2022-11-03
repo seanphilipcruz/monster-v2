@@ -34,7 +34,7 @@
                                                         <button type="button" class="btn btn-info btn-monster-blue btn-rounded">STATION ADDRESS</button>
                                                     </div>
                                                     <div class="col-lg-12">
-                                                        <p class="barlow">5th Floor Gaisano Mall of Davao <br> J. P. Laurel Ave., <br> Davao City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
+                                                        <p class="barlow">5th Floor Gaisano Mall of Davao <br> J. P. Laurel Ave., Davao City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
@@ -74,9 +74,9 @@
                                             <div class="col-12 col-md-9">
                                                 <div class="card-body bg-medium-gray barlow">
                                                     <div class="my-4 mx-3">
-                                                        Whether you are an on-air or online winner, you can claim your prize at the station during office hours (including Saturday morning).
+                                                        You can claim your prize at the station during office hours (including Saturday morning) unless instructed otherwise. Don't forget to bring a valid ID.
                                                         <br><br>
-                                                        If you choose to send a representative to claim for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
+                                                        If you choose to send a representative to claim your prize for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
                                                     </div>
                                                 </div>
                                             </div>
@@ -112,7 +112,7 @@
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <div class="my-3 mx-2">
-                                                            <p class="barlow">5th Floor Gaisano Mall of Davao <br> J. P. Laurel Ave., <br> Davao City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
+                                                            <p class="barlow">5th Floor Gaisano Mall of Davao <br> J. P. Laurel Ave., Davao City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -151,16 +151,16 @@
                                                 <div class="card-body bg-medium-gray barlow">
                                                     <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none">
                                                         <div class="my-1 mx-0">
-                                                            Whether you are an on-air or online winner, you can claim your prize at the station during office hours (including Saturday morning).
+                                                            You can claim your prize at the station during office hours (including Saturday morning) unless instructed otherwise. Don't forget to bring a valid ID.
                                                             <br><br>
-                                                            If you choose to send a representative to claim for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
+                                                            If you choose to send a representative to claim your prize for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
                                                         </div>
                                                     </div>
                                                     <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">
                                                         <div class="my-4 mx-3">
-                                                            Whether you are an on-air or online, you can claim your prize at the station during office hours (including Saturday Morning). Don't forget to bring a valid ID.
+                                                            You can claim your prize at the station during office hours (including Saturday morning) unless instructed otherwise. Don't forget to bring a valid ID.
                                                             <br><br>
-                                                            If you choose to send a representative to claim for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
+                                                            If you choose to send a representative to claim your prize for you, have him/her bring a valid ID, a photocopy of your ID and an authorization letter with your signature.
                                                         </div>
                                                     </div>
                                                 </div>

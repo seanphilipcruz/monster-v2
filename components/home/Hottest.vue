@@ -12,7 +12,7 @@
                                 </div>
                                 <div class="col-10">
                                     <p class="fs-4 header mb-0">WHAT'S HOT</p>
-                                    <p class="barlow text-light">Articles, and YouTube Videos</p>
+                                    <p class="barlow text-light">Articles and YouTube Videos</p>
                                 </div>
                             </div>
                         </div>
@@ -23,7 +23,7 @@
                                 </div>
                                 <div class="col-11">
                                     <p class="fs-4 header mb-0">WHAT'S HOT</p>
-                                    <p class="barlow text-light">Articles, and YouTube Videos</p>
+                                    <p class="barlow text-light">Articles and YouTube Videos</p>
                                 </div>
                             </div>
                         </div>

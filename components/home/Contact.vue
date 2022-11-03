@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="m-4"></div>
                                 <div class="text-light">
-                                    <p class="barlow">5th Floor Gaisano Mall of Davao <br> J. P. Laurel Ave., <br> Davao City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
+                                    <p class="barlow">5th Floor Gaisano Mall of Davao <br> J. P. Laurel Ave., Davao City <br><br> (Don't forget to bring a valid ID for building entrance)</p>
                                 </div>
                                 <div class="m-4"></div>
                                 <div class="row">
@@ -102,7 +102,7 @@
                         <div class="my-4"></div>
                         <div class="row">
                             <div class="col text-center">
-                                <p class="text-light barlow m-0">For inquiries, email at</p>
+                                <p class="text-light barlow m-0">For inquiries, email us at</p>
                                 <div class="barlow-heading">info@monsterdavao.com</div>
                             </div>
                         </div>

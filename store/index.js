@@ -26,9 +26,9 @@ export const state = () => ({
 export const getters = {
     StationChart(state) {
         if (state.stationCode === 'cbu') {
-            return 'Monster Hot Top 40';
+            return 'Monster Hot 40';
         } else if (state.stationCode === 'dav') {
-            return 'The Monster\'s Top 30';
+            return 'Monster\'s Top 30';
         } else {
             return 'Countdown Top 7';
         }
@@ -56,9 +56,9 @@ export const getters = {
 
     StationVersion(state) {
         if (state.stationCode === 'cbu') {
-            return '2.0.0';
+            return '2.1.1';
         } else if (state.stationCode === 'dav') {
-            return '2.0.0';
+            return '2.0.1';
         } else {
             return '2.1.5';
         }

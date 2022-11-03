@@ -36,14 +36,14 @@ export default {
         return {
             title: 'Home',
             meta: [
-                { hid: 'description', name: 'description', content: "Manila's Hottest Radio Station" },
+                { hid: 'description', name: 'description', content: "Davao's Hottest Radio Station" },
                 { 'property': 'og:url', content: this.siteUrl },
                 { 'property': 'og:title', content: `Home | ${this.stationName}` },
-                { 'property': 'og:description', content: "Manila's Hottest Radio Station" },
+                { 'property': 'og:description', content: "Davao's Hottest Radio Station" },
                 { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'twitter:title', content: `Home | ${this.stationName}` },
-                { 'property': 'twitter:description', content: "Manila's Hottest Radio Station" },
+                { 'property': 'twitter:description', content: "Davao's Hottest Radio Station" },
                 { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }

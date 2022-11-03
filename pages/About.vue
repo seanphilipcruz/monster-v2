@@ -130,14 +130,14 @@ export default {
         return {
             title: 'About Us',
             meta: [
-                { hid: 'description', name: 'description', content: "Get to know about us! " + this.stationName },
+                { hid: 'description', name: 'description', content: "Get to know us! " + this.stationName },
                 { 'property': 'og:url', content: this.siteUrl + this.routePath },
                 { 'property': 'og:title', content: `About Us | ${this.stationName}` },
-                { 'property': 'og:description', content: "Get to know about us! " + this.stationName },
+                { 'property': 'og:description', content: "Get to know us! " + this.stationName },
                 { 'property': 'og:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'og:image:alt', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` },
                 { 'property': 'twitter:title', content: `About Us | ${this.stationName}` },
-                { 'property': 'twitter:description', content: "Get to know about us! " + this.stationName },
+                { 'property': 'twitter:description', content: "Get to know us! " + this.stationName },
                 { 'property': 'twitter:image', content: `${this.siteUrl}/images/_assets/thumbnails/thmbn-mnl.jpg` }
             ]
         }

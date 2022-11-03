@@ -25,9 +25,6 @@
                                 <a href="https://www.instagram.com/monsterbt995" target="_blank" class="btn btn-social-icon btn-flickr text-light mx-1">
                                     <font-awesome-icon :icon="['fab', 'fa-instagram']" />
                                 </a>
-                                <a href="https://www.youtube.com/channel/UCMgKa-bzBoj40sQUqvX7kag" target="_blank" class="btn btn-social-icon btn-pinterest text-light mx-1">
-                                    <font-awesome-icon :icon="['fab', 'fa-youtube']" />
-                                </a>
                             </div>
                         </div>
                     </div>

@@ -92,7 +92,7 @@
                         <ul class="dropdown-menu text-center" aria-labelledby="misc-dropdown">
                             <li><nuxt-link :to="{ name: 'ContactUs' }" class="dropdown-item">Contact</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'PrivacyPolicy'}" class="dropdown-item">Privacy Policy</nuxt-link></li>
-                            <li><nuxt-link :to="{ name: 'About' }" class="dropdown-item">About BT</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'About' }" class="dropdown-item">About BT99.5</nuxt-link></li>
                         </ul>
                     </li>
                     <li class="nav-item">
