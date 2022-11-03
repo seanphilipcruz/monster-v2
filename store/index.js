@@ -58,9 +58,9 @@ export const getters = {
         if (state.stationCode === 'cbu') {
             return '2.1.1';
         } else if (state.stationCode === 'dav') {
-            return '2.0.1';
+            return '2.0.3';
         } else {
-            return '2.1.5';
+            return '2.1.6';
         }
     },
 

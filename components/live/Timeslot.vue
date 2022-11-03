@@ -25,7 +25,7 @@
                                 </div>
                             </div>
 
-                            <div v-for="(timeslot, index) in showTimeslots" :key="timeslot.id" v-show="!showJocks">
+                            <div v-for="(timeslot, index) in showTimeslots" :key="'S' + timeslot.id" v-show="!showJocks">
                                 <div class="card bg-medium-gray text-light barlow interactive-card" v-if="index % 2 === 0">
                                     <div class="row m-4">
                                         <div class="col-6">
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
 
-                            <div v-for="(timeslot, index) in jockTimeslots" :key="timeslot.id" v-show="showJocks">
+                            <div v-for="(timeslot, index) in jockTimeslots" :key="'J' + timeslot.id" v-show="showJocks">
                                 <div class="card bg-medium-gray text-light barlow" v-if="index % 2 === 0">
                                     <div class="row m-4">
                                         <div class="col-6" v-show="timeslot.jock.length === 0">
