@@ -3,7 +3,7 @@
         <div class="col-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mb-4" v-for="podcast in podcasts" :key="podcast.id">
             <div class="card bg-medium-gray text-light interactive-card">
                 <div class="card-header text-center">
-                    <nuxt-link :to="{ name: 'Podcasts-id-podcastEpisode', params: { id: podcast.id, podcastEpisode: trimWhiteSpaces(podcast.episode) } }"
+                    <nuxt-link :to="{ name: 'Podcasts-id', params: { id: podcast.id, podcastEpisode: trimWhiteSpaces(podcast.episode) } }"
                                  class="fs-6 text-monster-blue text-uppercase"
                                  :title="podcast.episode">{{ trimString(podcast.episode, 16) }}</nuxt-link>
                 </div>

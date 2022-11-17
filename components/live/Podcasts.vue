@@ -15,7 +15,7 @@
                                 <img :src="podcast.image"  :alt="podcast.episode" class="img-fluid">
                                 <div class="card-body">
                                     <div class="card-text text-light barlow text-center">
-                                        <router-link :to="{ name: 'Podcasts-id-podcastEpisode', params: { id: podcast.id, podcastEpisode: trimWhiteSpaces(podcast.episode) } }" class="stretched-link">{{ trimString(podcast.episode, 22) }}</router-link>
+                                        <router-link :to="{ name: 'Podcasts-id', params: { id: podcast.id, podcastEpisode: trimWhiteSpaces(podcast.episode) } }" class="stretched-link">{{ trimString(podcast.episode, 22) }}</router-link>
                                     </div>
                                 </div>
                             </div>

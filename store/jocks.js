@@ -49,49 +49,81 @@ export const getters = {
 
     headsCount(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 1).length;
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 1).length;
+            }
+
+            return 0;
         }
     },
 
     seniorsCount(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 2).length;
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 2).length;
+            }
+
+            return 0;
         }
     },
 
     juniorsCount(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 3).length;
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 3).length;
+            }
+
+            return 0;
         }
     },
 
     babiesCount(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 4).length;
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 4).length;
+            }
+
+            return 0;
         }
     },
 
     studentJockHeads(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 1);
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 1);
+            }
+
+            return 0;
         }
     },
 
     studentJockSeniors(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 2);
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 2);
+            }
+
+            return 0;
         }
     },
 
     studentJockJuniors(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 3);
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 3);
+            }
+
+            return 0;
         }
     },
 
     studentJockBabies(state) {
         if (process.client) {
-            return state.radio1.student.filter(s => s.position === 4);
+            if (state.radio1.student) {
+                return state.radio1.student.filter(s => s.position === 4);
+            }
+
+            return 0;
         }
     },
 }

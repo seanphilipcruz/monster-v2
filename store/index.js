@@ -60,7 +60,7 @@ export const getters = {
         } else if (state.stationCode === 'dav') {
             return '2.0.0';
         } else {
-            return '2.1.6';
+            return '2.1.7';
         }
     },
 

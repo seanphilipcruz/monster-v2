@@ -17,7 +17,7 @@ export const state = () => ({
 
 export const getters = {
     getShowCount(state) {
-        if (process.length) {
+        if (process.client) {
             return state.shows.length;
         }
     },

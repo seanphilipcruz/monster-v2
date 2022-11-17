@@ -15,7 +15,11 @@ export const getters = {
     },
 
     getLatestArticle(state) {
-        return state.articles[0];
+        if (state.articles.length > 0) {
+            return state.articles[0];
+        }
+
+        return null;
     }
 }
 

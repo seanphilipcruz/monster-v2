@@ -15,7 +15,7 @@ export const state = () => ({
 
 export const getters = {
     dailyChartLength(state) {
-        if (process.length) {
+        if (process.client) {
             return state.dailyCharts.length;
         }
     }

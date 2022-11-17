@@ -67,7 +67,7 @@
                                                         <div class="row">
                                                             <div class="col-12 text-center">
                                                                 <div class="my-2"></div>
-                                                                <nuxt-link :to="{ name: 'Podcasts-id-podcastEpisode', params: { id: related_podcast.id, podcastEpisode: trimWhiteSpaces(related_podcast.episode) } }"
+                                                                <nuxt-link :to="{ name: 'Podcasts-id', params: { id: related_podcast.id, podcastEpisode: trimWhiteSpaces(related_podcast.episode) } }"
                                                                            class="text-monster-blue"
                                                                            :title="related_podcast.episode">
                                                                     {{ trimString(related_podcast.episode, 20) }}
@@ -102,7 +102,7 @@
 
 <script>
 export default {
-    name: "podcasts-id-podcastEpisode",
+    name: "podcasts-id",
 
     async asyncData({ params, store }) {
         const { id, podcastEpisode } = params;
@@ -134,7 +134,11 @@ export default {
     methods: {
         loadPodcast(loadingState) {
             this.$store.dispatch("setLoadingState", { type: 'content', status: loadingState });
-        }
+        },
+
+        trimWhiteSpaces(text = "") {
+            return text.replace(/\s+/g, '');
+        },
     },
 
     computed: {
