@@ -5,8 +5,6 @@ export const recaptchaSiteKey = '6Ld2bAscAAAAAETgf1NV6XXg1DR6ztZRcmCzQyeP';
 const baseUrl = (process.env.NODE_ENV === 'development' ? 'http://127.0.0.2' : 'https://monstercebu.com');
 
 export default {
-    target: 'static',
-
     server: {
         // host: '192.168.0.2'
     },
