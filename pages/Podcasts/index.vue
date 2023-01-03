@@ -174,20 +174,20 @@ import ApiService from "@/services/api";
 export default {
     name: "PodcastsHome",
 
-    async asyncData({ store, route }) {
-        const { showID, show, page } = route.query;
+    async fetch() {
+        const { showID, show, page } = this.$route.query;
 
         try {
             if (showID && page) {
-                await store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?filter=${showID}&page=${page}`);
+                await this.$store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?filter=${showID}&page=${page}`);
             } else if (page) {
-                await store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?page=${page}`);
+                await this.$store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?page=${page}`);
             } else if (showID) {
-                await store.dispatch("podcasts/getShowData", show);
+                await this.$store.dispatch("podcasts/getShowData", show);
 
-                await store.dispatch("podcasts/filterPodcast", showID);
+                await this.$store.dispatch("podcasts/filterPodcast", showID);
             } else {
-                await store.dispatch("podcasts/setPodcastsData");
+                await this.$store.dispatch("podcasts/setPodcastsData");
             }
         } catch (error) {
             alert(error);

@@ -156,22 +156,22 @@ import ApiService from "@/services/api";
 export default {
     name: "Wallpapers",
 
-    async asyncData({ route, store }) {
-        const { device, page } = route.query;
+    async fetch() {
+        const { device, page } = this.$route.query;
 
         try {
-            await store.dispatch("getHomeData");
+            await this.$store.dispatch("getHomeData");
 
             if (device && page) {
-                await store.dispatch("wallpapers/setWallpaperDeviceType", device);
-                await store.dispatch("wallpapers/getPage", ApiService.baseUrl() + `/wallpapers?type=${device}&page=${page}`);
+                await this.$store.dispatch("wallpapers/setWallpaperDeviceType", device);
+                await this.$store.dispatch("wallpapers/getPage", ApiService.baseUrl() + `/wallpapers?type=${device}&page=${page}`);
             } else if (page) {
-                await store.dispatch("wallpapers/getPage", ApiService.baseUrl() + `/wallpapers?page=${page}`);
+                await this.$store.dispatch("wallpapers/getPage", ApiService.baseUrl() + `/wallpapers?page=${page}`);
             } else if (device) {
-                await store.dispatch("wallpapers/setWallpaperDeviceType", device);
-                await store.dispatch("wallpapers/getWallpaperDeviceType", device);
+                await this.$store.dispatch("wallpapers/setWallpaperDeviceType", device);
+                await this.$store.dispatch("wallpapers/getWallpaperDeviceType", device);
             } else {
-                await store.dispatch("wallpapers/getWallpapersData");
+                await this.$store.dispatch("wallpapers/getWallpapersData");
             }
         } catch (error) {
             alert(error);

@@ -6,8 +6,8 @@ const JockService = {
         return await axios.get(ApiService.baseUrl() + '/jocks');
     },
 
-    async getJock(name) {
-        return await axios.get(ApiService.baseUrl() + `/jock/${name}`);
+    async getJock(slugName) {
+        return await axios.get(ApiService.baseUrl() + `/jock/${slugName}`);
     },
 
     async getRadio1() {

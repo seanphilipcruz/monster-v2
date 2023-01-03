@@ -42,14 +42,14 @@ import SideContent from "@/components/monsterScholar/SideContent";
 export default {
     name: "ScholarsHome",
 
-    async asyncData({ route, store }) {
-        const { batchNumber } = route.query;
+    async fetch() {
+        const { batchNumber } = this.$route.query;
 
         try {
             if (batchNumber) {
-                await store.dispatch("scholars/getBatch", batchNumber);
+                await this.$store.dispatch("scholars/getBatch", batchNumber);
             } else {
-                await store.dispatch("scholars/getScholarsBatch");
+                await this.$store.dispatch("scholars/getScholarsBatch");
             }
         } catch (error) {
             alert(error);

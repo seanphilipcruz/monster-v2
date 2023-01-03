@@ -13,19 +13,23 @@ export default {
 
     methods: {
         async initiateNavigation() {
-            let environment = process.env.NODE_ENV;
+            try {
+                let environment = process.env.NODE_ENV;
 
-            await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
+                await this.$store.dispatch("setLoadingState", { type: 'page', status: true });
 
-            await this.$store.dispatch("getHomeData");
+                await this.$store.dispatch("getHomeData");
 
-            if (environment === 'development') {
-                console.log('Nav init: complete');
+                if (environment === 'development') {
+                    console.log('Nav init: complete');
+                }
+
+                this.$nextTick(() => {
+                    this.$store.dispatch("setLoadingState", { type: 'page', status: false });
+                });
+            } catch (error) {
+                alert(error);
             }
-
-            this.$nextTick(() => {
-                this.$store.dispatch("setLoadingState", { type: 'page', status: false });
-            });
         },
     },
 
@@ -42,7 +46,7 @@ export default {
     async created() {
         setTimeout(async() => {
             await this.initiateNavigation();
-        }, 1400);
+        }, 800);
     }
 }
 </script>

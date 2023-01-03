@@ -66,6 +66,14 @@ import Jocks from "@/components/jocks/Cards";
 export default {
     name: "JocksHome",
 
+    async fetch() {
+        try {
+            await this.$store.dispatch("jocks/setJocksData");
+        } catch (error) {
+            alert(error);
+        }
+    },
+
     components: {
         Jocks
     },

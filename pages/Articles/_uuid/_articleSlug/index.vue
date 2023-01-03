@@ -51,15 +51,17 @@ import RelatedArticles from "@/components/articles/Related";
 export default {
     name: "articles-view",
 
-    async asyncData({ params, store }) {
-        const { uuid, articleSlug } = params
+    async fetch() {
+        const { uuid, articleSlug } = this.$route.params;
 
         try {
-            await store.dispatch("articles/getArticle", uuid);
+            await this.$store.dispatch("articles/getArticle", uuid);
         } catch (error) {
             alert(error);
         }
     },
+
+    fetchOnServer: true,
 
     components: {
         RelatedArticles,
@@ -70,14 +72,14 @@ export default {
             title: this.article.title,
             meta: [
                 { hid: 'description', name: 'description', content: this.article.heading },
-                { 'property': 'og:url', content: this.siteUrl + this.routePath },
-                { 'property': 'og:title', content: `${this.article.title} | ${this.stationName}` },
-                { 'property': 'og:description', content: this.article.heading },
-                { 'property': 'og:image', content: this.article.image },
-                { 'property': 'og:image:alt', content: this.article.image },
-                { 'property': 'twitter:title', content: `${this.article.title} | ${this.stationName}` },
-                { 'property': 'twitter:description', content: this.article.heading },
-                { 'property': 'twitter:image', content: this.article.image },
+                { hid: 'og:url','property': 'og:url', content: this.siteUrl + this.routePath },
+                { hid: 'og:title','property': 'og:title', content: `${this.article.title} | ${this.stationName}` },
+                { hid: 'og:description','property': 'og:description', content: this.article.heading },
+                { hid: 'og:image','property': 'og:image', content: this.article.image },
+                { hid: 'og:image:alt', 'property': 'og:image:alt', content: this.article.image },
+                { hid: 'twitter:title','property': 'twitter:title', content: `${this.article.title} | ${this.stationName}` },
+                { hid: 'twitter:description','property': 'twitter:description', content: this.article.heading },
+                { hid: 'twitter:image','property': 'twitter:image', content: this.article.image },
             ]
         }
     },

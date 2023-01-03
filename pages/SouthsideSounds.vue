@@ -177,9 +177,9 @@ import Top5Chart from "@/components/widgets/Top5";
 export default {
     name: "SouthsideSounds",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("southsideSounds/getSouthsideCharts");
+            await this.$store.dispatch("southsideSounds/getSouthsideCharts");
         } catch (error) {
             alert(error);
         }

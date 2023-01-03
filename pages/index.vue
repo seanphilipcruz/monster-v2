@@ -24,14 +24,6 @@ import Contact from "@/components/home/Contact";
 export default {
     name: 'Home',
 
-    async asyncData({ store }) {
-        try {
-            await store.dispatch("getHomeData");
-        } catch (error) {
-            alert(error);
-        }
-    },
-
     head() {
         return {
             title: 'Home',

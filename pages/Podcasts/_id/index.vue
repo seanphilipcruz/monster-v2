@@ -104,11 +104,11 @@
 export default {
     name: "podcasts-id",
 
-    async asyncData({ params, store }) {
-        const { id, podcastEpisode } = params;
+    async fetch() {
+        const { id, podcastEpisode } = this.$route.params;
 
         try {
-            await store.dispatch("podcasts/getPodcast", id);
+            await this.$store.dispatch("podcasts/getPodcast", id);
         } catch (error) {
             alert(error);
         }

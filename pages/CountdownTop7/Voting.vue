@@ -65,9 +65,9 @@ import OutbreakSongs from "@/components/widgets/OutbreakSongs";
 export default {
     name: "StationCountdownVoting",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("countdowns/getChartData");
+            await this.$store.dispatch("countdowns/getChartData");
         } catch (error) {
             alert(error);
         }

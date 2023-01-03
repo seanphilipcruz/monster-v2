@@ -2,7 +2,16 @@ import ArticleService from "@/services/articles";
 
 export const state = () => ({
     articles: [],
-    article: null,
+    article: {
+        category: {
+            name: null,
+        },
+        related: [],
+        employee: {
+            first_name: null,
+            last_name: null,
+        }
+    },
     pageNumber: 0,
     categories: null,
     nextPageUrl: null,

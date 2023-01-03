@@ -153,11 +153,11 @@ import TDSHeader from "@/components/dailysurvey/Header";
 export default {
     name: "TheDailySurveyTop5Home",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("dailyCountdowns/getDailySurveyCharts");
+            await this.$store.dispatch("dailyCountdowns/getDailySurveyCharts");
             // Getting the widget.
-            await store.dispatch("widgets/getChartsWidget");
+            await this.$store.dispatch("widgets/getChartsWidget");
         } catch (error) {
             alert(error);
         }

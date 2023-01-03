@@ -9,13 +9,13 @@
             </button>
             <div class="collapse navbar-collapse">
                 <!-- Monster RX93.1 -->
-                <ul class="navbar-nav ms-auto text-center" v-if="stationCode === 'mnl'">
+                <ul class="navbar-nav ms-auto text-center" v-show="stationCode === 'mnl'">
                     <li class="nav-item dropdown">
                         <a id="latest-dropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">WHAT'S HOT</a>
 
                         <ul class="dropdown-menu text-center" aria-labelledby="latest-dropdown">
-                            <li><nuxt-link :to="{ name: 'Articles' }" class="dropdown-item" v-if="articles">News/Articles</nuxt-link></li>
-                            <li><nuxt-link :to="{ name: 'Podcasts' } " class="dropdown-item" v-if="podcasts">Podcasts</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'Articles' }" class="dropdown-item" v-show="articles">News/Articles</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'Podcasts' } " class="dropdown-item" v-show="podcasts">Podcasts</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'Wallpapers' }" class="dropdown-item">Monster Wallpapers</nuxt-link></li>
                             <li><a href="https://www.youtube.com/user/RX931" target="_blank" class="dropdown-item">YouTube Channel</a></li>
                         </ul>
@@ -60,13 +60,13 @@
                 </ul>
 
                 <!-- Monster Cebu BT105.9 -->
-                <ul class="navbar-nav ms-auto text-center" v-else-if="stationCode === 'cbu'">
+                <ul class="navbar-nav ms-auto text-center" v-show="stationCode === 'cbu'">
                     <li class="nav-item dropdown">
                         <a id="latest-dropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">WHAT'S HOT</a>
 
                         <ul class="dropdown-menu text-center" aria-labelledby="latest-dropdown">
-                            <li><nuxt-link :to="{ name: 'Articles' }" class="dropdown-item" v-if="articles">News/Articles</nuxt-link></li>
-                            <li><nuxt-link :to="{ name: 'Podcasts' } " class="dropdown-item" v-if="podcasts">Podcasts</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'Articles' }" class="dropdown-item" v-show="articles">News/Articles</nuxt-link></li>
+                            <li><nuxt-link :to="{ name: 'Podcasts' } " class="dropdown-item" v-show="podcasts">Podcasts</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'Wallpapers' }" class="dropdown-item">Monster Wallpapers</nuxt-link></li>
                             <li><a href="https://www.youtube.com/channel/UCfJcAW5qTdVgZK0AdTQW0cA" target="_blank" class="dropdown-item">YouTube Channel</a></li>
                         </ul>

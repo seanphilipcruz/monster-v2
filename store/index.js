@@ -56,11 +56,11 @@ export const getters = {
 
     StationVersion(state) {
         if (state.stationCode === 'cbu') {
-            return '2.0.0';
+            return "2.0.0";
         } else if (state.stationCode === 'dav') {
-            return '2.0.0';
+            return "2.0.0";
         } else {
-            return '2.1.7';
+            return "2.2";
         }
     },
 

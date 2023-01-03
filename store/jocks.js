@@ -3,6 +3,13 @@ import JockService from "@/services/jocks";
 export const state = () => ({
     jocks: [],
     jock: {
+        slug_string: '',
+        name: '',
+        moniker: '',
+        description: '',
+        is_active: '',
+        profile_image: '',
+        main_image: '',
         background_image: null,
         show: [],
         fact: [],
@@ -161,9 +168,24 @@ export const actions = {
         }
     },
 
-    async getJock({ commit }, _name) {
+    setJockProfile({ state, commit }, _name) {
         try {
-            const response = await JockService.getJock(_name);
+            let employee = state.jocks.find(e => e.jock[0].name = _name);
+            let jock = employee.jock;
+
+            console.log("Jock: ", jock);
+            // Parses the objects
+            JSON.parse(jock);
+
+            commit("setJock", jock);
+        } catch (error) {
+            return error;
+        }
+    },
+
+    async getJock({ commit }, _jockSlug) {
+        try {
+            const response = await JockService.getJock(_jockSlug);
 
             const { jock } = response.data;
 

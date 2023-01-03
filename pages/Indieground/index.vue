@@ -125,9 +125,9 @@ import Roster from "@/components/indiegrounds/Roster";
 export default {
     name: "IndiegroundsHome",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("indiegrounds/getIndiegroundsData");
+            await this.$store.dispatch("indiegrounds/getIndiegroundsData");
         } catch (error) {
             alert(error);
         }

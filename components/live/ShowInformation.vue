@@ -37,7 +37,7 @@
                                 <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
                                 <div class="card-text">
                                     <small class="my-0 barlow">
-                                        <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                        <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }">
                                             {{ jock.name }}
                                         </nuxt-link>
                                     </small>
@@ -49,7 +49,7 @@
                                 <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
                                 <div class="card-text">
                                     <small class="my-0 barlow">
-                                        <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                        <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }">
                                             {{ jock.name }}
                                         </nuxt-link>
                                     </small>
@@ -65,7 +65,7 @@
                                     <div class="col d-flex justify-content-center align-items-center">
                                         <div class="card-text">
                                             <small class="my-0 barlow">
-                                                <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                                <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }">
                                                     {{ jock.name }}
                                                 </nuxt-link>
                                             </small>
@@ -83,7 +83,7 @@
                                     <div class="col d-flex justify-content-center align-items-center">
                                         <div class="card-text">
                                             <small class="my-0 barlow">
-                                                <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-slugString', params: { slugString: currentJocks[0].slug_string } }">
+                                                <nuxt-link class="text-monster-blue stretched-link" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: currentJocks[0].slug_string } }">
                                                     {{ currentJocks[0].name }}
                                                 </nuxt-link>
                                             </small>
