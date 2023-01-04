@@ -25,17 +25,17 @@ import CurrentHit from "@/components/alltime/CurrentHit";
 export default {
     name: "AllTimeHits",
 
-    async asyncData({ route, store }) {
-        const { date } = route.query;
+    async fetch() {
+        const { date } = this.$route.query;
 
         try {
             if (!date) {
-                await store.dispatch("monsterHit/getMonsterHitData");
+                await this.$store.dispatch("monsterHit/getMonsterHitData");
             } else {
-                await store.dispatch("monsterHit/getMonsterHitByDate", date);
+                await this.$store.dispatch("monsterHit/getMonsterHitByDate", date);
             }
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -76,7 +76,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         },
 

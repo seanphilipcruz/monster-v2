@@ -125,11 +125,11 @@ import Roster from "@/components/indiegrounds/Roster";
 export default {
     name: "IndiegroundsHome",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("indiegrounds/getIndiegroundsData");
+            await this.$store.dispatch("indiegrounds/getIndiegroundsData");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -138,12 +138,12 @@ export default {
             title: 'Indieground',
             meta: [
                 { hid: 'description', name: 'description', content: 'Indieground: Sowing the seeds of great OPM. Listen to independent music by fresh Filipino artists!' },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: "Indieground | Monster RX93.1" },
+                { 'property': 'og:url', content: this.stationUrl + this.routePath },
+                { 'property': 'og:title', content: `Indieground | ${this.stationName}` },
                 { 'property': 'og:description', content: 'Indieground: Sowing the seeds of great OPM. Listen to independent music by fresh Filipino artists!' },
                 { 'property': 'og:image', content: "https://rx931.com/images/_assets/indiegrounds/banner.jpg" },
                 { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/indiegrounds/banner.jpg" },
-                { 'property': 'twitter:title', content: `Indieground | Monster RX93.1` },
+                { 'property': 'twitter:title', content: `Indieground | ${this.stationName}` },
                 { 'property': 'twitter:description', content: 'Indieground: Sowing the seeds of great OPM. Listen to independent music by fresh Filipino artists!' },
                 { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/indiegrounds/banner.jpg" }
             ]
@@ -165,7 +165,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },
@@ -192,7 +192,11 @@ export default {
         },
 
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
+        },
+
+        stationUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

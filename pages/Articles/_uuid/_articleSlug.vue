@@ -51,13 +51,13 @@ import RelatedArticles from "@/components/articles/Related";
 export default {
     name: "articles-view",
 
-    async asyncData({ params, store }) {
-        const { uuid, articleSlug } = params
+    async fetch() {
+        const { uuid, articleSlug } = this.$route.params;
 
         try {
-            await store.dispatch("articles/getArticle", uuid);
+            await this.$store.dispatch("articles/getArticle", uuid);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 

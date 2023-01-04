@@ -89,13 +89,13 @@ import Songs from "@/components/indiegrounds/Artist/Song";
 export default {
     name: "ViewIndiegroundArtist",
 
-    async asyncData({ params, store }) {
+    async fetch() {
         try {
-            const { artistID, artistSlugName } = params;
+            const { artistID, artistSlugName } = this.$route.params;
 
-            await store.dispatch("indiegrounds/getIndiegroundArtist", artistID);
+            await this.$store.dispatch("indiegrounds/getIndiegroundArtist", artistID);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -104,12 +104,12 @@ export default {
             title: this.artistName,
             meta: [
                 { hid: 'description', name: 'description', content: "'Indieground: Sowing the seeds of great OPM. Listen to independent music by fresh Filipino artists!'" },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: `${this.artistName} | Monster RX93.1` },
+                { 'property': 'og:url', content: this.stationUrl + this.routePath },
+                { 'property': 'og:title', content: `${this.artistName} | ${this.stationName}` },
                 { 'property': 'og:description', content: "'Indieground: Sowing the seeds of great OPM. Listen to independent music by fresh Filipino artists!'" },
                 { 'property': 'og:image', content: 'https://rx931.com/images/_assets/indiegrounds/banner.jpg' },
                 { 'property': 'og:image:alt', content: 'https://rx931.com/images/_assets/indiegrounds/banner.jpg' },
-                { 'property': 'twitter:title', content: `${this.artistName} | Monster RX93.1` },
+                { 'property': 'twitter:title', content: `${this.artistName} | ${this.stationName}` },
                 { 'property': 'twitter:description', content: "'Indieground: Sowing the seeds of great OPM. Listen to independent music by fresh Filipino artists!'" },
                 { 'property': 'twitter:image', content: 'https://rx931.com/images/_assets/indiegrounds/banner.jpg' }
             ]
@@ -133,7 +133,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },
@@ -161,6 +161,14 @@ export default {
 
         artistCountry() {
             return this.indieground.artist.country;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        stationUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

@@ -11,7 +11,7 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="routeName !== 'home'">
+                <div v-show="routeName !== 'home'">
                     <div class="my-4"></div>
                     <div class="row">
                         <div class="col-12">
@@ -59,11 +59,11 @@ export default {
 
     computed: {
         routeName() {
-            return this.$router.name;
+            return this.$route.name;
         },
 
         version() {
-            return this.$store.getters['StationVersion'];
+            return this.$store.getters.StationVersion;
         }
     }
 }

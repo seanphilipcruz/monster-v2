@@ -57,7 +57,7 @@
                                         <div class="col-6" v-show="timeslot.jock.length > 0">
                                             <ul v-for="jock in timeslot.jock">
                                                 <li>
-                                                    <nuxt-link :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }" class="stretched-link text-white">
+                                                    <nuxt-link :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }" class="stretched-link text-white">
                                                         {{ jock.name }}
                                                     </nuxt-link>
                                                 </li>
@@ -74,7 +74,7 @@
                                         <div class="col-6" v-show="timeslot.jock.length > 0">
                                             <ul v-for="jock in timeslot.jock">
                                                 <li>
-                                                    <nuxt-link :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }" class="stretched-link text-white">
+                                                    <nuxt-link :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }" class="stretched-link text-white">
                                                         {{ jock.name }}
                                                     </nuxt-link>
                                                 </li>

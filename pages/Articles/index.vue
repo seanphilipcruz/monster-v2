@@ -134,16 +134,16 @@ import ApiService from "@/services/api";
 export default {
     name: "ArticlesHome",
 
-    async asyncData({ route, store }) {
-        const { page, keyword } = route.query;
+    async fetch() {
+        const { page, keyword } = this.$route.query;
 
         try {
             if (page) {
-                await store.dispatch("articles/getPage", ApiService.baseUrl() + `/articles?page=${page}`);
+                await this.$store.dispatch("articles/getPage", ApiService.baseUrl() + `/articles?page=${page}`);
             } else if (keyword) {
-                await store.dispatch("articles/searchArticles", keyword);
+                await this.$store.dispatch("articles/searchArticles", keyword);
             } else {
-                await store.dispatch("articles/setArticlesData");
+                await this.$store.dispatch("articles/setArticlesData");
             }
         } catch (error) {
             throw error;

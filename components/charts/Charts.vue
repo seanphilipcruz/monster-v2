@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="(chart, index) in charts" :key="chart.id" v-show="stationCode === 'mnl'">
-            <div v-if="isFullCharts === false">
+            <div v-show="!isFullCharts">
                 <div v-if="index < 7">
                     <div v-if="index % 2 === 0">
                         <div class="card bg-medium-gray text-light" v-if="chart.song.type === 'spotify'">
@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else>
+            <div v-show="isFullCharts">
                 <div v-if="index < 20">
                     <div v-if="index % 2 === 0">
                         <div class="card bg-medium-gray text-light" v-if="chart.song.type === 'spotify'">
@@ -193,7 +193,7 @@
 
         <!-- Monster BT105.9 Cebu -->
         <div v-for="(chart, index) in charts" :key="chart.id" v-show="stationCode === 'cbu'">
-            <div v-if="isFullCharts === false">
+            <div v-show="!isFullCharts">
                 <div v-if="index < 10">
                     <div v-if="index % 2 === 0">
                         <div class="card bg-medium-gray text-light" v-if="chart.song.type === 'spotify'">
@@ -285,7 +285,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else>
+            <div v-show="isFullCharts">
                 <div v-if="index < 40">
                     <div v-if="index % 2 === 0">
                         <div class="card bg-medium-gray text-light" v-if="chart.song.type === 'spotify'">
@@ -385,7 +385,7 @@
 
         <!-- Monster BT99.5 Davao -->
         <div v-for="(chart, index) in charts" :key="chart.id" v-show="stationCode === 'dav'">
-            <div v-if="isFullCharts === false">
+            <div v-show="!isFullCharts">
                 <div v-if="index < 10">
                     <div v-if="index % 2 === 0">
                         <div class="card bg-medium-gray text-light" v-if="chart.song.type === 'spotify'">
@@ -477,7 +477,7 @@
                     </div>
                 </div>
             </div>
-            <div v-else>
+            <div v-show="isFullCharts">
                 <div v-if="index < 30">
                     <div v-if="index % 2 === 0">
                         <div class="card bg-medium-gray text-light" v-if="chart.song.type === 'spotify'">
@@ -587,7 +587,7 @@ export default {
         },
 
         isFullCharts: {
-            required: true
+            required: true,
         },
 
         stationCode: {

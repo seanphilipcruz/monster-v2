@@ -92,11 +92,11 @@ import OutbreakSongs from "@/components/widgets/OutbreakSongs";
 export default {
     name: "CountdownTop7",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("countdowns/getChartData");
+            await this.$store.dispatch("countdowns/getChartData");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -177,7 +177,7 @@ export default {
         },
 
         chartCount() {
-            return this.$store.state.chartCount;
+            return this.$store.getters.StationChartCount;
         },
 
         stationCode() {

@@ -23,12 +23,12 @@ export default {
             title: '400: Unexpected error',
             meta: [
                 { hid: 'description', name: 'description', content: "Oops, the content you have been looking for was not found! 😔" },
-                { 'property': 'og:url', content: "https://rx931.com" },
-                { 'property': 'og:title', content: "400: Unexpected error | Monster RX93.1" },
+                { 'property': 'og:url', content: this.stationUrl },
+                { 'property': 'og:title', content: `400: Unexpected error | ${this.stationName}` },
                 { 'property': 'og:description', content: "Oops, the content you have been looking for was not found! 😔" },
                 { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
                 { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: `400: Unexpected error | Monster RX93.1` },
+                { 'property': 'twitter:title', content: `400: Unexpected error | ${this.stationName}` },
                 { 'property': 'twitter:description', content: "Oops, the content you have been looking for was not found! 😔" },
                 { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
             ]
@@ -38,7 +38,15 @@ export default {
     computed: {
         env() {
             return process.env.NODE_ENV;
-        }
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        stationUrl() {
+            return this.$store.getters.StationUrl;
+        },
     }
 }
 </script>

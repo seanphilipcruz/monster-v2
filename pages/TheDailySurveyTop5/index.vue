@@ -153,13 +153,13 @@ import TDSHeader from "@/components/dailysurvey/Header";
 export default {
     name: "TheDailySurveyTop5Home",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("dailyCountdowns/getDailySurveyCharts");
+            await this.$store.dispatch("dailyCountdowns/getDailySurveyCharts");
             // Getting the widget.
-            await store.dispatch("widgets/getChartsWidget");
+            await this.$store.dispatch("widgets/getChartsWidget");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -169,11 +169,11 @@ export default {
             meta: [
                 { hid: 'description', name: 'description', content: !this.show ? 'Loading ...' : this.show.front_description },
                 { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: !this.show ? 'Loading ...' : `${this.show.title} | Monster RX93.1` },
+                { 'property': 'og:title', content: !this.show ? 'Loading ...' : `${this.show.title} | ${this.stationName}` },
                 { 'property': 'og:description', content: !this.show ? 'Loading ...' : this.show.front_description },
                 { 'property': 'og:image', content: !this.show ? 'Loading ...' : this.show.header_image },
                 { 'property': 'og:image:alt', content: !this.show ? 'Loading ...' : this.show.header_image },
-                { 'property': 'twitter:title', content: !this.show ? 'Loading ...' : `${this.show.title} | Monster RX93.1` },
+                { 'property': 'twitter:title', content: !this.show ? 'Loading ...' : `${this.show.title} | ${this.stationName}` },
                 { 'property': 'twitter:description', content: !this.show ? 'Loading ...' : this.show.front_description },
                 { 'property': 'twitter:image', content: !this.show ? 'Loading ...' : this.show.header_image }
             ]
@@ -196,7 +196,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },
@@ -211,7 +211,11 @@ export default {
         },
 
         stationChart() {
-            return this.$store.state.station.title;
+            return this.$store.getters.StationChart;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
         },
 
         show() {

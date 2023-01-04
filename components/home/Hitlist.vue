@@ -211,15 +211,15 @@ export default {
 
     computed: {
         StationChart() {
-            return this.$store.getters['StationChart'];
+            return this.$store.getters.StationChart;
         },
 
         StationName() {
-            return this.$store.getters['StationName'];
+            return this.$store.getters.StationName;
         },
 
         ChartCount() {
-            return this.$store.getters['StationChartCount'];
+            return this.$store.getters.StationChartCount;
         }
     },
 }

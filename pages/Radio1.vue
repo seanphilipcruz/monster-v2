@@ -91,17 +91,17 @@ import StudentJocks from "@/components/radio1/StudentJocks";
 export default {
     name: "Radio1",
 
-    async asyncData({ route, store }) {
-        const { batchNumber } = route.query;
+    async fetch() {
+        const { batchNumber } = this.$route.query;
 
         try {
             if (batchNumber) {
-                await store.dispatch("jocks/getR1Batch", batchNumber);
+                await this.$store.dispatch("jocks/getR1Batch", batchNumber);
             } else {
-                await store.dispatch("jocks/getR1Students");
+                await this.$store.dispatch("jocks/getR1Students");
             }
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -156,7 +156,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },

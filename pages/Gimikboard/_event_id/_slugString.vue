@@ -48,13 +48,13 @@ import LatestNews from "@/components/widgets/LatestNews";
 export default {
     name: "index",
 
-    async asyncData({ params, store }) {
+    async fetch() {
         try {
-            const { event_id, slugString } = params;
+            const { event_id, slugString } = this.$route.params;
 
-            await store.dispatch("gimikboards/getGimikboard", event_id);
+            await this.$store.dispatch("gimikboards/getGimikboard", event_id);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -63,7 +63,7 @@ export default {
             title: `${this.gimikboard.title}`,
             meta: [
                 { hid: 'description', name: 'description', content: this.gimikboard.sub_description },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
+                { 'property': 'og:url', content: "https://monstercebu.com" + this.routePath },
                 { 'property': 'og:title', content: `${this.gimikboard.title} | Monster RX93.1` },
                 { 'property': 'og:description', content: this.gimikboard.sub_description },
                 { 'property': 'og:image', content: this.gimikboard.image },
@@ -90,7 +90,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },
@@ -102,6 +102,14 @@ export default {
 
         gimikboard() {
             return this.$store.state.gimikboards.gimikboard;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        stationUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

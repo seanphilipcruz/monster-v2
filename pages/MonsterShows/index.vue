@@ -79,17 +79,17 @@ import Cards from "@/components/shows/Cards";
 export default {
     name: "MonsterShowsHome",
 
-    async asyncData({ route, store }) {
-        const { shows } = route.query;
+    async fetch() {
+        const { shows } = this.$route.query;
 
         try {
             if (shows) {
-                await store.dispatch('shows/filterShows', shows);
+                await this.$store.dispatch('shows/filterShows', shows);
             } else {
-                await store.dispatch('shows/getPageData');
+                await this.$store.dispatch('shows/getPageData');
             }
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -144,7 +144,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },

@@ -4,7 +4,9 @@ export const state = () => ({
     dailyCharts: [],
     dates: [],
     resultDate: null,
-    show: null,
+    show: {
+        title: null,
+    },
     showSlug: null,
     jock: [
         {

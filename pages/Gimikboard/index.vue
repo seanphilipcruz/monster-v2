@@ -41,12 +41,12 @@ export default {
             title: 'Gimikboard',
             meta: [
                 { hid: 'description', name: 'description', content: "The Radio1 School Gimikboard: What’s new on campus?" },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: "Gimikboard | Monster RX93.1" },
+                { 'property': 'og:url', content: this.stationUrl + this.routePath },
+                { 'property': 'og:title', content: `Gimikboard | ${this.stationName}` },
                 { 'property': 'og:description', content: "The Radio1 School Gimikboard: What’s new on campus?" },
                 { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-sgb.jpg" },
                 { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-sgb.jpg" },
-                { 'property': 'twitter:title', content: "Gimikboard | Monster RX93.1" },
+                { 'property': 'twitter:title', content: `Gimikboard | ${this.stationName}` },
                 { 'property': 'twitter:description', content: "The Radio1 School Gimikboard: What’s new on campus?" },
                 { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-sgb.jpg" }
             ]
@@ -80,6 +80,14 @@ export default {
 
         gimikboards() {
             return this.$store.state.gimikboards.boards;
+        },
+
+        stationName() {
+            return this.$store.getters.StationName;
+        },
+
+        stationUrl() {
+            return this.$store.getters.StationUrl;
         },
 
         routePath() {

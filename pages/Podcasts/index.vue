@@ -174,23 +174,23 @@ import ApiService from "@/services/api";
 export default {
     name: "PodcastsHome",
 
-    async asyncData({ store, route }) {
-        const { showID, show, page } = route.query;
+    async fetch() {
+        const { showID, show, page } = this.$route.query;
 
         try {
             if (showID && page) {
-                await store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?filter=${showID}&page=${page}`);
+                await this.$store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?filter=${showID}&page=${page}`);
             } else if (page) {
-                await store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?page=${page}`);
+                await this.$store.dispatch("podcasts/getPage", ApiService.baseUrl() + `/podcasts?page=${page}`);
             } else if (showID) {
-                await store.dispatch("podcasts/getShowData", show);
+                await this.$store.dispatch("podcasts/getShowData", show);
 
-                await store.dispatch("podcasts/filterPodcast", showID);
+                await this.$store.dispatch("podcasts/filterPodcast", showID);
             } else {
-                await store.dispatch("podcasts/setPodcastsData");
+                await this.$store.dispatch("podcasts/setPodcastsData");
             }
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -198,14 +198,14 @@ export default {
         return {
             title: !this.show ? 'Official Monster Podcast Channel' : `${this.show.title} Official Podcast Channel`,
             meta: [
-                { hid: 'description', name: 'description', content: "Listen to podcast episodes and exclusive interviews from your favorite RX93.1 MonsterShows." },
-                { 'property': 'og:url', content: "https://rx931.com" + this.routePath },
-                { 'property': 'og:title', content: !this.show ? "Official Monster Podcast Channel | Monster RX93.1" : `${this.show.title}  Official Podcast Channel | Monster RX93.1` },
-                { 'property': 'og:description', content: "Listen to podcast episodes and exclusive interviews from your favorite RX93.1 MonsterShows." },
+                { hid: 'description', name: 'description', content: `Listen to podcast episodes and exclusive interviews from your favorite ${this.stationName} MonsterShows.` },
+                { 'property': 'og:url', content: this.stationUrl + this.routePath },
+                { 'property': 'og:title', content: !this.show ? `Official Monster Podcast Channel | ${this.stationName}` : `${this.show.title}  Official Podcast Channel | ${this.stationName}` },
+                { 'property': 'og:description', content: `Listen to podcast episodes and exclusive interviews from your favorite ${this.stationName} MonsterShows.` },
                 { 'property': 'og:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
                 { 'property': 'og:image:alt', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" },
-                { 'property': 'twitter:title', content: !this.show ? "Official Monster Podcast Channel | Monster RX93.1" : `${this.show.title}  Official Podcast Channel | Monster RX93.1` },
-                { 'property': 'twitter:description', content: "Listen to podcast episodes and exclusive interviews from your favorite RX93.1 MonsterShows." },
+                { 'property': 'twitter:title', content: !this.show ? `Official Monster Podcast Channel | ${this.stationName}` : `${this.show.title}  Official Podcast Channel | ${this.stationName}` },
+                { 'property': 'twitter:description', content: `Listen to podcast episodes and exclusive interviews from your favorite ${this.stationName} MonsterShows.` },
                 { 'property': 'twitter:image', content: "https://rx931.com/images/_assets/thumbnails/thmbn-mnl.jpg" }
             ]
         }
@@ -292,7 +292,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },
@@ -330,8 +330,12 @@ export default {
             return this.$store.state.podcasts.prevPageUrl;
         },
 
+        stationUrl() {
+            return this.$store.getters.StationUrl;
+        },
+
         stationName() {
-            return this.$store.state.stationName;
+            return this.$store.getters.StationName;
         },
 
         show() {
