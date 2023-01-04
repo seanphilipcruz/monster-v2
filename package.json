@@ -1,6 +1,6 @@
 {
-  "name": "monster",
-  "version": "1.0.0",
+  "name": "monster-cebu",
+  "version": "2.1.2",
   "private": true,
   "scripts": {
     "dev": "nuxt",
