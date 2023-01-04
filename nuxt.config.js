@@ -9,6 +9,8 @@ export default {
         // host: '192.168.0.2'
     },
 
+    target: 'static',
+
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         titleTemplate: '%s | Monster BT99.5 Davao',
@@ -72,7 +74,8 @@ export default {
     },
 
     generate: {
-        fallback: true
+        fallback: true,
+        interval: 1800
     },
 
     // Auto import components: https://go.nuxtjs.dev/config-components

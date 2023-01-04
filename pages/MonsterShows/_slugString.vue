@@ -85,15 +85,15 @@ import Top5Chart from "@/components/widgets/Top5";
 export default {
     name: "index",
 
-    async asyncData({ params, store }) {
-        const { slugString } = params;
+    async fetch() {
+        const { slugString } = this.$route.params;
 
         try {
-            await store.dispatch('shows/getShow', slugString);
+            await this.$store.dispatch('shows/getShow', slugString);
             // Getting the widget.
-            await store.dispatch("widgets/getChartsWidget");
+            await this.$store.dispatch("widgets/getChartsWidget");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -136,7 +136,7 @@ export default {
 
                 await this.$store.dispatch('setLoadingState', { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         },
     },

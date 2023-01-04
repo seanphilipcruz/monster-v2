@@ -90,13 +90,13 @@ import JockBanner from "@/components/jocks/JockBanner";
 export default {
     name: "ViewJock",
 
-    async asyncData({ params, store }) {
-        const { slugString } = params;
+    async fetch() {
+        const { jockSlug } = this.$route.params;
 
         try {
-            await store.dispatch("jocks/getJock", slugString);
+            await this.$store.dispatch("jocks/getJock", jockSlug);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -134,7 +134,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },

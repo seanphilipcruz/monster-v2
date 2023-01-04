@@ -10,7 +10,7 @@
                             </div>
                             <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6 d-flex align-items-center">
                                 <div class="card-body text-light text-wrap text-start">
-                                    <nuxt-link :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }" class="stretched-link text-light mb-2 text-monster-blue fs-5 text-uppercase">{{ jock.name }}</nuxt-link>
+                                    <nuxt-link :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }" class="stretched-link text-light mb-2 text-monster-blue fs-5 text-uppercase">{{ jock.name }}</nuxt-link>
                                     <div v-for="show in jock.show" :key="show.id">
                                         <p class="my-0 barlow">{{ show.title }}</p>
                                     </div>
@@ -26,7 +26,7 @@
                             </div>
                             <div class="col-12 col-sm-12 d-flex align-items-center">
                                 <div class="card-body text-light text-wrap text-start">
-                                    <nuxt-link :to="{ name: 'MonsterJocks-slugString' , params: { slugString: jock.slug_string } }" class="stretched-link text-light mb-2 text-monster-blue text-uppercase">{{ jock.name }}</nuxt-link>
+                                    <nuxt-link :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }" class="stretched-link text-light mb-2 text-monster-blue text-uppercase">{{ jock.name }}</nuxt-link>
                                     <div v-for="show in jock.show" :key="show.id">
                                         <p class="my-0 barlow">{{ show.title }}</p>
                                     </div>

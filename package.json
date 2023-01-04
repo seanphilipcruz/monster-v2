@@ -1,6 +1,6 @@
 {
-  "name": "monster",
-  "version": "1.0.0",
+  "name": "monster-davao",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",

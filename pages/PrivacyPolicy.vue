@@ -222,12 +222,6 @@
 export default {
     name: "PrivacyPolicy",
 
-    async asyncData({ store }) {
-        store.dispatch("setLoadingState", { type: 'page', status: true });
-
-        store.dispatch("setLoadingState", { type: 'page', status: false });
-    },
-
     head() {
         return {
             title: 'Privacy Policy',

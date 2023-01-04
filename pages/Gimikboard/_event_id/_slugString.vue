@@ -48,13 +48,13 @@ import LatestNews from "@/components/widgets/LatestNews";
 export default {
     name: "index",
 
-    async asyncData({ params, store }) {
+    async fetch() {
         try {
-            const { event_id, slugString } = params;
+            const { event_id, slugString } = this.$route.params;
 
-            await store.dispatch("gimikboards/getGimikboard", event_id);
+            await this.$store.dispatch("gimikboards/getGimikboard", event_id);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -90,7 +90,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },

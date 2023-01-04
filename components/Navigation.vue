@@ -8,7 +8,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse">
-                <!-- Monster RX93.1 -->
                 <ul class="navbar-nav ms-auto text-center" v-show="stationCode === 'mnl'">
                     <li class="nav-item dropdown">
                         <a id="latest-dropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">WHAT'S HOT</a>
@@ -47,7 +46,6 @@
                         <a id="misc-dropdown" href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">OTHERS</a>
 
                         <ul class="dropdown-menu text-center" aria-labelledby="misc-dropdown">
-                            <li><nuxt-link :to="{ name: 'Gimikboard' }" class="dropdown-item">Gimikboard</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'MonsterScholars' }" class="dropdown-item">Monster Scholars</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'ContactUs' }" class="dropdown-item">Contact</nuxt-link></li>
                             <li><nuxt-link :to="{ name: 'PrivacyPolicy'}" class="dropdown-item">Privacy Policy</nuxt-link></li>

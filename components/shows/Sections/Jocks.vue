@@ -9,7 +9,7 @@
                     <div v-if="jockCount > 0">
                         <div class="row" v-if="jockCount === 4">
                             <div class="col-6 col-sm-3 col-md col-lg col-xl col-xxl interactive-card" v-for="jock in jocks" :key="jock.id">
-                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }">
                                     <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
                                     <div class="card-text">
                                         <small class="my-0 barlow">{{ jock.name }}</small>
@@ -19,7 +19,7 @@
                         </div>
                         <div class="row" v-else-if="jockCount === 3">
                             <div class="col interactive-card" v-for="jock in jocks" :key="jock.id">
-                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }">
                                     <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
                                     <div class="card-text">
                                         <small class="my-0 barlow">{{ jock.name }}</small>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="row" v-else-if="jockCount === 2">
                             <div class="col interactive-card" v-for="jock in jocks" :key="jock.id">
-                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }">
                                     <div class="row">
                                         <div class="col">
                                             <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">
@@ -45,7 +45,7 @@
                         </div>
                         <div class="row justify-content-center" v-else-if="jockCount === 1">
                             <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6 col-xxl-6 interactive-card" v-for="jock in jocks" :key="jock.id">
-                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-slugString', params: { slugString: jock.slug_string } }">
+                                <nuxt-link class="text-monster-blue" :to="{ name: 'MonsterJocks-jockSlug', params: { jockSlug: jock.slug_string } }">
                                     <div class="row">
                                         <div class="col">
                                             <img :src="jock.profile_image" :alt="jock.profile_image" class="img-fluid rounded-start bg-medium-gray">

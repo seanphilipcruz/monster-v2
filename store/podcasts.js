@@ -3,7 +3,19 @@ import ShowService from "@/services/shows";
 
 export const state = () => ({
     podcasts: [],
-    podcast: null,
+    podcast: {
+        id: null,
+        show_id: null,
+        episode: null,
+        date: null,
+        link: null,
+        image: null,
+        location: null,
+        show_title: null,
+        show_description: null,
+        date_aired: null,
+        show: null,
+    },
     pageNumber: 0,
     shows: null,
     related: [],

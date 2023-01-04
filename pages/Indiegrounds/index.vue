@@ -125,11 +125,11 @@ import Roster from "@/components/indiegrounds/Roster";
 export default {
     name: "IndiegroundsHome",
 
-    async asyncData({ store }) {
+    async fetch() {
         try {
-            await store.dispatch("indiegrounds/getIndiegroundsData");
+            await this.$store.dispatch("indiegrounds/getIndiegroundsData");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -165,7 +165,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },
