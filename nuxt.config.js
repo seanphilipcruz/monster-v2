@@ -112,7 +112,7 @@ export default {
     build: {
     },
 
-    route: {
+    router: {
         trailingSlash: false
     }
 }
