@@ -113,7 +113,7 @@ export default {
             try {
                 await this.$store.dispatch("widgets/outbreaksWidget");
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },

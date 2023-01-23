@@ -10,26 +10,24 @@
             </div>
             <div class="card-body bg-medium-gray">
                 <div v-if="studentsCount > 0">
-                    <client-only>
-                        <carousel per-page="4">
-                            <slide v-for="student in students" :key="student.id">
-                                <div class="text-light">
-                                    <img :src="student.image" :alt="student.image" class="card-img img-fluid rounded-start bg-medium-gray">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="my-2"></div>
-                                            <small class="text-monster-blue mb-0 text-uppercase">{{ student.first_name }} {{ student.last_name }}</small>
-                                            <div class="my-1"></div>
-                                            <div class="text-light barlow">
-                                                <p class="mb-0">{{ student.school.name }}</p>
-                                                <small class="">{{ student.course }}</small>
-                                            </div>
+                    <ssr-carousel>
+                        <div class="slide" v-for="student in students" :key="student.id">
+                            <div class="text-light">
+                                <img :src="student.image" :alt="student.image" class="card-img img-fluid rounded-start bg-medium-gray">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="my-2"></div>
+                                        <small class="text-monster-blue mb-0 text-uppercase">{{ student.first_name }} {{ student.last_name }}</small>
+                                        <div class="my-1"></div>
+                                        <div class="text-light barlow">
+                                            <p class="mb-0">{{ student.school.name }}</p>
+                                            <small class="">{{ student.course }}</small>
                                         </div>
                                     </div>
                                 </div>
-                            </slide>
-                        </carousel>
-                    </client-only>
+                            </div>
+                        </div>
+                    </ssr-carousel>
                 </div>
                 <div v-else>
                     <div class="m-5">
@@ -49,26 +47,24 @@
             </div>
             <div class="card-body bg-medium-gray">
                 <div v-if="sponsoredStudentsCount > 0">
-                    <client-only>
-                        <carousel per-page="4">
-                            <slide v-for="student in sponsoredStudents" :key="student.id">
-                                <div class="text-light">
-                                    <img :src="student.image" :alt="student.image" class="card-img img-fluid rounded-start bg-medium-gray">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="my-2"></div>
-                                            <small class="text-monster-blue mb-0 text-uppercase">{{ student.first_name }} {{ student.last_name }}</small>
-                                            <div class="my-1"></div>
-                                            <div class="text-light barlow">
-                                                <p class="mb-0">{{ !student.school ? '' : student.school.name }}</p>
-                                                <small class="">{{ student.course }}</small>
-                                            </div>
+                    <ssr-carousel>
+                        <div class="slide" v-for="student in sponsoredStudents" :key="student.id">
+                            <div class="text-light">
+                                <img :src="student.image" :alt="student.image" class="card-img img-fluid rounded-start bg-medium-gray">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="my-2"></div>
+                                        <small class="text-monster-blue mb-0 text-uppercase">{{ student.first_name }} {{ student.last_name }}</small>
+                                        <div class="my-1"></div>
+                                        <div class="text-light barlow">
+                                            <p class="mb-0">{{ !student.school ? '' : student.school.name }}</p>
+                                            <small class="">{{ student.course }}</small>
                                         </div>
                                     </div>
                                 </div>
-                            </slide>
-                        </carousel>
-                    </client-only>
+                            </div>
+                        </div>
+                    </ssr-carousel>
                 </div>
                 <div v-else>
                     <div class="m-5">

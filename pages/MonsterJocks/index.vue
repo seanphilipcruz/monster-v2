@@ -70,7 +70,7 @@ export default {
         try {
             await this.$store.dispatch("jocks/setJocksData");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 

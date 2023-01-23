@@ -181,7 +181,7 @@ export default {
         try {
             await this.$store.dispatch("southsideSounds/getSouthsideCharts");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -221,7 +221,7 @@ export default {
                     this.$store.dispatch("setLoadingState", { type: 'page', status: false });
                 }, 1400);
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         },
 

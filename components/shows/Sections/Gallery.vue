@@ -7,8 +7,8 @@
         <client-only>
             <div class="row">
                 <div class="col-12" v-if="photoCount > 0">
-                    <carousel :per-page="4">
-                        <slide v-for="image in image" :key="image.id">
+                    <ssr-carousel>
+                        <div class="slide" v-for="image in images" :key="image.id">
                             <img :src="image.file"
                                  class="bg-transparent mx-2 interactive-card"
                                  width="200"
@@ -16,8 +16,8 @@
                                  data-bs-toggle="modal"
                                  data-bs-target="#showGalleryModal"
                                  @click="getShowPhoto(image.file, image.name)">
-                        </slide>
-                    </carousel>
+                        </div>
+                    </ssr-carousel>
                 </div>
                 <div class="col-12" v-else>
                     <div class="text-light text-center barlow my-5">COMING SOON!</div>

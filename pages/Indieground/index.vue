@@ -2,10 +2,10 @@
     <div>
         <custom-banner type="indiegrounds" />
 
+        <div v-if="isLoading">
+            <loader />
+        </div>
         <transition name="fade">
-            <div v-if="isLoading">
-                <loader />
-            </div>
             <div class="container">
                 <div class="my-4" v-if="indiegroundArtistsCount">
                     <div class="d-none d-md-none d-lg-block d-xl-block d-xxl-block">
@@ -129,7 +129,7 @@ export default {
         try {
             await this.$store.dispatch("indiegrounds/getIndiegroundsData");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -165,7 +165,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },

@@ -83,7 +83,7 @@ import CustomBanner from "@/components/CustomBanner";
 import Top5Chart from "@/components/widgets/Top5";
 
 export default {
-    name: "index",
+    name: "monsterShows-slugString",
 
     async fetch() {
         const { slugString } = this.$route.params;
@@ -93,7 +93,7 @@ export default {
             // Getting the widget.
             await this.$store.dispatch("widgets/getChartsWidget");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -136,7 +136,7 @@ export default {
 
                 await this.$store.dispatch('setLoadingState', { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         },
     },

@@ -35,7 +35,7 @@ export default {
                 await this.$store.dispatch("monsterHit/getMonsterHitByDate", date);
             }
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -76,7 +76,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         },
 

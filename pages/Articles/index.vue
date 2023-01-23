@@ -5,7 +5,7 @@
             <div class="my-5" id="start_page">
                 <div class="card bg-dark-gray border-dark-gray">
                     <div v-if="isLoading">
-                        <loader />
+                        <loader></loader>
                     </div>
                     <transition name="fade">
                         <div class="my-5" v-if="!isLoading">
@@ -132,7 +132,7 @@ import PageLoader from "@/components/PageLoader";
 import ApiService from "@/services/api";
 
 export default {
-    name: "ArticlesHome",
+    name: "index",
 
     async fetch() {
         const { page, keyword } = this.$route.query;
@@ -146,7 +146,7 @@ export default {
                 await this.$store.dispatch("articles/setArticlesData");
             }
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 

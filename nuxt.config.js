@@ -75,7 +75,7 @@ export default {
 
     generate: {
         fallback: true,
-        interval: 1800
+        interval: 1500
     },
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -83,6 +83,7 @@ export default {
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
+        'vue-ssr-carousel/nuxt'
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules

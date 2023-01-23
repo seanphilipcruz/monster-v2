@@ -58,9 +58,8 @@
                                 </div>
                                 <div class="card bg-medium-gray">
                                     <div class="card-body">
-                                        <carousel
-                                            :per-page="4">
-                                            <slide v-for="related_podcast in related" :key="related_podcast.id">
+                                        <ssr-carousel :slides-per-page="slidesPerPage" center>
+                                            <div class="slide" v-for="related_podcast in related" :key="related_podcast.id">
                                                 <div class="card bg-transparent border-transparent rounded-start interactive-card-shadow">
                                                     <img :src="related_podcast.image" :alt="related_podcast.image" class="card-img img-fluid rounded-start bg-medium-gray">
                                                     <div class="card-body text-light">
@@ -81,8 +80,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </slide>
-                                        </carousel>
+                                            </div>
+                                        </ssr-carousel>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +109,7 @@ export default {
         try {
             await this.$store.dispatch("podcasts/getPodcast", id);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -131,6 +130,12 @@ export default {
         }
     },
 
+    data() {
+        return {
+            slidesPerPage: 4
+        }
+    },
+
     methods: {
         loadPodcast(loadingState) {
             this.$store.dispatch("setLoadingState", { type: 'content', status: loadingState });
@@ -138,6 +143,14 @@ export default {
 
         trimWhiteSpaces(text = "") {
             return text.replace(/\s+/g, '');
+        },
+
+        trimString(string = "", limit = 0, end = "...") {
+            if(string.length > limit) {
+                return string.slice(0, limit) + end;
+            }
+
+            return string;
         },
     },
 

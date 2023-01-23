@@ -76,7 +76,7 @@ export default {
                 case 'Spotify' || 'spotify':
                     return 'fa-spotify';
                 default:
-                    return 'fa-globe'
+                    return 'fa-chrome'
             }
         }
     }

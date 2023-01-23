@@ -94,7 +94,7 @@ export default {
         try {
             await this.$store.dispatch("countdowns/getChartData");
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 

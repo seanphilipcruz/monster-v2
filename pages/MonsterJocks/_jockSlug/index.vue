@@ -94,7 +94,7 @@ export default {
         try {
             await this.$store.dispatch("jocks/getJock", jockSlug);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -132,7 +132,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },

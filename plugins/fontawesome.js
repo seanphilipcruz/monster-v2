@@ -23,7 +23,8 @@ import {
     faTiktok,
     faTumblr,
     faTwitter,
-    faYoutube
+    faYoutube,
+    faChrome
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faPlay,
@@ -39,6 +40,7 @@ library.add(faPlay,
     faTumblr,
     faLinkedin,
     faGlobe,
+    faChrome,
     faSpotify,
     faPlayCircle,
     faChevronCircleLeft,

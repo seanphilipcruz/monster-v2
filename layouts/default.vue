@@ -28,7 +28,7 @@ export default {
                     this.$store.dispatch("setLoadingState", { type: 'page', status: false });
                 });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         },
     },

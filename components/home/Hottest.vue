@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                             <div class="my-2"></div>
-                            <nuxt-link :to="{ name: 'Articles-uuid-articleSlug', params: { uuid: article.unique_id, articleSlug: slugString(article.title) } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">VIEW ARTICLE</nuxt-link>
+                            <nuxt-link :to="{ name: 'Articles-uuid', params: { uuid: article.unique_id, articleSlug: slugString(article.title) } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">VIEW ARTICLE</nuxt-link>
                         </div>
                         <div class="col mb-4" v-if="tmr">
                             <div class="card bg-light-gray text-light">
@@ -94,7 +94,7 @@
                                         </div>
                                     </div>
                                     <div class="my-2"></div>
-                                    <nuxt-link :to="{ name: 'Articles-uuid-articleSlug', params: { uuid: article.unique_id, articleSlug: slugString(article.title) } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">VIEW ARTICLE</nuxt-link>
+                                    <nuxt-link :to="{ name: 'Articles-uuid', params: { uuid: article.unique_id, articleSlug: slugString(article.title) } }" class="btn btn-info btn-monster-blue d-grid btn-rounded">VIEW ARTICLE</nuxt-link>
                                 </div>
                                 <div class="col col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3 mt-4" v-if="tmr">
                                     <div class="card bg-light-gray text-light">

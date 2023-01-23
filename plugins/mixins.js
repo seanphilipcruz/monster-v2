@@ -1,5 +1,4 @@
 import Vue from "vue";
-import VueCarousel from "vue-carousel";
 import $ from "./jquery.min";
 import axios from "axios";
 import { saveAs } from "file-saver";
@@ -11,9 +10,7 @@ window.Swal = Swal;
 window.axios = axios;
 window.saveAs = saveAs;
 
-Vue.use(VueCarousel);
-
-Vue.mixin({
+Vue.mixin( {
     components: {
         'loader': () => import('@/components/Loader'),
         'miniLoader': () => import('@/components/MiniLoader'),

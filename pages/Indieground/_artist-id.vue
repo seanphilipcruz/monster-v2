@@ -87,7 +87,7 @@ import About from "@/components/indiegrounds/Artist/About";
 import Songs from "@/components/indiegrounds/Artist/Song";
 
 export default {
-    name: "ViewIndiegroundArtist",
+    name: "view-indieground-artistID",
 
     async fetch() {
         try {
@@ -95,7 +95,7 @@ export default {
 
             await this.$store.dispatch("indiegrounds/getIndiegroundArtist", artistID);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 
@@ -133,7 +133,7 @@ export default {
 
                 await this.$store.dispatch("setLoadingState", { type: 'page', status: false });
             } catch (error) {
-                alert(error);
+                console.log(error);
             }
         }
     },
