@@ -2,12 +2,12 @@
     <div id="audio-player-root" class="card bg-dark border-transparent">
         <div class="card-body">
             <!-- If no audio and if player is not hidden -->
-            <div class="m-4 text-center text-light" v-if="!audioPresent && !isAudioPlayerHidden">
+            <div class="m-4 text-center text-light" v-if="!audioPresent">
                 <MiniLoader />
                 <div>There is no audio streaming</div>
             </div>
             <!-- For podcasts -->
-            <div class="my-2" v-if="audioPresent && !isAudioPlayerHidden && audioType === 'podcast'">
+            <div class="my-2" v-if="audioPresent && audioType === 'podcast'">
                 <audio style="display:none" ref="player">
                     <source :src="audioStream">
                     Your browser does not support audio tag
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <!-- For spotify or mp3/m4a file types -->
-            <div class="my-2" v-else-if="audioPresent && !isAudioPlayerHidden && audioType === 'song'">
+            <div class="my-2" v-else-if="audioPresent && audioType === 'song'">
                 <div v-if="playerData.type === 'spotify'">
                     <div class="row">
                         <div class="col">
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <!-- Live stream -->
-            <div class="my-2" v-else-if="audioPresent && !isAudioPlayerHidden && audioType === 'radio'">
+            <div class="my-2" v-else-if="audioPresent && audioType === 'radio'">
                 <audio style="display:none" ref="player">
                     <source :src="audioStream">
                     Your browser does not support audio tag

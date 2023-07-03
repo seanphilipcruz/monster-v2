@@ -50,6 +50,7 @@
 
                             <div class="col-md-12 mt-4">
                                 <roster :indieground-artists="indiegroundArtists" />
+                                <NuxtChild />
                             </div>
                         </div>
                     </div>
@@ -77,10 +78,12 @@
 
                                 <div class="card bg-medium-gray text-light" v-if="featuredArtistsCount > 0">
                                     <featured-artists :featured-artist="featuredArtist" />
+                                    <NuxtChild />
                                 </div>
 
                                 <div class="col-md-12 mt-4">
                                     <roster :indieground-artists="indiegroundArtists" />
+                                    <NuxtChild />
                                 </div>
                             </div>
                         </div>

@@ -87,7 +87,7 @@ import About from "@/components/indiegrounds/Artist/About";
 import Songs from "@/components/indiegrounds/Artist/Song";
 
 export default {
-    name: "view-indieground-artistID",
+    name: "IndiegroundArtist",
 
     async fetch() {
         try {

@@ -5,7 +5,7 @@
                 <img :src="article.image" :alt="article.title" class="card-img img-fluid rounded-start bg-light-gray">
                 <div class="card-body">
                     <nuxt-link
-                        :to="{ name: 'Articles-uuid', params: { uuid: article.unique_id } }"
+                        :to="{ name: 'Articles-uuid', params: { uuid: article.unique_id, articleSlug: slugString(article.title) } }"
                         :title="article.title"
                         class="fs-5 text-monster-blue mb-2 stretched-link text-uppercase">
                         {{ trimString(article.title, 14) }}
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-    name: "article-cards",
+    name: "ArticleCards",
 
     props: {
         articles: {

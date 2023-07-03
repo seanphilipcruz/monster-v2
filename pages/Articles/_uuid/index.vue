@@ -37,6 +37,7 @@
                         </div>
                         <div class="col col-lg-3 col-xl-3 col-xxl-3">
                             <related-articles :related-articles="related_articles"></related-articles>
+                            <NuxtChild />
                         </div>
                     </div>
                 </div>
@@ -49,7 +50,7 @@
 import RelatedArticles from "@/components/articles/Related";
 
 export default {
-    name: "articles-view",
+    name: "ArticlePage",
 
     async fetch() {
         const { uuid, articleSlug } = this.$route.params;
@@ -57,7 +58,7 @@ export default {
         try {
             await this.$store.dispatch("articles/getArticle", uuid);
         } catch (error) {
-            alert(error);
+            console.log(error);
         }
     },
 

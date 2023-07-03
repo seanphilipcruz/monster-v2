@@ -1,9 +1,23 @@
 import IndiegroundService from "@/services/indiegrounds";
 
 export const state = () => ({
-    featuredArtist: [],
+    featuredArtist: {
+        indie: {
+            artist: {
+                album: {
+                    song: []
+                }
+            }
+        }
+    },
     indiegroundArtists: [],
-    indiegroundArtist: null,
+    indiegroundArtist: {
+        artist: {
+            name: '',
+            country: '',
+            image: ''
+        }
+    },
 });
 
 export const getters = {

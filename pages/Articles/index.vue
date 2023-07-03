@@ -36,6 +36,7 @@
                                 <div class="my-4"></div>
                                 <page-loader v-if="isContentLoading" />
                                 <cards :articles="news" :current-page="pageNumber" v-if="!isContentLoading && articleCount >= 1"></cards>
+                                <NuxtChild />
                                 <div v-if="articleCount < 1">
                                     <div class="m-5">
                                         <div class="row">
@@ -72,6 +73,7 @@
                                 <div class="my-4"></div>
                                 <page-loader v-if="isContentLoading" />
                                 <cards :articles="news" :current-page="pageNumber" v-if="!isContentLoading && articleCount >= 1"></cards>
+                                <NuxtChild />
                                 <div v-if="articleCount < 1">
                                     <div class="m-5">
                                         <div class="row">
@@ -132,7 +134,7 @@ import PageLoader from "@/components/PageLoader";
 import ApiService from "@/services/api";
 
 export default {
-    name: "index",
+    name: "Articles-uuid-slugString",
 
     async fetch() {
         const { page, keyword } = this.$route.query;
@@ -152,7 +154,7 @@ export default {
 
     head() {
         return {
-            title: !this.pageNumber || this.pageNumber === 1 ? 'News, Blogs, & Articles' : `News, Blogs, & Articles Page ${this.pageNumber}`,
+            title: !this.pageNumber || this.pageNumber === 1 ? `News, Blogs, & Articles` : `News, Blogs, & Articles Page ${this.pageNumber}`,
             meta: [
                 { hid: 'description', name: 'description', content: `Read up on the latest in showbiz and exclusive interviews on the ${this.stationName} blog.` },
                 { 'property': 'og:url', content: this.siteUrl + this.routePath },
